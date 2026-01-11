@@ -1,0 +1,3971 @@
+[
+  {
+    "id": "nico-vinz-am-i-wrong",
+    "title": "Am I Wrong",
+    "album": "Am I Wrong",
+    "singers": [
+      "Nico & Vinz"
+    ],
+    "key": "G#/Ab major"
+  },
+  {
+    "id": "coldplay-a-sky-full-of-stars",
+    "title": "A Sky Full of Stars",
+    "album": "A Sky Full of Stars",
+    "singers": [
+      "Coldplay"
+    ],
+    "key": "F#/Gb major"
+  },
+  {
+    "id": "ed-sheeran-sing",
+    "title": "Sing",
+    "album": "Sing",
+    "singers": [
+      "Ed Sheeran"
+    ],
+    "key": "G#/Ab minor"
+  },
+  {
+    "id": "passenger-let-her-go",
+    "title": "Let Her Go",
+    "album": "All the Little Lights",
+    "singers": [
+      "Passenger"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "bruno-mars-just-the-way-you-are",
+    "title": "Just The Way You Are",
+    "album": "Just The Way You Are",
+    "singers": [
+      "Bruno Mars"
+    ],
+    "key": "F major"
+  },
+  {
+    "id": "macklemore-ryan-lewis-macklemore-ryan-lewis-ray-dalton-can-t-hold-us-feat-ray-da",
+    "title": "Can't Hold Us (feat. Ray Dalton)",
+    "album": "The Heist",
+    "singers": [
+      "Macklemore;Ryan Lewis;Macklemore & Ryan Lewis;Ray Dalton"
+    ],
+    "key": "D major"
+  },
+  {
+    "id": "christina-perri-jar-of-hearts",
+    "title": "jar of hearts",
+    "album": "lovestrong.",
+    "singers": [
+      "Christina Perri"
+    ],
+    "key": "D#/Eb major"
+  },
+  {
+    "id": "lupe-fiasco-the-show-goes-on",
+    "title": "The Show Goes On",
+    "album": "Lasers",
+    "singers": [
+      "Lupe Fiasco"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "adele-rolling-in-the-deep",
+    "title": "Rolling in the Deep",
+    "album": "Rolling In The Deep",
+    "singers": [
+      "Adele"
+    ],
+    "key": "G#/Ab major"
+  },
+  {
+    "id": "bruno-mars-grenade",
+    "title": "Grenade",
+    "album": "Doo-Wops & Hooligans",
+    "singers": [
+      "Bruno Mars"
+    ],
+    "key": "D minor"
+  },
+  {
+    "id": "coldplay-magic",
+    "title": "Magic",
+    "album": "Magic",
+    "singers": [
+      "Coldplay"
+    ],
+    "key": "F#/Gb minor"
+  },
+  {
+    "id": "cobra-starship-sabi-you-make-me-feel-feat-sabi",
+    "title": "You Make Me Feel... (feat. Sabi)",
+    "album": "You Make Me Feel... (feat. Sabi)",
+    "singers": [
+      "Cobra Starship;Sabi"
+    ],
+    "key": "G minor"
+  },
+  {
+    "id": "katy-perry-firework",
+    "title": "Firework",
+    "album": "Teenage Dream",
+    "singers": [
+      "Katy Perry"
+    ],
+    "key": "G#/Ab major"
+  },
+  {
+    "id": "lorde-royals",
+    "title": "Royals",
+    "album": "Pure Heroine",
+    "singers": [
+      "Lorde"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "pitbull-afrojack-ne-yo-nayer-give-me-everything-feat-nayer",
+    "title": "Give Me Everything (feat. Nayer)",
+    "album": "Planet Pit (Deluxe Version)",
+    "singers": [
+      "Pitbull;AFROJACK;Ne-Yo;Nayer"
+    ],
+    "key": "G#/Ab major"
+  },
+  {
+    "id": "linkin-park-the-catalyst",
+    "title": "The Catalyst",
+    "album": "A Thousand Suns",
+    "singers": [
+      "Linkin Park"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "jason-derulo-don-t-wanna-go-home",
+    "title": "Don't Wanna Go Home",
+    "album": "Don't Wanna Go Home",
+    "singers": [
+      "Jason Derulo"
+    ],
+    "key": "D minor"
+  },
+  {
+    "id": "black-eyed-peas-just-can-t-get-enough",
+    "title": "Just Can’t Get Enough",
+    "album": "The Beginning",
+    "singers": [
+      "Black Eyed Peas"
+    ],
+    "key": "C minor"
+  },
+  {
+    "id": "rihanna-s-m",
+    "title": "S&M",
+    "album": "Loud",
+    "singers": [
+      "Rihanna"
+    ],
+    "key": "C#/Db major"
+  },
+  {
+    "id": "foster-the-people-pumped-up-kicks",
+    "title": "Pumped Up Kicks",
+    "album": "Torches",
+    "singers": [
+      "Foster The People"
+    ],
+    "key": "F minor"
+  },
+  {
+    "id": "jessie-j-b-o-b-price-tag",
+    "title": "Price Tag",
+    "album": "Who You Are",
+    "singers": [
+      "Jessie J;B.o.B"
+    ],
+    "key": "F major"
+  },
+  {
+    "id": "p-nk-raise-your-glass",
+    "title": "Raise Your Glass",
+    "album": "Raise Your Glass",
+    "singers": [
+      "P!nk"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "lady-gaga-born-this-way",
+    "title": "Born This Way",
+    "album": "Born This Way",
+    "singers": [
+      "Lady Gaga"
+    ],
+    "key": "B major"
+  },
+  {
+    "id": "lady-gaga-the-edge-of-glory",
+    "title": "The Edge Of Glory",
+    "album": "Born This Way (Special Edition)",
+    "singers": [
+      "Lady Gaga"
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "hot-chelle-rae-tonight-tonight",
+    "title": "Tonight Tonight",
+    "album": "Whatever",
+    "singers": [
+      "Hot Chelle Rae"
+    ],
+    "key": "E major"
+  },
+  {
+    "id": "daft-punk-pharrell-williams-nile-rodgers-get-lucky-radio-edit-feat-pharrell-will",
+    "title": "Get Lucky (Radio Edit) [feat. Pharrell Williams and Nile Rodgers]",
+    "album": "Get Lucky (Radio Edit) [feat. Pharrell Williams and Nile Rodgers]",
+    "singers": [
+      "Daft Punk;Pharrell Williams;Nile Rodgers"
+    ],
+    "key": "F#/Gb minor"
+  },
+  {
+    "id": "taio-cruz-dynamite",
+    "title": "Dynamite",
+    "album": "Rokstarr",
+    "singers": [
+      "Taio Cruz"
+    ],
+    "key": "E major"
+  },
+  {
+    "id": "the-script-for-the-first-time",
+    "title": "For the First Time",
+    "album": "Science & Faith (US Version)",
+    "singers": [
+      "The Script"
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "eminem-rihanna-the-monster",
+    "title": "The Monster",
+    "album": "The Monster",
+    "singers": [
+      "Eminem;Rihanna"
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "miley-cyrus-wrecking-ball",
+    "title": "Wrecking Ball",
+    "album": "Wrecking Ball",
+    "singers": [
+      "Miley Cyrus"
+    ],
+    "key": "F major"
+  },
+  {
+    "id": "imagine-dragons-radioactive",
+    "title": "Radioactive",
+    "album": "Night Visions",
+    "singers": [
+      "Imagine Dragons"
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "avicii-wake-me-up",
+    "title": "Wake Me Up",
+    "album": "True",
+    "singers": [
+      "Avicii"
+    ],
+    "key": "D major"
+  },
+  {
+    "id": "the-lumineers-ho-hey",
+    "title": "Ho Hey",
+    "album": "The Lumineers",
+    "singers": [
+      "The Lumineers"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "paramore-still-into-you",
+    "title": "Still into You",
+    "album": "Paramore",
+    "singers": [
+      "Paramore"
+    ],
+    "key": "F major"
+  },
+  {
+    "id": "macklemore-ryan-lewis-wanz-thrift-shop-feat-wanz",
+    "title": "Thrift Shop (feat. Wanz)",
+    "album": "The Heist",
+    "singers": [
+      "Macklemore & Ryan Lewis;Wanz"
+    ],
+    "key": "F#/Gb minor"
+  },
+  {
+    "id": "mumford-sons-i-will-wait",
+    "title": "I Will Wait",
+    "album": "Babel (Deluxe Edition)",
+    "singers": [
+      "Mumford & Sons"
+    ],
+    "key": "C#/Db major"
+  },
+  {
+    "id": "linkin-park-burn-it-down",
+    "title": "BURN IT DOWN",
+    "album": "LIVING THINGS",
+    "singers": [
+      "Linkin Park"
+    ],
+    "key": "A minor"
+  },
+  {
+    "id": "of-monsters-and-men-little-talks",
+    "title": "Little Talks",
+    "album": "My Head Is An Animal",
+    "singers": [
+      "Of Monsters and Men"
+    ],
+    "key": "C#/Db major"
+  },
+  {
+    "id": "ed-sheeran-the-a-team",
+    "title": "The A Team",
+    "album": "+",
+    "singers": [
+      "Ed Sheeran"
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "david-guetta-sia-titanium-feat-sia",
+    "title": "Titanium (feat. Sia)",
+    "album": "Nothing but the Beat",
+    "singers": [
+      "David Guetta;Sia"
+    ],
+    "key": "C minor"
+  },
+  {
+    "id": "awolnation-sail",
+    "title": "Sail",
+    "album": "Megalithic Symphony",
+    "singers": [
+      "AWOLNATION"
+    ],
+    "key": "C#/Db major"
+  },
+  {
+    "id": "k-naan-wavin-flag-coca-cola-celebration-mix",
+    "title": "Wavin' Flag - Coca-Cola® Celebration Mix",
+    "album": "Wavin' Flag (International Version Coca-Cola® Celebration Mix)",
+    "singers": [
+      "K'NAAN"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "p-nk-raise-your-glass-12lztplx",
+    "title": "Raise Your Glass",
+    "album": "Raise Your Glass",
+    "singers": [
+      "P!nk"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "rihanna-only-girl-in-the-world",
+    "title": "Only Girl (In The World)",
+    "album": "Loud",
+    "singers": [
+      "Rihanna"
+    ],
+    "key": "B minor"
+  },
+  {
+    "id": "rihanna-calvin-harris-we-found-love",
+    "title": "We Found Love",
+    "album": "We Found Love",
+    "singers": [
+      "Rihanna;Calvin Harris"
+    ],
+    "key": "C#/Db major"
+  },
+  {
+    "id": "imagine-dragons-demons",
+    "title": "Demons",
+    "album": "Night Visions (Deluxe)",
+    "singers": [
+      "Imagine Dragons"
+    ],
+    "key": "D#/Eb major"
+  },
+  {
+    "id": "imagine-dragons-on-top-of-the-world",
+    "title": "On Top Of The World",
+    "album": "Night Visions (Deluxe)",
+    "singers": [
+      "Imagine Dragons"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "imagine-dragons-it-s-time",
+    "title": "It's Time",
+    "album": "Night Visions",
+    "singers": [
+      "Imagine Dragons"
+    ],
+    "key": "D major"
+  },
+  {
+    "id": "avicii-hey-brother",
+    "title": "Hey Brother",
+    "album": "True",
+    "singers": [
+      "Avicii"
+    ],
+    "key": "G minor"
+  },
+  {
+    "id": "avicii-addicted-to-you",
+    "title": "Addicted To You",
+    "album": "True",
+    "singers": [
+      "Avicii"
+    ],
+    "key": "C#/Db minor"
+  },
+  {
+    "id": "avicii-you-make-me",
+    "title": "You Make Me",
+    "album": "True",
+    "singers": [
+      "Avicii"
+    ],
+    "key": "F#/Gb major"
+  },
+  {
+    "id": "avicii-levels-radio-edit",
+    "title": "Levels - Radio Edit",
+    "album": "Levels",
+    "singers": [
+      "Avicii"
+    ],
+    "key": "C#/Db minor"
+  },
+  {
+    "id": "onerepublic-counting-stars",
+    "title": "Counting Stars",
+    "album": "Native",
+    "singers": [
+      "OneRepublic"
+    ],
+    "key": "C#/Db minor"
+  },
+  {
+    "id": "onerepublic-love-runs-out",
+    "title": "Love Runs Out",
+    "album": "Native",
+    "singers": [
+      "OneRepublic"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "onerepublic-something-i-need",
+    "title": "Something I Need",
+    "album": "Native",
+    "singers": [
+      "OneRepublic"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "fall-out-boy-alone-together",
+    "title": "Alone Together",
+    "album": "Save Rock And Roll",
+    "singers": [
+      "Fall Out Boy"
+    ],
+    "key": "E major"
+  },
+  {
+    "id": "magic-rude",
+    "title": "Rude",
+    "album": "Don't Kill the Magic",
+    "singers": [
+      "MAGIC!"
+    ],
+    "key": "C#/Db major"
+  },
+  {
+    "id": "ed-sheeran-don-t",
+    "title": "Don't",
+    "album": "x (Deluxe Edition)",
+    "singers": [
+      "Ed Sheeran"
+    ],
+    "key": "C#/Db major"
+  },
+  {
+    "id": "calvin-harris-summer",
+    "title": "Summer",
+    "album": "Summer",
+    "singers": [
+      "Calvin Harris"
+    ],
+    "key": "E minor"
+  },
+  {
+    "id": "maroon-5-maps",
+    "title": "Maps",
+    "album": "Maps",
+    "singers": [
+      "Maroon 5"
+    ],
+    "key": "C#/Db minor"
+  },
+  {
+    "id": "american-authors-best-day-of-my-life",
+    "title": "Best Day Of My Life",
+    "album": "Oh, What A Life",
+    "singers": [
+      "American Authors"
+    ],
+    "key": "D major"
+  },
+  {
+    "id": "jessie-j-ariana-grande-nicki-minaj-bang-bang",
+    "title": "Bang Bang",
+    "album": "Bang Bang",
+    "singers": [
+      "Jessie J;Ariana Grande;Nicki Minaj"
+    ],
+    "key": "C minor"
+  },
+  {
+    "id": "jason-mraz-love-someone",
+    "title": "Love Someone",
+    "album": "Love Someone",
+    "singers": [
+      "Jason Mraz"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "ariana-grande-iggy-azalea-problem",
+    "title": "Problem",
+    "album": "Problem",
+    "singers": [
+      "Ariana Grande;Iggy Azalea"
+    ],
+    "key": "C#/Db minor"
+  },
+  {
+    "id": "cazzette-the-high-sleepless-radio-edit",
+    "title": "Sleepless - Radio Edit",
+    "album": "Sleepless",
+    "singers": [
+      "CAZZETTE;The High"
+    ],
+    "key": "F#/Gb minor"
+  },
+  {
+    "id": "christina-perri-human",
+    "title": "human",
+    "album": "human",
+    "singers": [
+      "Christina Perri"
+    ],
+    "key": "G#/Ab major"
+  },
+  {
+    "id": "iyaz-replay",
+    "title": "Replay",
+    "album": "Replay",
+    "singers": [
+      "Iyaz"
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "jay-z-run-this-town-jay-z-rihanna-kanye-west",
+    "title": "Run This Town [Jay-Z + Rihanna + Kanye West]",
+    "album": "Run This Town [Jay-Z, Rihanna, & Kanye West]",
+    "singers": [
+      "JAY-Z"
+    ],
+    "key": "C#/Db major"
+  },
+  {
+    "id": "cascada-evacuate-the-dancefloor-radio-edit",
+    "title": "Evacuate The Dancefloor - Radio Edit",
+    "album": "Evacuate The Dancefloor",
+    "singers": [
+      "Cascada"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "cobra-starship-leighton-meester-good-girls-go-bad-feat-leighton-meester",
+    "title": "Good Girls Go Bad (feat. Leighton Meester)",
+    "album": "Good Girls Go Bad (feat. Leighton Meester)",
+    "singers": [
+      "Cobra Starship;Leighton Meester"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "lady-gaga-colby-o-donis-just-dance",
+    "title": "Just Dance",
+    "album": "The Fame",
+    "singers": [
+      "Lady Gaga;Colby O'Donis"
+    ],
+    "key": "C#/Db minor"
+  },
+  {
+    "id": "lady-gaga-alejandro",
+    "title": "Alejandro",
+    "album": "The Fame Monster (International Deluxe)",
+    "singers": [
+      "Lady Gaga"
+    ],
+    "key": "B minor"
+  },
+  {
+    "id": "the-pussycat-dolls-when-i-grow-up",
+    "title": "When I Grow Up",
+    "album": "Pussycat Dolls Hit Pac - 5 Series",
+    "singers": [
+      "The Pussycat Dolls"
+    ],
+    "key": "B minor"
+  },
+  {
+    "id": "eminem-rihanna-love-the-way-you-lie",
+    "title": "Love The Way You Lie",
+    "album": "Recovery",
+    "singers": [
+      "Eminem;Rihanna"
+    ],
+    "key": "A#/Bb major"
+  },
+  {
+    "id": "b-o-b-nothin-on-you-feat-bruno-mars",
+    "title": "Nothin' On You - feat. Bruno Mars",
+    "album": "Nothin' On You [feat. Bruno Mars]",
+    "singers": [
+      "B.o.B"
+    ],
+    "key": "A#/Bb major"
+  },
+  {
+    "id": "jason-derulo-ridin-solo",
+    "title": "Ridin' Solo",
+    "album": "Jason Derulo (International)",
+    "singers": [
+      "Jason Derulo"
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "usher-will-i-am-omg",
+    "title": "OMG",
+    "album": "OMG",
+    "singers": [
+      "USHER;will.i.am"
+    ],
+    "key": "E minor"
+  },
+  {
+    "id": "usher-pitbull-dj-got-us-fallin-in-love-feat-pitbull",
+    "title": "DJ Got Us Fallin' In Love (feat. Pitbull)",
+    "album": "DJ Got Us Fallin' In Love (feat. Pitbull)",
+    "singers": [
+      "USHER;Pitbull"
+    ],
+    "key": "G minor"
+  },
+  {
+    "id": "lady-gaga-beyonc-telephone",
+    "title": "Telephone",
+    "album": "The Fame Monster (International Deluxe)",
+    "singers": [
+      "Lady Gaga;Beyoncé"
+    ],
+    "key": "F minor"
+  },
+  {
+    "id": "coldplay-fix-you",
+    "title": "Fix You",
+    "album": "X&Y",
+    "singers": [
+      "Coldplay"
+    ],
+    "key": "D#/Eb major"
+  },
+  {
+    "id": "3oh-3-kesha-my-first-kiss-feat-ke-ha",
+    "title": "My First Kiss (feat. Ke$ha)",
+    "album": "My First Kiss (feat. Ke$ha)",
+    "singers": [
+      "3OH!3;Kesha"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "kesha-we-r-who-we-r",
+    "title": "We R Who We R",
+    "album": "We R Who We R",
+    "singers": [
+      "Kesha"
+    ],
+    "key": "G#/Ab major"
+  },
+  {
+    "id": "tinie-tempah-eric-turner-written-in-the-stars-feat-eric-turner",
+    "title": "Written in the Stars (feat. Eric Turner)",
+    "album": "Written in the Stars (feat. Eric Turner)",
+    "singers": [
+      "Tinie Tempah;Eric Turner"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "travie-mccoy-bruno-mars-billionaire-feat-bruno-mars",
+    "title": "Billionaire (feat. Bruno Mars)",
+    "album": "Billionaire (feat. Bruno Mars)",
+    "singers": [
+      "Travie McCoy;Bruno Mars"
+    ],
+    "key": "F#/Gb minor"
+  },
+  {
+    "id": "john-legend-all-of-me",
+    "title": "All of Me",
+    "album": "Love In The Future (Expanded Edition)",
+    "singers": [
+      "John Legend"
+    ],
+    "key": "G#/Ab major"
+  },
+  {
+    "id": "lady-gaga-applause",
+    "title": "Applause",
+    "album": "Applause",
+    "singers": [
+      "Lady Gaga"
+    ],
+    "key": "G minor"
+  },
+  {
+    "id": "cash-cash-bebe-rexha-take-me-home-feat-bebe-rexha",
+    "title": "Take Me Home (feat. Bebe Rexha)",
+    "album": "Take Me Home (feat. Bebe Rexha)",
+    "singers": [
+      "Cash Cash;Bebe Rexha"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "mkto-classic",
+    "title": "Classic",
+    "album": "Classic",
+    "singers": [
+      "MKTO"
+    ],
+    "key": "C#/Db major"
+  },
+  {
+    "id": "5-seconds-of-summer-don-t-stop",
+    "title": "Don't Stop",
+    "album": "5 Seconds Of Summer",
+    "singers": [
+      "5 Seconds of Summer"
+    ],
+    "key": "G#/Ab major"
+  },
+  {
+    "id": "becky-g-shower",
+    "title": "Shower",
+    "album": "Shower",
+    "singers": [
+      "Becky G"
+    ],
+    "key": "D major"
+  },
+  {
+    "id": "kesha-die-young",
+    "title": "Die Young",
+    "album": "Warrior (Deluxe Version)",
+    "singers": [
+      "Kesha"
+    ],
+    "key": "C#/Db minor"
+  },
+  {
+    "id": "afrojack-wrabel-ten-feet-tall",
+    "title": "Ten Feet Tall",
+    "album": "Ten Feet Tall",
+    "singers": [
+      "AFROJACK;WRABEL"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "ajr-i-m-ready",
+    "title": "I'm Ready",
+    "album": "I'm Ready - EP",
+    "singers": [
+      "AJR"
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "demi-lovato-cher-lloyd-really-don-t-care",
+    "title": "Really Don't Care",
+    "album": "Demi",
+    "singers": [
+      "Demi Lovato;Cher Lloyd"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "5-seconds-of-summer-she-looks-so-perfect",
+    "title": "She Looks So Perfect",
+    "album": "She Looks So Perfect",
+    "singers": [
+      "5 Seconds of Summer"
+    ],
+    "key": "C#/Db minor"
+  },
+  {
+    "id": "icona-pop-charli-xcx-i-love-it-feat-charli-xcx",
+    "title": "I Love It (feat. Charli XCX)",
+    "album": "I Love It (feat. Charli XCX)",
+    "singers": [
+      "Icona Pop;Charli xcx"
+    ],
+    "key": "G#/Ab major"
+  },
+  {
+    "id": "hot-chelle-rae-don-t-say-goodnight",
+    "title": "Don't Say Goodnight",
+    "album": "Don't Say Goodnight",
+    "singers": [
+      "Hot Chelle Rae"
+    ],
+    "key": "A#/Bb major"
+  },
+  {
+    "id": "todd-carey-nintendo",
+    "title": "Nintendo",
+    "album": "Nintendo",
+    "singers": [
+      "Todd Carey"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "panic-at-the-disco-ready-to-go-get-me-out-of-my-mind",
+    "title": "Ready to Go (Get Me Out of My Mind)",
+    "album": "Vices & Virtues",
+    "singers": [
+      "Panic! At The Disco"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "maroon-5-animals",
+    "title": "Animals",
+    "album": "V (Deluxe)",
+    "singers": [
+      "Maroon 5"
+    ],
+    "key": "E minor"
+  },
+  {
+    "id": "walk-the-moon-shut-up-and-dance",
+    "title": "Shut Up and Dance",
+    "album": "Shut Up and Dance",
+    "singers": [
+      "WALK THE MOON"
+    ],
+    "key": "C#/Db major"
+  },
+  {
+    "id": "the-shins-james-mercer-simple-song",
+    "title": "Simple Song",
+    "album": "Port Of Morrow",
+    "singers": [
+      "The Shins;James Mercer"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "glee-cast-adam-lambert-marry-the-night-glee-cast-version-feat-adam-lambert",
+    "title": "Marry the Night (Glee Cast Version) (feat. Adam Lambert)",
+    "album": "Playlist: The Very Best Of Adam Lambert",
+    "singers": [
+      "Glee Cast;Adam Lambert"
+    ],
+    "key": "A minor"
+  },
+  {
+    "id": "macklemore-and-we-danced-feat-ziggy-stardust",
+    "title": "And We Danced (feat. Ziggy Stardust)",
+    "album": "The Unplanned Mixtape",
+    "singers": [
+      "Macklemore"
+    ],
+    "key": "F major"
+  },
+  {
+    "id": "lorde-tennis-court",
+    "title": "Tennis Court",
+    "album": "Pure Heroine",
+    "singers": [
+      "Lorde"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "lorde-everybody-wants-to-rule-the-world-from-the-hunger-games-catching-fire-soun",
+    "title": "Everybody Wants To Rule The World - From “The Hunger Games: Catching Fire” Soundtrack",
+    "album": "The Hunger Games: Catching Fire (Original Motion Picture Soundtrack / Deluxe Version)",
+    "singers": [
+      "Lorde"
+    ],
+    "key": "B minor"
+  },
+  {
+    "id": "gym-class-heroes-adam-levine-stereo-hearts-feat-adam-levine",
+    "title": "Stereo Hearts (feat. Adam Levine)",
+    "album": "The Papercut Chronicles II",
+    "singers": [
+      "Gym Class Heroes;Adam Levine"
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "gym-class-heroes-ryan-tedder-the-fighter",
+    "title": "The Fighter",
+    "album": "The Papercut Chronicles II",
+    "singers": [
+      "Gym Class Heroes;Ryan Tedder"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "the-script-will-i-am-hall-of-fame-feat-will-i-am",
+    "title": "Hall of Fame (feat. will.i.am)",
+    "album": "#3",
+    "singers": [
+      "The Script;will.i.am"
+    ],
+    "key": "A#/Bb major"
+  },
+  {
+    "id": "the-script-six-degrees-of-separation",
+    "title": "Six Degrees of Separation",
+    "album": "#3",
+    "singers": [
+      "The Script"
+    ],
+    "key": "E major"
+  },
+  {
+    "id": "mr-probz-robin-schulz-waves-robin-schulz-radio-edit",
+    "title": "Waves - Robin Schulz Radio Edit",
+    "album": "Waves (Robin Schulz Radio Edit)",
+    "singers": [
+      "Mr. Probz;Robin Schulz"
+    ],
+    "key": "F minor"
+  },
+  {
+    "id": "fun-some-nights",
+    "title": "Some Nights",
+    "album": "Some Nights",
+    "singers": [
+      "fun."
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "fun-janelle-mon-e-we-are-young-feat-janelle-mon-e",
+    "title": "We Are Young (feat. Janelle Monáe)",
+    "album": "Some Nights",
+    "singers": [
+      "fun.;Janelle Monáe"
+    ],
+    "key": "A#/Bb major"
+  },
+  {
+    "id": "fun-carry-on",
+    "title": "Carry On",
+    "album": "Some Nights",
+    "singers": [
+      "fun."
+    ],
+    "key": "F major"
+  },
+  {
+    "id": "hozier-take-me-to-church",
+    "title": "Take Me To Church",
+    "album": "Hozier (Deluxe)",
+    "singers": [
+      "Hozier"
+    ],
+    "key": "E minor"
+  },
+  {
+    "id": "fall-out-boy-centuries",
+    "title": "Centuries",
+    "album": "American Beauty/American Psycho",
+    "singers": [
+      "Fall Out Boy"
+    ],
+    "key": "E minor"
+  },
+  {
+    "id": "meghan-trainor-lips-are-movin",
+    "title": "Lips Are Movin",
+    "album": "Title (Deluxe)",
+    "singers": [
+      "Meghan Trainor"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "echosmith-cool-kids",
+    "title": "Cool Kids",
+    "album": "Talking Dreams (Deluxe Edition)",
+    "singers": [
+      "Echosmith"
+    ],
+    "key": "G#/Ab major"
+  },
+  {
+    "id": "gym-class-heroes-neon-hitch-ass-back-home-feat-neon-hitch",
+    "title": "Ass Back Home (feat. Neon Hitch)",
+    "album": "The Papercut Chronicles II",
+    "singers": [
+      "Gym Class Heroes;Neon Hitch"
+    ],
+    "key": "A#/Bb major"
+  },
+  {
+    "id": "b-o-b-hayley-williams-airplanes-feat-hayley-williams-of-paramore",
+    "title": "Airplanes (feat. Hayley Williams of Paramore)",
+    "album": "B.o.B Presents: The Adventures of Bobby Ray",
+    "singers": [
+      "B.o.B;Hayley Williams"
+    ],
+    "key": "F#/Gb minor"
+  },
+  {
+    "id": "misterwives-reflections",
+    "title": "Reflections",
+    "album": "Our Own House",
+    "singers": [
+      "MisterWives"
+    ],
+    "key": "D major"
+  },
+  {
+    "id": "fall-out-boy-uma-thurman",
+    "title": "Uma Thurman",
+    "album": "American Beauty/American Psycho",
+    "singers": [
+      "Fall Out Boy"
+    ],
+    "key": "E minor"
+  },
+  {
+    "id": "fall-out-boy-my-songs-know-what-you-did-in-the-dark-light-em-up",
+    "title": "My Songs Know What You Did In The Dark (Light Em Up)",
+    "album": "Save Rock And Roll",
+    "singers": [
+      "Fall Out Boy"
+    ],
+    "key": "A minor"
+  },
+  {
+    "id": "fall-out-boy-immortals",
+    "title": "Immortals",
+    "album": "American Beauty/American Psycho",
+    "singers": [
+      "Fall Out Boy"
+    ],
+    "key": "D major"
+  },
+  {
+    "id": "fall-out-boy-fourth-of-july",
+    "title": "Fourth Of July",
+    "album": "American Beauty/American Psycho",
+    "singers": [
+      "Fall Out Boy"
+    ],
+    "key": "E minor"
+  },
+  {
+    "id": "walk-the-moon-anna-sun",
+    "title": "Anna Sun",
+    "album": "Walk The Moon",
+    "singers": [
+      "WALK THE MOON"
+    ],
+    "key": "A#/Bb major"
+  },
+  {
+    "id": "walk-the-moon-work-this-body",
+    "title": "Work This Body",
+    "album": "TALKING IS HARD",
+    "singers": [
+      "WALK THE MOON"
+    ],
+    "key": "E major"
+  },
+  {
+    "id": "wiz-khalifa-charlie-puth-see-you-again-feat-charlie-puth",
+    "title": "See You Again (feat. Charlie Puth)",
+    "album": "See You Again (feat. Charlie Puth)",
+    "singers": [
+      "Wiz Khalifa;Charlie Puth"
+    ],
+    "key": "A#/Bb major"
+  },
+  {
+    "id": "maroon-5-sugar",
+    "title": "Sugar",
+    "album": "V (Deluxe)",
+    "singers": [
+      "Maroon 5"
+    ],
+    "key": "C#/Db major"
+  },
+  {
+    "id": "meghan-trainor-dear-future-husband",
+    "title": "Dear Future Husband",
+    "album": "Title (Deluxe)",
+    "singers": [
+      "Meghan Trainor"
+    ],
+    "key": "C#/Db major"
+  },
+  {
+    "id": "ed-sheeran-photograph",
+    "title": "Photograph",
+    "album": "x (Deluxe Edition)",
+    "singers": [
+      "Ed Sheeran"
+    ],
+    "key": "E major"
+  },
+  {
+    "id": "david-guetta-sam-martin-dangerous-feat-sam-martin",
+    "title": "Dangerous (feat. Sam Martin)",
+    "album": "Listen",
+    "singers": [
+      "David Guetta;Sam Martin"
+    ],
+    "key": "E minor"
+  },
+  {
+    "id": "milky-chance-stolen-dance",
+    "title": "Stolen Dance",
+    "album": "Stolen Dance",
+    "singers": [
+      "Milky Chance"
+    ],
+    "key": "B major"
+  },
+  {
+    "id": "echosmith-bright",
+    "title": "Bright",
+    "album": "Talking Dreams (Deluxe Edition)",
+    "singers": [
+      "Echosmith"
+    ],
+    "key": "F#/Gb major"
+  },
+  {
+    "id": "childish-gambino-3005",
+    "title": "3005",
+    "album": "Because The Internet",
+    "singers": [
+      "Childish Gambino"
+    ],
+    "key": "F#/Gb minor"
+  },
+  {
+    "id": "sheppard-geronimo",
+    "title": "Geronimo",
+    "album": "Geronimo",
+    "singers": [
+      "Sheppard"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "avicii-the-days",
+    "title": "The Days",
+    "album": "The Days / Nights",
+    "singers": [
+      "Avicii"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "train-angel-in-blue-jeans",
+    "title": "Angel in Blue Jeans",
+    "album": "Bulletproof Picasso",
+    "singers": [
+      "Train"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "fences-macklemore-ryan-lewis-arrows-feat-macklemore-ryan-lewis",
+    "title": "Arrows (feat. Macklemore & Ryan Lewis)",
+    "album": "Arrows (feat. Macklemore & Ryan Lewis)",
+    "singers": [
+      "Fences;Macklemore;Ryan Lewis"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "the-script-superheroes",
+    "title": "Superheroes",
+    "album": "No Sound Without Silence",
+    "singers": [
+      "The Script"
+    ],
+    "key": "D#/Eb major"
+  },
+  {
+    "id": "family-of-the-year-hero",
+    "title": "Hero",
+    "album": "Loma Vista",
+    "singers": [
+      "Family of the Year"
+    ],
+    "key": "F major"
+  },
+  {
+    "id": "avicii-the-nights",
+    "title": "The Nights",
+    "album": "The Days / Nights",
+    "singers": [
+      "Avicii"
+    ],
+    "key": "F#/Gb major"
+  },
+  {
+    "id": "hyper-records-we-are-done",
+    "title": "We Are Done",
+    "album": "We Are Done",
+    "singers": [
+      "Hyper Records"
+    ],
+    "key": "F#/Gb minor"
+  },
+  {
+    "id": "hozier-someone-new",
+    "title": "Someone New",
+    "album": "Hozier",
+    "singers": [
+      "Hozier"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "imagine-dragons-i-bet-my-life",
+    "title": "I Bet My Life",
+    "album": "Smoke + Mirrors",
+    "singers": [
+      "Imagine Dragons"
+    ],
+    "key": "C#/Db major"
+  },
+  {
+    "id": "shawn-mendes-stitches",
+    "title": "Stitches",
+    "album": "Handwritten",
+    "singers": [
+      "Shawn Mendes"
+    ],
+    "key": "C#/Db major"
+  },
+  {
+    "id": "x-ambassadors-renegades",
+    "title": "Renegades",
+    "album": "VHS",
+    "singers": [
+      "X Ambassadors"
+    ],
+    "key": "D major"
+  },
+  {
+    "id": "nick-jonas-levels",
+    "title": "Levels",
+    "album": "Levels",
+    "singers": [
+      "Nick Jonas"
+    ],
+    "key": "F#/Gb major"
+  },
+  {
+    "id": "adele-hello",
+    "title": "Hello",
+    "album": "Hello",
+    "singers": [
+      "Adele"
+    ],
+    "key": "F minor"
+  },
+  {
+    "id": "kenny-chesney-the-boys-of-fall",
+    "title": "The Boys of Fall",
+    "album": "Hemingway's Whiskey",
+    "singers": [
+      "Kenny Chesney"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "rihanna-california-king-bed",
+    "title": "California King Bed",
+    "album": "Loud",
+    "singers": [
+      "Rihanna"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "mika-ariana-grande-jason-nevins-popular-song",
+    "title": "Popular Song",
+    "album": "Popular Song",
+    "singers": [
+      "MIKA;Ariana Grande;Jason Nevins"
+    ],
+    "key": "G#/Ab major"
+  },
+  {
+    "id": "charlie-puth-one-call-away",
+    "title": "One Call Away",
+    "album": "One Call Away",
+    "singers": [
+      "Charlie Puth"
+    ],
+    "key": "C#/Db major"
+  },
+  {
+    "id": "jonas-blue-dakota-fast-car",
+    "title": "Fast Car",
+    "album": "Fast Car",
+    "singers": [
+      "Jonas Blue;Dakota"
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "lukas-graham-7-years",
+    "title": "7 Years",
+    "album": "7 Years",
+    "singers": [
+      "Lukas Graham"
+    ],
+    "key": "A#/Bb major"
+  },
+  {
+    "id": "panic-at-the-disco-victorious",
+    "title": "Victorious",
+    "album": "Victorious",
+    "singers": [
+      "Panic! At The Disco"
+    ],
+    "key": "G#/Ab major"
+  },
+  {
+    "id": "the-chainsmokers-rozes-roses",
+    "title": "Roses",
+    "album": "Roses",
+    "singers": [
+      "The Chainsmokers;ROZES"
+    ],
+    "key": "E major"
+  },
+  {
+    "id": "dnce-cake-by-the-ocean",
+    "title": "Cake By The Ocean",
+    "album": "SWAAY",
+    "singers": [
+      "DNCE"
+    ],
+    "key": "E minor"
+  },
+  {
+    "id": "coldplay-adventure-of-a-lifetime",
+    "title": "Adventure of a Lifetime",
+    "album": "Adventure of a Lifetime",
+    "singers": [
+      "Coldplay"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "panic-at-the-disco-sarah-smiles",
+    "title": "Sarah Smiles",
+    "album": "Vices & Virtues",
+    "singers": [
+      "Panic! At The Disco"
+    ],
+    "key": "F major"
+  },
+  {
+    "id": "panic-at-the-disco-the-ballad-of-mona-lisa",
+    "title": "The Ballad of Mona Lisa",
+    "album": "Vices & Virtues",
+    "singers": [
+      "Panic! At The Disco"
+    ],
+    "key": "A minor"
+  },
+  {
+    "id": "panic-at-the-disco-hallelujah",
+    "title": "Hallelujah",
+    "album": "Death of a Bachelor",
+    "singers": [
+      "Panic! At The Disco"
+    ],
+    "key": "B major"
+  },
+  {
+    "id": "panic-at-the-disco-emperor-s-new-clothes",
+    "title": "Emperor's New Clothes",
+    "album": "Death of a Bachelor",
+    "singers": [
+      "Panic! At The Disco"
+    ],
+    "key": "C#/Db major"
+  },
+  {
+    "id": "panic-at-the-disco-lolo-miss-jackson-feat-lolo",
+    "title": "Miss Jackson (feat. LOLO)",
+    "album": "Too Weird to Live, Too Rare to Die!",
+    "singers": [
+      "Panic! At The Disco;LOLO"
+    ],
+    "key": "D major"
+  },
+  {
+    "id": "haley-reinhart-can-t-help-falling-in-love",
+    "title": "Can't Help Falling in Love",
+    "album": "Can't Help Falling in Love",
+    "singers": [
+      "Haley Reinhart"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "fort-atlantic-let-your-heart-hold-fast",
+    "title": "Let Your Heart Hold Fast",
+    "album": "Fort Atlantic",
+    "singers": [
+      "Fort Atlantic"
+    ],
+    "key": "F major"
+  },
+  {
+    "id": "band-of-horses-the-funeral",
+    "title": "The Funeral",
+    "album": "Everything All The Time",
+    "singers": [
+      "Band of Horses"
+    ],
+    "key": "C minor"
+  },
+  {
+    "id": "mike-posner-i-took-a-pill-in-ibiza-seeb-remix",
+    "title": "I Took A Pill In Ibiza - Seeb Remix",
+    "album": "The Truth (Remixes)",
+    "singers": [
+      "Mike Posner"
+    ],
+    "key": "G minor"
+  },
+  {
+    "id": "flo-rida-my-house",
+    "title": "My House",
+    "album": "My House",
+    "singers": [
+      "Flo Rida"
+    ],
+    "key": "G minor"
+  },
+  {
+    "id": "ben-rector-brand-new",
+    "title": "Brand New",
+    "album": "Brand New",
+    "singers": [
+      "Ben Rector"
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "maroon-5-feelings",
+    "title": "Feelings",
+    "album": "V",
+    "singers": [
+      "Maroon 5"
+    ],
+    "key": "A#/Bb minor"
+  },
+  {
+    "id": "imagine-dragons-warriors",
+    "title": "Warriors",
+    "album": "Smoke + Mirrors (Deluxe)",
+    "singers": [
+      "Imagine Dragons"
+    ],
+    "key": "E minor"
+  },
+  {
+    "id": "ruth-b-lost-boy",
+    "title": "Lost Boy",
+    "album": "Lost Boy",
+    "singers": [
+      "Ruth B."
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "carly-rae-jepsen-i-really-like-you",
+    "title": "I Really Like You",
+    "album": "Emotion",
+    "singers": [
+      "Carly Rae Jepsen"
+    ],
+    "key": "F major"
+  },
+  {
+    "id": "demi-lovato-cool-for-the-summer",
+    "title": "Cool for the Summer",
+    "album": "Confident (Deluxe Edition)",
+    "singers": [
+      "Demi Lovato"
+    ],
+    "key": "F minor"
+  },
+  {
+    "id": "demi-lovato-cher-lloyd-really-don-t-care-5vtpxzm4",
+    "title": "Really Don't Care",
+    "album": "Demi",
+    "singers": [
+      "Demi Lovato;Cher Lloyd"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "sammy-adams-all-night-longer",
+    "title": "All Night Longer",
+    "album": "All Night Longer",
+    "singers": [
+      "Sammy Adams"
+    ],
+    "key": "C#/Db major"
+  },
+  {
+    "id": "the-chainsmokers-daya-don-t-let-me-down",
+    "title": "Don't Let Me Down",
+    "album": "Don't Let Me Down",
+    "singers": [
+      "The Chainsmokers;Daya"
+    ],
+    "key": "B major"
+  },
+  {
+    "id": "twenty-one-pilots-ride",
+    "title": "Ride",
+    "album": "Blurryface",
+    "singers": [
+      "Twenty One Pilots"
+    ],
+    "key": "F#/Gb major"
+  },
+  {
+    "id": "timeflies-once-in-a-while",
+    "title": "Once In a While",
+    "album": "Once In a While",
+    "singers": [
+      "Timeflies"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "charlie-puth-selena-gomez-we-don-t-talk-anymore-feat-selena-gomez",
+    "title": "We Don't Talk Anymore (feat. Selena Gomez)",
+    "album": "Nine Track Mind",
+    "singers": [
+      "Charlie Puth;Selena Gomez"
+    ],
+    "key": "C#/Db minor"
+  },
+  {
+    "id": "avril-lavigne-here-s-to-never-growing-up",
+    "title": "Here's to Never Growing Up",
+    "album": "Avril Lavigne",
+    "singers": [
+      "Avril Lavigne"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "the-wanted-we-own-the-night",
+    "title": "We Own The Night",
+    "album": "Word Of Mouth",
+    "singers": [
+      "The Wanted"
+    ],
+    "key": "B major"
+  },
+  {
+    "id": "the-wanted-glad-you-came",
+    "title": "Glad You Came",
+    "album": "The Wanted",
+    "singers": [
+      "The Wanted"
+    ],
+    "key": "G minor"
+  },
+  {
+    "id": "owl-city-carly-rae-jepsen-good-time",
+    "title": "Good Time",
+    "album": "The Midsummer Station",
+    "singers": [
+      "Owl City;Carly Rae Jepsen"
+    ],
+    "key": "D#/Eb major"
+  },
+  {
+    "id": "bastille-pompeii",
+    "title": "Pompeii",
+    "album": "Bad Blood",
+    "singers": [
+      "Bastille"
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "pitbull-kesha-timber",
+    "title": "Timber",
+    "album": "Global Warming: Meltdown (Deluxe Version)",
+    "singers": [
+      "Pitbull;Kesha"
+    ],
+    "key": "B major"
+  },
+  {
+    "id": "train-drive-by",
+    "title": "Drive By",
+    "album": "California 37",
+    "singers": [
+      "Train"
+    ],
+    "key": "C#/Db minor"
+  },
+  {
+    "id": "avril-lavigne-what-the-hell",
+    "title": "What the Hell",
+    "album": "Goodbye Lullaby",
+    "singers": [
+      "Avril Lavigne"
+    ],
+    "key": "F#/Gb minor"
+  },
+  {
+    "id": "kelly-clarkson-piece-by-piece",
+    "title": "Piece by Piece",
+    "album": "Piece By Piece (Deluxe Version)",
+    "singers": [
+      "Kelly Clarkson"
+    ],
+    "key": "C#/Db major"
+  },
+  {
+    "id": "rixton-me-and-my-broken-heart",
+    "title": "Me And My Broken Heart",
+    "album": "Let The Road",
+    "singers": [
+      "Rixton"
+    ],
+    "key": "F minor"
+  },
+  {
+    "id": "capital-cities-safe-and-sound",
+    "title": "Safe And Sound",
+    "album": "In A Tidal Wave Of Mystery (Deluxe Edition)",
+    "singers": [
+      "Capital Cities"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "ella-henderson-ghost",
+    "title": "Ghost",
+    "album": "Chapter One (Deluxe Version)",
+    "singers": [
+      "Ella Henderson"
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "train-50-ways-to-say-goodbye",
+    "title": "50 Ways to Say Goodbye",
+    "album": "California 37",
+    "singers": [
+      "Train"
+    ],
+    "key": "F#/Gb major"
+  },
+  {
+    "id": "vance-joy-riptide",
+    "title": "Riptide",
+    "album": "Dream Your Life Away",
+    "singers": [
+      "Vance Joy"
+    ],
+    "key": "C#/Db major"
+  },
+  {
+    "id": "p-nk-so-what",
+    "title": "So What",
+    "album": "Funhouse: The Tour Edition",
+    "singers": [
+      "P!nk"
+    ],
+    "key": "B major"
+  },
+  {
+    "id": "cher-lloyd-want-u-back",
+    "title": "Want U Back",
+    "album": "Sticks & Stones",
+    "singers": [
+      "Cher Lloyd"
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "kelly-clarkson-stronger-what-doesn-t-kill-you",
+    "title": "Stronger (What Doesn't Kill You)",
+    "album": "Stronger (Deluxe Version)",
+    "singers": [
+      "Kelly Clarkson"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "clean-bandit-jess-glynne-rather-be-feat-jess-glynne",
+    "title": "Rather Be (feat. Jess Glynne)",
+    "album": "New Eyes",
+    "singers": [
+      "Clean Bandit;Jess Glynne"
+    ],
+    "key": "B major"
+  },
+  {
+    "id": "ellie-goulding-burn",
+    "title": "Burn",
+    "album": "Halcyon Days",
+    "singers": [
+      "Ellie Goulding"
+    ],
+    "key": "C#/Db major"
+  },
+  {
+    "id": "alesso-tove-lo-heroes-we-could-be",
+    "title": "Heroes (we could be)",
+    "album": "Forever",
+    "singers": [
+      "Alesso;Tove Lo"
+    ],
+    "key": "F major"
+  },
+  {
+    "id": "rachel-platten-fight-song",
+    "title": "Fight Song",
+    "album": "Wildfire",
+    "singers": [
+      "Rachel Platten"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "andy-grammer-honey-i-m-good",
+    "title": "Honey, I'm Good.",
+    "album": "Magazines Or Novels",
+    "singers": [
+      "Andy Grammer"
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "p-nk-blow-me",
+    "title": "Blow Me",
+    "album": "The Truth About Love",
+    "singers": [
+      "P!nk"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "kesha-tik-tok",
+    "title": "TiK ToK",
+    "album": "Animal",
+    "singers": [
+      "Kesha"
+    ],
+    "key": "D minor"
+  },
+  {
+    "id": "jessie-j-domino",
+    "title": "Domino",
+    "album": "Who You Are (Platinum Edition)",
+    "singers": [
+      "Jessie J"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "neon-trees-everybody-talks",
+    "title": "Everybody Talks",
+    "album": "Picture Show",
+    "singers": [
+      "Neon Trees"
+    ],
+    "key": "G#/Ab major"
+  },
+  {
+    "id": "omi-felix-jaehn-cheerleader-felix-jaehn-remix-radio-edit",
+    "title": "Cheerleader (Felix Jaehn Remix) - Radio Edit",
+    "album": "Me 4 U",
+    "singers": [
+      "OMI;Felix Jaehn"
+    ],
+    "key": "E major"
+  },
+  {
+    "id": "jason-derulo-want-to-want-me",
+    "title": "Want to Want Me",
+    "album": "Everything Is 4",
+    "singers": [
+      "Jason Derulo"
+    ],
+    "key": "C minor"
+  },
+  {
+    "id": "kelly-clarkson-heartbeat-song",
+    "title": "Heartbeat Song",
+    "album": "Piece By Piece (Deluxe Version)",
+    "singers": [
+      "Kelly Clarkson"
+    ],
+    "key": "F#/Gb major"
+  },
+  {
+    "id": "macklemore-ryan-lewis-macklemore-ryan-lewis-mary-lambert-same-love-feat-mary-lam",
+    "title": "Same Love (feat. Mary Lambert)",
+    "album": "The Heist",
+    "singers": [
+      "Macklemore & Ryan Lewis;Macklemore;Ryan Lewis;Mary Lambert"
+    ],
+    "key": "G#/Ab major"
+  },
+  {
+    "id": "twenty-one-pilots-heathens",
+    "title": "Heathens",
+    "album": "Heathens",
+    "singers": [
+      "Twenty One Pilots"
+    ],
+    "key": "E minor"
+  },
+  {
+    "id": "lukas-graham-mama-said",
+    "title": "Mama Said",
+    "album": "Lukas Graham",
+    "singers": [
+      "Lukas Graham"
+    ],
+    "key": "G minor"
+  },
+  {
+    "id": "the-chainsmokers-halsey-closer",
+    "title": "Closer",
+    "album": "Closer",
+    "singers": [
+      "The Chainsmokers;Halsey"
+    ],
+    "key": "G#/Ab major"
+  },
+  {
+    "id": "wrabel-11-blocks",
+    "title": "11 Blocks",
+    "album": "11 Blocks",
+    "singers": [
+      "WRABEL"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "b-rns-electric-love",
+    "title": "Electric Love",
+    "album": "Dopamine",
+    "singers": [
+      "BØRNS"
+    ],
+    "key": "F#/Gb minor"
+  },
+  {
+    "id": "fitz-and-the-tantrums-handclap",
+    "title": "HandClap",
+    "album": "Fitz and The Tantrums",
+    "singers": [
+      "Fitz and The Tantrums"
+    ],
+    "key": "G#/Ab major"
+  },
+  {
+    "id": "andy-grammer-fresh-eyes",
+    "title": "Fresh Eyes",
+    "album": "Fresh Eyes",
+    "singers": [
+      "Andy Grammer"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "john-legend-love-me-now",
+    "title": "Love Me Now",
+    "album": "Love Me Now",
+    "singers": [
+      "John Legend"
+    ],
+    "key": "G#/Ab major"
+  },
+  {
+    "id": "train-play-that-song",
+    "title": "Play That Song",
+    "album": "Play That Song",
+    "singers": [
+      "Train"
+    ],
+    "key": "D#/Eb major"
+  },
+  {
+    "id": "ed-sheeran-shape-of-you",
+    "title": "Shape of You",
+    "album": "Shape of You",
+    "singers": [
+      "Ed Sheeran"
+    ],
+    "key": "C#/Db minor"
+  },
+  {
+    "id": "ed-sheeran-castle-on-the-hill",
+    "title": "Castle on the Hill",
+    "album": "Castle on the Hill",
+    "singers": [
+      "Ed Sheeran"
+    ],
+    "key": "D major"
+  },
+  {
+    "id": "zayn-taylor-swift-i-don-t-wanna-live-forever-fifty-shades-darker",
+    "title": "I Don’t Wanna Live Forever (Fifty Shades Darker)",
+    "album": "I Don’t Wanna Live Forever (Fifty Shades Darker)",
+    "singers": [
+      "ZAYN;Taylor Swift"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "the-chainsmokers-paris",
+    "title": "Paris",
+    "album": "Paris",
+    "singers": [
+      "The Chainsmokers"
+    ],
+    "key": "D major"
+  },
+  {
+    "id": "ed-sheeran-perfect",
+    "title": "Perfect",
+    "album": "÷ (Deluxe)",
+    "singers": [
+      "Ed Sheeran"
+    ],
+    "key": "G#/Ab major"
+  },
+  {
+    "id": "ed-sheeran-galway-girl",
+    "title": "Galway Girl",
+    "album": "÷ (Deluxe)",
+    "singers": [
+      "Ed Sheeran"
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "james-arthur-say-you-won-t-let-go",
+    "title": "Say You Won't Let Go",
+    "album": "Back from the Edge",
+    "singers": [
+      "James Arthur"
+    ],
+    "key": "A#/Bb major"
+  },
+  {
+    "id": "nick-fradiani-beautiful-life",
+    "title": "Beautiful Life",
+    "album": "American Idol Season 14: Best Of Nick Fradiani",
+    "singers": [
+      "Nick Fradiani"
+    ],
+    "key": "F#/Gb major"
+  },
+  {
+    "id": "andrew-mcmahon-in-the-wilderness-cecilia-and-the-satellite-live",
+    "title": "Cecilia And The Satellite - Live",
+    "album": "Cecilia And The Satellite (Live)",
+    "singers": [
+      "Andrew McMahon in the Wilderness"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "blue-october-home",
+    "title": "Home",
+    "album": "Home",
+    "singers": [
+      "Blue October"
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "the-strumbellas-spirits",
+    "title": "Spirits",
+    "album": "Hope",
+    "singers": [
+      "The Strumbellas"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "niall-horan-this-town",
+    "title": "This Town",
+    "album": "This Town",
+    "singers": [
+      "Niall Horan"
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "kygo-parson-james-stole-the-show",
+    "title": "Stole the Show",
+    "album": "Cloud Nine",
+    "singers": [
+      "Kygo;Parson James"
+    ],
+    "key": "G#/Ab minor"
+  },
+  {
+    "id": "adam-lambert-ghost-town",
+    "title": "Ghost Town",
+    "album": "The Original High (Deluxe Version)",
+    "singers": [
+      "Adam Lambert"
+    ],
+    "key": "E minor"
+  },
+  {
+    "id": "lady-gaga-million-reasons",
+    "title": "Million Reasons",
+    "album": "Joanne (Deluxe)",
+    "singers": [
+      "Lady Gaga"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "harry-styles-sign-of-the-times",
+    "title": "Sign of the Times",
+    "album": "Harry Styles",
+    "singers": [
+      "Harry Styles"
+    ],
+    "key": "F major"
+  },
+  {
+    "id": "imagine-dragons-believer",
+    "title": "Believer",
+    "album": "Evolve",
+    "singers": [
+      "Imagine Dragons"
+    ],
+    "key": "A#/Bb minor"
+  },
+  {
+    "id": "jamie-lawson-wasn-t-expecting-that",
+    "title": "Wasn't Expecting That",
+    "album": "Jamie Lawson",
+    "singers": [
+      "Jamie Lawson"
+    ],
+    "key": "F#/Gb major"
+  },
+  {
+    "id": "avalanche-city-love-love-love",
+    "title": "Love Love Love",
+    "album": "Love Love Love",
+    "singers": [
+      "Avalanche City"
+    ],
+    "key": "F#/Gb major"
+  },
+  {
+    "id": "kesha-praying",
+    "title": "Praying",
+    "album": "Praying",
+    "singers": [
+      "Kesha"
+    ],
+    "key": "A#/Bb major"
+  },
+  {
+    "id": "the-bravery-believe",
+    "title": "Believe",
+    "album": "The Sun And The Moon",
+    "singers": [
+      "The Bravery"
+    ],
+    "key": "G#/Ab major"
+  },
+  {
+    "id": "mother-mother-love-stuck",
+    "title": "Love Stuck",
+    "album": "No Culture (Deluxe)",
+    "singers": [
+      "Mother Mother"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "luminate-let-my-love-open-the-door",
+    "title": "Let My Love Open The Door",
+    "album": "The Covers EP",
+    "singers": [
+      "Luminate"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "paramore-hard-times",
+    "title": "Hard Times",
+    "album": "After Laughter",
+    "singers": [
+      "Paramore"
+    ],
+    "key": "F minor"
+  },
+  {
+    "id": "ava-max-sweet-but-psycho",
+    "title": "Sweet but Psycho",
+    "album": "Sweet but Psycho",
+    "singers": [
+      "Ava Max"
+    ],
+    "key": "C#/Db major"
+  },
+  {
+    "id": "panic-at-the-disco-high-hopes",
+    "title": "High Hopes",
+    "album": "Pray for the Wicked",
+    "singers": [
+      "Panic! At The Disco"
+    ],
+    "key": "F major"
+  },
+  {
+    "id": "panic-at-the-disco-death-of-a-bachelor",
+    "title": "Death of a Bachelor",
+    "album": "Death of a Bachelor",
+    "singers": [
+      "Panic! At The Disco"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "panic-at-the-disco-say-amen-saturday-night",
+    "title": "Say Amen (Saturday Night)",
+    "album": "Pray for the Wicked",
+    "singers": [
+      "Panic! At The Disco"
+    ],
+    "key": "F#/Gb minor"
+  },
+  {
+    "id": "thirty-seconds-to-mars-kings-and-queens",
+    "title": "Kings And Queens",
+    "album": "This Is War (Deluxe)",
+    "singers": [
+      "Thirty Seconds To Mars"
+    ],
+    "key": "G#/Ab major"
+  },
+  {
+    "id": "panic-at-the-disco-this-is-gospel",
+    "title": "This Is Gospel",
+    "album": "Too Weird to Live, Too Rare to Die!",
+    "singers": [
+      "Panic! At The Disco"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "michael-kiwanuka-cold-little-heart-radio-edit",
+    "title": "Cold Little Heart - Radio Edit",
+    "album": "Cold Little Heart (Radio Edit)",
+    "singers": [
+      "Michael Kiwanuka"
+    ],
+    "key": "G minor"
+  },
+  {
+    "id": "lewis-capaldi-someone-you-loved",
+    "title": "Someone You Loved",
+    "album": "Divinely Uninspired To A Hellish Extent",
+    "singers": [
+      "Lewis Capaldi"
+    ],
+    "key": "C#/Db major"
+  },
+  {
+    "id": "billie-eilish-bad-guy",
+    "title": "bad guy",
+    "album": "WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?",
+    "singers": [
+      "Billie Eilish"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "dj-shadow-run-the-jewels-nobody-speak",
+    "title": "Nobody Speak",
+    "album": "The Mountain Will Fall",
+    "singers": [
+      "DJ Shadow;Run The Jewels"
+    ],
+    "key": "D major"
+  },
+  {
+    "id": "taylor-swift-the-last-great-american-dynasty",
+    "title": "the last great american dynasty",
+    "album": "folklore",
+    "singers": [
+      "Taylor Swift"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "taylor-swift-illicit-affairs",
+    "title": "illicit affairs",
+    "album": "folklore",
+    "singers": [
+      "Taylor Swift"
+    ],
+    "key": "A#/Bb major"
+  },
+  {
+    "id": "taylor-swift-betty",
+    "title": "betty",
+    "album": "folklore",
+    "singers": [
+      "Taylor Swift"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "taylor-swift-cardigan",
+    "title": "cardigan",
+    "album": "folklore",
+    "singers": [
+      "Taylor Swift"
+    ],
+    "key": "C minor"
+  },
+  {
+    "id": "woodkid-run-boy-run",
+    "title": "Run Boy Run",
+    "album": "The Golden Age",
+    "singers": [
+      "Woodkid"
+    ],
+    "key": "F minor"
+  },
+  {
+    "id": "the-interrupters-bad-guy",
+    "title": "Bad Guy",
+    "album": "Bad Guy",
+    "singers": [
+      "The Interrupters"
+    ],
+    "key": "G minor"
+  },
+  {
+    "id": "x-ambassadors-unsteady",
+    "title": "Unsteady",
+    "album": "VHS",
+    "singers": [
+      "X Ambassadors"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "hamilton-leithauser-rostam-in-a-black-out",
+    "title": "In a Black Out",
+    "album": "I Had a Dream That You Were Mine",
+    "singers": [
+      "Hamilton Leithauser;Rostam"
+    ],
+    "key": "D#/Eb major"
+  },
+  {
+    "id": "dua-lipa-don-t-start-now",
+    "title": "Don't Start Now",
+    "album": "Future Nostalgia",
+    "singers": [
+      "Dua Lipa"
+    ],
+    "key": "B minor"
+  },
+  {
+    "id": "donna-missal-nothing-s-gonna-hurt-you-baby-from-promising-young-woman-soundtrack",
+    "title": "Nothing's Gonna Hurt You Baby - From \"Promising Young Woman\" Soundtrack",
+    "album": "Promising Young Woman (Original Motion Picture Soundtrack)",
+    "singers": [
+      "Donna Missal"
+    ],
+    "key": "E major"
+  },
+  {
+    "id": "taylor-swift-haim-no-body-no-crime-feat-haim",
+    "title": "no body, no crime (feat. HAIM)",
+    "album": "evermore",
+    "singers": [
+      "Taylor Swift;HAIM"
+    ],
+    "key": "G minor"
+  },
+  {
+    "id": "metric-brie-larson-black-sheep-brie-larson-vocal-version",
+    "title": "Black Sheep - Brie Larson Vocal Version",
+    "album": "Black Sheep (Brie Larson Vocal Version)",
+    "singers": [
+      "Metric;Brie Larson"
+    ],
+    "key": "B minor"
+  },
+  {
+    "id": "aly-aj-don-t-need-nothing",
+    "title": "Don't Need Nothing",
+    "album": "a touch of the beat gets you up on your feet gets you out and then into the sun",
+    "singers": [
+      "Aly & AJ"
+    ],
+    "key": "F#/Gb minor"
+  },
+  {
+    "id": "aly-aj-pretty-places",
+    "title": "Pretty Places",
+    "album": "a touch of the beat gets you up on your feet gets you out and then into the sun",
+    "singers": [
+      "Aly & AJ"
+    ],
+    "key": "D major"
+  },
+  {
+    "id": "ava-max-kings-queens",
+    "title": "Kings & Queens",
+    "album": "Heaven & Hell",
+    "singers": [
+      "Ava Max"
+    ],
+    "key": "C#/Db minor"
+  },
+  {
+    "id": "chaos-chaos-do-you-feel-it",
+    "title": "Do You Feel It?",
+    "album": "Committed to the Crime",
+    "singers": [
+      "Chaos Chaos"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "kishi-bashi-i-am-the-antichrist-to-you",
+    "title": "I Am the Antichrist to You",
+    "album": "151a",
+    "singers": [
+      "Kishi Bashi"
+    ],
+    "key": "D#/Eb major"
+  },
+  {
+    "id": "olivia-rodrigo-good-4-u",
+    "title": "good 4 u",
+    "album": "SOUR",
+    "singers": [
+      "Olivia Rodrigo"
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "olivia-rodrigo-brutal",
+    "title": "brutal",
+    "album": "SOUR",
+    "singers": [
+      "Olivia Rodrigo"
+    ],
+    "key": "E major"
+  },
+  {
+    "id": "edith-whiskers-home",
+    "title": "Home",
+    "album": "Stop Stealing The Covers!",
+    "singers": [
+      "Edith Whiskers"
+    ],
+    "key": "D major"
+  },
+  {
+    "id": "young-the-giant-mind-over-matter-reprise",
+    "title": "Mind Over Matter (Reprise)",
+    "album": "Mirrorball / Mind Over Matter (Reprise)",
+    "singers": [
+      "Young the Giant"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "sleeping-at-last-you-are-enough",
+    "title": "You Are Enough",
+    "album": "Atlas: I",
+    "singers": [
+      "Sleeping At Last"
+    ],
+    "key": "C#/Db major"
+  },
+  {
+    "id": "boywithuke-two-moons",
+    "title": "Two Moons",
+    "album": "Fever Dreams",
+    "singers": [
+      "BoyWithUke"
+    ],
+    "key": "F#/Gb minor"
+  },
+  {
+    "id": "saint-lazare-prhymekid-hey-how-you-doing",
+    "title": "HEY HOW YOU DOING",
+    "album": "The Saint Lazare Sample Pack",
+    "singers": [
+      "Saint Lazare;Prhymekid"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "a-wall-loverboy",
+    "title": "Loverboy",
+    "album": "Loverboy",
+    "singers": [
+      "A-Wall"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "hollow-coves-coastline",
+    "title": "Coastline",
+    "album": "Wanderlust",
+    "singers": [
+      "Hollow Coves"
+    ],
+    "key": "D major"
+  },
+  {
+    "id": "vance-joy-fire-and-the-flood",
+    "title": "Fire and the Flood",
+    "album": "Dream Your Life Away (Special Edition)",
+    "singers": [
+      "Vance Joy"
+    ],
+    "key": "F major"
+  },
+  {
+    "id": "loi-blinding-lights",
+    "title": "Blinding Lights",
+    "album": "Blinding Lights",
+    "singers": [
+      "Loi"
+    ],
+    "key": "A#/Bb minor"
+  },
+  {
+    "id": "lil-nas-x-thats-what-i-want",
+    "title": "THATS WHAT I WANT",
+    "album": "MONTERO",
+    "singers": [
+      "Lil Nas X"
+    ],
+    "key": "C#/Db minor"
+  },
+  {
+    "id": "ajr-world-s-smallest-violin",
+    "title": "World's Smallest Violin",
+    "album": "OK ORCHESTRA",
+    "singers": [
+      "AJR"
+    ],
+    "key": "F major"
+  },
+  {
+    "id": "lord-huron-the-night-we-met",
+    "title": "The Night We Met",
+    "album": "The Night We Met",
+    "singers": [
+      "Lord Huron"
+    ],
+    "key": "D major"
+  },
+  {
+    "id": "avril-lavigne-what-the-hell-2z4u9d5o",
+    "title": "What the Hell",
+    "album": "Goodbye Lullaby (Expanded Edition)",
+    "singers": [
+      "Avril Lavigne"
+    ],
+    "key": "F#/Gb minor"
+  },
+  {
+    "id": "carly-rae-jepsen-rufus-wainwright-the-loneliest-time-feat-rufus-wainwright",
+    "title": "The Loneliest Time (feat. Rufus Wainwright)",
+    "album": "The Loneliest Time",
+    "singers": [
+      "Carly Rae Jepsen;Rufus Wainwright"
+    ],
+    "key": "D major"
+  },
+  {
+    "id": "jax-victoria-s-secret",
+    "title": "Victoria's Secret",
+    "album": "Victoria’s Secret",
+    "singers": [
+      "Jax"
+    ],
+    "key": "F#/Gb major"
+  },
+  {
+    "id": "george-ezra-green-green-grass-sped-up",
+    "title": "Green Green Grass - Sped-Up",
+    "album": "Green Green Grass (Sped-Up)",
+    "singers": [
+      "George Ezra"
+    ],
+    "key": "C#/Db major"
+  },
+  {
+    "id": "mae-stephens-if-we-ever-broke-up",
+    "title": "If We Ever Broke Up",
+    "album": "If We Ever Broke Up",
+    "singers": [
+      "Mae Stephens"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "stephen-sanchez-em-beihold-until-i-found-you-with-em-beihold-em-beihold-version",
+    "title": "Until I Found You (with Em Beihold) - Em Beihold Version",
+    "album": "Until I Found You (Em Beihold Version)",
+    "singers": [
+      "Stephen Sanchez;Em Beihold"
+    ],
+    "key": "A#/Bb major"
+  },
+  {
+    "id": "hannah-connolly-vienna",
+    "title": "Vienna",
+    "album": "Vienna",
+    "singers": [
+      "Hannah Connolly"
+    ],
+    "key": "B major"
+  },
+  {
+    "id": "florence-the-machine-just-a-girl-from-the-original-series-yellowjackets",
+    "title": "Just A Girl - From The Original Series “Yellowjackets”",
+    "album": "Just A Girl (From The Original Series “Yellowjackets”)",
+    "singers": [
+      "Florence + The Machine"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "the-script-breakeven",
+    "title": "Breakeven",
+    "album": "The Script",
+    "singers": [
+      "The Script"
+    ],
+    "key": "A#/Bb major"
+  },
+  {
+    "id": "eric-hutchinson-tell-the-world",
+    "title": "Tell The World",
+    "album": "Pure Fiction",
+    "singers": [
+      "Eric Hutchinson"
+    ],
+    "key": "E major"
+  },
+  {
+    "id": "meghan-trainor-me-too",
+    "title": "Me Too",
+    "album": "Thank You (Deluxe Version)",
+    "singers": [
+      "Meghan Trainor"
+    ],
+    "key": "B minor"
+  },
+  {
+    "id": "hailee-steinfeld-love-myself",
+    "title": "Love Myself",
+    "album": "HAIZ",
+    "singers": [
+      "Hailee Steinfeld"
+    ],
+    "key": "C minor"
+  },
+  {
+    "id": "g-r-l-ugly-heart",
+    "title": "Ugly Heart",
+    "album": "G.R.L.",
+    "singers": [
+      "G.R.L."
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "hot-chelle-rae-new-boyz-i-like-it-like-that-feat-new-boyz",
+    "title": "I Like It Like That (feat. New Boyz)",
+    "album": "Whatever",
+    "singers": [
+      "Hot Chelle Rae;New Boyz"
+    ],
+    "key": "C#/Db major"
+  },
+  {
+    "id": "meghan-trainor-all-about-that-bass",
+    "title": "All About That Bass",
+    "album": "Title (Deluxe)",
+    "singers": [
+      "Meghan Trainor"
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "george-ezra-budapest",
+    "title": "Budapest",
+    "album": "Wanted on Voyage (Expanded Edition)",
+    "singers": [
+      "George Ezra"
+    ],
+    "key": "F major"
+  },
+  {
+    "id": "the-fray-love-don-t-die",
+    "title": "Love Don't Die",
+    "album": "Helios",
+    "singers": [
+      "The Fray"
+    ],
+    "key": "B minor"
+  },
+  {
+    "id": "the-lumineers-stubborn-love",
+    "title": "Stubborn Love",
+    "album": "The Lumineers",
+    "singers": [
+      "The Lumineers"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "taylor-swift-i-knew-you-were-trouble",
+    "title": "I Knew You Were Trouble.",
+    "album": "Red (Big Machine Radio Release Special)",
+    "singers": [
+      "Taylor Swift"
+    ],
+    "key": "D#/Eb minor"
+  },
+  {
+    "id": "meghan-trainor-john-legend-like-i-m-gonna-lose-you-feat-john-legend",
+    "title": "Like I'm Gonna Lose You (feat. John Legend)",
+    "album": "Title (Deluxe)",
+    "singers": [
+      "Meghan Trainor;John Legend"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "christina-perri-a-thousand-years",
+    "title": "a thousand years",
+    "album": "a thousand years",
+    "singers": [
+      "Christina Perri"
+    ],
+    "key": "A#/Bb major"
+  },
+  {
+    "id": "one-direction-best-song-ever",
+    "title": "Best Song Ever",
+    "album": "Midnight Memories (Deluxe)",
+    "singers": [
+      "One Direction"
+    ],
+    "key": "C#/Db major"
+  },
+  {
+    "id": "adele-someone-like-you",
+    "title": "Someone Like You",
+    "album": "21",
+    "singers": [
+      "Adele"
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "adele-when-we-were-young",
+    "title": "When We Were Young",
+    "album": "25",
+    "singers": [
+      "Adele"
+    ],
+    "key": "D#/Eb major"
+  },
+  {
+    "id": "elle-king-ex-s-oh-s",
+    "title": "Ex's & Oh's",
+    "album": "Love Stuff",
+    "singers": [
+      "Elle King"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "of-monsters-and-men-dirty-paws",
+    "title": "Dirty Paws",
+    "album": "My Head Is An Animal",
+    "singers": [
+      "Of Monsters and Men"
+    ],
+    "key": "D#/Eb major"
+  },
+  {
+    "id": "a-great-big-world-christina-aguilera-say-something",
+    "title": "Say Something",
+    "album": "Is There Anybody Out There?",
+    "singers": [
+      "A Great Big World;Christina Aguilera"
+    ],
+    "key": "D major"
+  },
+  {
+    "id": "taylor-swift-22",
+    "title": "22",
+    "album": "Red (Big Machine Radio Release Special)",
+    "singers": [
+      "Taylor Swift"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "lady-gaga-bradley-cooper-shallow",
+    "title": "Shallow",
+    "album": "A Star Is Born Soundtrack",
+    "singers": [
+      "Lady Gaga;Bradley Cooper"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "selena-gomez-lose-you-to-love-me",
+    "title": "Lose You To Love Me",
+    "album": "Rare",
+    "singers": [
+      "Selena Gomez"
+    ],
+    "key": "E major"
+  },
+  {
+    "id": "gotye-kimbra-somebody-that-i-used-to-know",
+    "title": "Somebody That I Used To Know",
+    "album": "Making Mirrors",
+    "singers": [
+      "Gotye;Kimbra"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "taylor-swift-blank-space",
+    "title": "Blank Space",
+    "album": "1989",
+    "singers": [
+      "Taylor Swift"
+    ],
+    "key": "F major"
+  },
+  {
+    "id": "edward-sharpe-the-magnetic-zeros-home-2019-remaster",
+    "title": "Home - 2019 - Remaster",
+    "album": "Up From Below (10th Anniversary Edition) [2019 - Remaster]",
+    "singers": [
+      "Edward Sharpe & The Magnetic Zeros"
+    ],
+    "key": "D major"
+  },
+  {
+    "id": "adele-set-fire-to-the-rain",
+    "title": "Set Fire to the Rain",
+    "album": "21",
+    "singers": [
+      "Adele"
+    ],
+    "key": "D minor"
+  },
+  {
+    "id": "neon-trees-animal",
+    "title": "Animal",
+    "album": "Habits",
+    "singers": [
+      "Neon Trees"
+    ],
+    "key": "F major"
+  },
+  {
+    "id": "one-direction-what-makes-you-beautiful",
+    "title": "What Makes You Beautiful",
+    "album": "Up All Night",
+    "singers": [
+      "One Direction"
+    ],
+    "key": "E major"
+  },
+  {
+    "id": "ellie-goulding-lights-single-version",
+    "title": "Lights - Single Version",
+    "album": "Lights",
+    "singers": [
+      "Ellie Goulding"
+    ],
+    "key": "G#/Ab minor"
+  },
+  {
+    "id": "the-score-oh-my-love",
+    "title": "Oh My Love",
+    "album": "ATLAS (Deluxe)",
+    "singers": [
+      "The Score"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "the-chainsmokers-coldplay-something-just-like-this",
+    "title": "Something Just Like This",
+    "album": "Memories...Do Not Open",
+    "singers": [
+      "The Chainsmokers;Coldplay"
+    ],
+    "key": "B minor"
+  },
+  {
+    "id": "princess-chelsea-cigarette-duet",
+    "title": "Cigarette Duet",
+    "album": "Lil' Golden Book",
+    "singers": [
+      "Princess Chelsea"
+    ],
+    "key": "C minor"
+  },
+  {
+    "id": "madison-shamoun-you-gotta-be-from-the-amazon-original-series-the-lake",
+    "title": "You Gotta Be (From the Amazon Original Series The Lake)",
+    "album": "You Gotta Be (From the Amazon Original Series The Lake)",
+    "singers": [
+      "Madison Shamoun"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "gavin-degraw-she-sets-the-city-on-fire",
+    "title": "She Sets The City On Fire",
+    "album": "Something Worth Saving",
+    "singers": [
+      "Gavin DeGraw"
+    ],
+    "key": "E major"
+  },
+  {
+    "id": "kesha-take-it-off",
+    "title": "Take It Off",
+    "album": "Animal (Expanded Edition)",
+    "singers": [
+      "Kesha"
+    ],
+    "key": "F minor"
+  },
+  {
+    "id": "ti-sto-red-lights",
+    "title": "Red Lights",
+    "album": "A Town Called Paradise",
+    "singers": [
+      "Tiësto"
+    ],
+    "key": "A#/Bb major"
+  },
+  {
+    "id": "the-struts-could-have-been-me",
+    "title": "Could Have Been Me",
+    "album": "Everybody Wants",
+    "singers": [
+      "The Struts"
+    ],
+    "key": "E major"
+  },
+  {
+    "id": "tegan-and-sara-closer",
+    "title": "Closer",
+    "album": "Heartthrob",
+    "singers": [
+      "Tegan and Sara"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "brandi-carlile-catherine-carlile-closer-to-fine-from-barbie-the-album",
+    "title": "Closer To Fine (From Barbie The Album)",
+    "album": "Closer To Fine (From Barbie The Album)",
+    "singers": [
+      "Brandi Carlile;Catherine Carlile"
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "lizzo-pink",
+    "title": "Pink",
+    "album": "Barbie The Album",
+    "singers": [
+      "Lizzo"
+    ],
+    "key": "C#/Db major"
+  },
+  {
+    "id": "dua-lipa-dance-the-night-from-barbie-the-album",
+    "title": "Dance The Night - From Barbie The Album",
+    "album": "Dance The Night (From Barbie The Album)",
+    "singers": [
+      "Dua Lipa"
+    ],
+    "key": "B minor"
+  },
+  {
+    "id": "fall-out-boy-we-didn-t-start-the-fire-bonus-track",
+    "title": "We Didn’t Start The Fire (Bonus Track)",
+    "album": "So Much (For) Stardust",
+    "singers": [
+      "Fall Out Boy"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "em-beihold-numb-little-bug",
+    "title": "Numb Little Bug",
+    "album": "Egg in the Backseat",
+    "singers": [
+      "Em Beihold"
+    ],
+    "key": "G#/Ab minor"
+  },
+  {
+    "id": "olivia-rodrigo-bad-idea-right",
+    "title": "bad idea right?",
+    "album": "GUTS",
+    "singers": [
+      "Olivia Rodrigo"
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "olivia-rodrigo-get-him-back",
+    "title": "get him back!",
+    "album": "GUTS",
+    "singers": [
+      "Olivia Rodrigo"
+    ],
+    "key": "F major"
+  },
+  {
+    "id": "fun-sight-of-the-sun-single-version",
+    "title": "Sight of the Sun - Single Version",
+    "album": "Sight of the Sun",
+    "singers": [
+      "fun."
+    ],
+    "key": "B major"
+  },
+  {
+    "id": "noah-kahan-stick-season",
+    "title": "Stick Season",
+    "album": "Stick Season",
+    "singers": [
+      "Noah Kahan"
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "djo-end-of-beginning",
+    "title": "End of Beginning",
+    "album": "DECIDE",
+    "singers": [
+      "Djo"
+    ],
+    "key": "D major"
+  },
+  {
+    "id": "of-monsters-and-men-mountain-sound",
+    "title": "Mountain Sound",
+    "album": "My Head Is An Animal",
+    "singers": [
+      "Of Monsters and Men"
+    ],
+    "key": "C#/Db minor"
+  },
+  {
+    "id": "the-naked-and-famous-young-blood",
+    "title": "Young Blood",
+    "album": "Passive Me, Aggressive You",
+    "singers": [
+      "The Naked And Famous"
+    ],
+    "key": "F#/Gb major"
+  },
+  {
+    "id": "two-door-cinema-club-what-you-know",
+    "title": "What You Know",
+    "album": "Tourist History",
+    "singers": [
+      "Two Door Cinema Club"
+    ],
+    "key": "F#/Gb minor"
+  },
+  {
+    "id": "tom-odell-another-love",
+    "title": "Another Love",
+    "album": "Long Way Down (Deluxe)",
+    "singers": [
+      "Tom Odell"
+    ],
+    "key": "E minor"
+  },
+  {
+    "id": "adele-send-my-love-to-your-new-lover",
+    "title": "Send My Love (To Your New Lover)",
+    "album": "25",
+    "singers": [
+      "Adele"
+    ],
+    "key": "F#/Gb minor"
+  },
+  {
+    "id": "selena-gomez-single-soon",
+    "title": "Single Soon",
+    "album": "Single Soon",
+    "singers": [
+      "Selena Gomez"
+    ],
+    "key": "D major"
+  },
+  {
+    "id": "harry-styles-watermelon-sugar",
+    "title": "Watermelon Sugar",
+    "album": "Fine Line",
+    "singers": [
+      "Harry Styles"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "taylor-swift-anti-hero",
+    "title": "Anti-Hero",
+    "album": "Midnights",
+    "singers": [
+      "Taylor Swift"
+    ],
+    "key": "E major"
+  },
+  {
+    "id": "taylor-swift-i-can-do-it-with-a-broken-heart",
+    "title": "I Can Do It With a Broken Heart",
+    "album": "THE TORTURED POETS DEPARTMENT",
+    "singers": [
+      "Taylor Swift"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "sabrina-carpenter-espresso",
+    "title": "Espresso",
+    "album": "Espresso",
+    "singers": [
+      "Sabrina Carpenter"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "taylor-swift-florence-the-machine-florida-feat-florence-the-machine",
+    "title": "Florida!!! (feat. Florence + The Machine)",
+    "album": "THE TORTURED POETS DEPARTMENT",
+    "singers": [
+      "Taylor Swift;Florence + The Machine"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "sabrina-carpenter-feather",
+    "title": "Feather",
+    "album": "emails i can’t send fwd:",
+    "singers": [
+      "Sabrina Carpenter"
+    ],
+    "key": "F#/Gb minor"
+  },
+  {
+    "id": "chappell-roan-hot-to-go",
+    "title": "HOT TO GO!",
+    "album": "The Rise and Fall of a Midwest Princess",
+    "singers": [
+      "Chappell Roan"
+    ],
+    "key": "F#/Gb major"
+  },
+  {
+    "id": "chappell-roan-red-wine-supernova",
+    "title": "Red Wine Supernova",
+    "album": "The Rise and Fall of a Midwest Princess",
+    "singers": [
+      "Chappell Roan"
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "chappell-roan-good-luck-babe",
+    "title": "Good Luck, Babe!",
+    "album": "Good Luck, Babe!",
+    "singers": [
+      "Chappell Roan"
+    ],
+    "key": "B minor"
+  },
+  {
+    "id": "sabrina-carpenter-please-please-please",
+    "title": "Please Please Please",
+    "album": "Please Please Please",
+    "singers": [
+      "Sabrina Carpenter"
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "chappell-roan-pink-pony-club",
+    "title": "Pink Pony Club",
+    "album": "The Rise and Fall of a Midwest Princess",
+    "singers": [
+      "Chappell Roan"
+    ],
+    "key": "F#/Gb major"
+  },
+  {
+    "id": "senses-good-luck-babe",
+    "title": "good luck, babe!",
+    "album": "good luck, babe!",
+    "singers": [
+      "senses"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "dasha-austin-boots-stop-workin",
+    "title": "Austin (Boots Stop Workin')",
+    "album": "What Happens Now?",
+    "singers": [
+      "Dasha"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "sabrina-carpenter-taste",
+    "title": "Taste",
+    "album": "Short n' Sweet",
+    "singers": [
+      "Sabrina Carpenter"
+    ],
+    "key": "D#/Eb major"
+  },
+  {
+    "id": "andy-grammer-keep-your-head-up",
+    "title": "Keep Your Head Up",
+    "album": "Andy Grammer",
+    "singers": [
+      "Andy Grammer"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "taylor-swift-brendon-urie-panic-at-the-disco-me-feat-brendon-urie-of-panic-at-th",
+    "title": "ME! (feat. Brendon Urie of Panic! At The Disco)",
+    "album": "Lover",
+    "singers": [
+      "Taylor Swift;Brendon Urie;Panic! At The Disco"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "sabrina-carpenter-bed-chem",
+    "title": "Bed Chem",
+    "album": "Short n' Sweet",
+    "singers": [
+      "Sabrina Carpenter"
+    ],
+    "key": "B minor"
+  },
+  {
+    "id": "sabrina-carpenter-juno",
+    "title": "Juno",
+    "album": "Short n' Sweet",
+    "singers": [
+      "Sabrina Carpenter"
+    ],
+    "key": "F major"
+  },
+  {
+    "id": "alex-warren-carry-you-home",
+    "title": "Carry You Home",
+    "album": "Carry You Home",
+    "singers": [
+      "Alex Warren"
+    ],
+    "key": "A#/Bb major"
+  },
+  {
+    "id": "metric-i-will-remember-you",
+    "title": "I Will Remember You",
+    "album": "Scott Pilgrim Takes Off (Soundtrack from the Netflix Original Series)",
+    "singers": [
+      "Metric"
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "kathryn-hahn-sasheer-zamata-ali-ahn-patti-lupone-aubrey-plaza-joe-locke-agatha-a",
+    "title": "The Ballad of the Witches' Road (Cover Version)",
+    "album": "Songs from Agatha All Along (Episode 4)",
+    "singers": [
+      "Kathryn Hahn;Sasheer Zamata;Ali Ahn;Patti LuPone;Aubrey Plaza;Joe Locke;Agatha All Along - Cast"
+    ],
+    "key": "C minor"
+  },
+  {
+    "id": "sophie-ellis-bextor-crying-at-the-discotheque",
+    "title": "Crying at the Discotheque",
+    "album": "Crying at the Discotheque",
+    "singers": [
+      "Sophie Ellis-Bextor"
+    ],
+    "key": "A minor"
+  },
+  {
+    "id": "l-l-u-turn-me-on-but-u-give-me-depression",
+    "title": "u turn me on (but u give me depression)",
+    "album": "falling for robots & wishing i was one",
+    "singers": [
+      "LØLØ"
+    ],
+    "key": "D#/Eb major"
+  },
+  {
+    "id": "l-l-disney-let-it-go",
+    "title": "Let It Go",
+    "album": "A Whole New Sound",
+    "singers": [
+      "LØLØ;Disney"
+    ],
+    "key": "F#/Gb major"
+  },
+  {
+    "id": "l-l-don-t",
+    "title": "DON'T!",
+    "album": "DON'T!",
+    "singers": [
+      "LØLØ"
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "l-l-hot-girls-in-hell",
+    "title": "hot girls in hell",
+    "album": "falling for robots & wishing i was one",
+    "singers": [
+      "LØLØ"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "l-l-u-the-tin-man",
+    "title": "u & the tin man",
+    "album": "falling for robots & wishing i was one",
+    "singers": [
+      "LØLØ"
+    ],
+    "key": "A#/Bb major"
+  },
+  {
+    "id": "l-l-maggie-lindemann-debbie-downer",
+    "title": "debbie downer",
+    "album": "debbie downer",
+    "singers": [
+      "LØLØ;Maggie Lindemann"
+    ],
+    "key": "D major"
+  },
+  {
+    "id": "gracie-abrams-that-s-so-true",
+    "title": "That’s So True",
+    "album": "The Secret of Us (Deluxe)",
+    "singers": [
+      "Gracie Abrams"
+    ],
+    "key": "C#/Db major"
+  },
+  {
+    "id": "dua-lipa-new-rules",
+    "title": "New Rules",
+    "album": "Dua Lipa (Deluxe)",
+    "singers": [
+      "Dua Lipa"
+    ],
+    "key": "A minor"
+  },
+  {
+    "id": "charli-xcx-boom-clap",
+    "title": "Boom Clap",
+    "album": "SUCKER",
+    "singers": [
+      "Charli xcx"
+    ],
+    "key": "E major"
+  },
+  {
+    "id": "robbie-williams-rock-dj-from-better-man-original-motion-picture-soundtrack",
+    "title": "Rock DJ (From Better Man: Original Motion Picture Soundtrack)",
+    "album": "Better Man (Original Motion Picture Soundtrack)",
+    "singers": [
+      "Robbie Williams"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "robbie-williams-adam-tucker-angels-from-better-man-original-motion-picture-sound",
+    "title": "Angels (From Better Man: Original Motion Picture Soundtrack) (feat. Adam Tucker)",
+    "album": "Better Man (Original Motion Picture Soundtrack)",
+    "singers": [
+      "Robbie Williams;Adam Tucker"
+    ],
+    "key": "E major"
+  },
+  {
+    "id": "robbie-williams-adam-tucker-let-me-entertain-you-from-better-man-original-motion",
+    "title": "Let Me Entertain You (From Better Man: Original Motion Picture Soundtrack) (feat. Adam Tucker)",
+    "album": "Better Man (Original Motion Picture Soundtrack)",
+    "singers": [
+      "Robbie Williams;Adam Tucker"
+    ],
+    "key": "A#/Bb major"
+  },
+  {
+    "id": "robyn-dancing-on-my-own",
+    "title": "Dancing On My Own",
+    "album": "Body Talk Pt. 1",
+    "singers": [
+      "Robyn"
+    ],
+    "key": "F#/Gb major"
+  },
+  {
+    "id": "chappell-roan-femininomenon",
+    "title": "Femininomenon",
+    "album": "The Rise and Fall of a Midwest Princess",
+    "singers": [
+      "Chappell Roan"
+    ],
+    "key": "C minor"
+  },
+  {
+    "id": "doechii-anxiety",
+    "title": "Anxiety",
+    "album": "Anxiety",
+    "singers": [
+      "Doechii"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "sabrina-carpenter-busy-woman",
+    "title": "Busy Woman",
+    "album": "Short n' Sweet (Deluxe)",
+    "singers": [
+      "Sabrina Carpenter"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "sabrina-carpenter-15-minutes",
+    "title": "15 Minutes",
+    "album": "Short n' Sweet (Deluxe)",
+    "singers": [
+      "Sabrina Carpenter"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "gracie-abrams-i-love-you-i-m-sorry",
+    "title": "I Love You, I'm Sorry",
+    "album": "The Secret of Us",
+    "singers": [
+      "Gracie Abrams"
+    ],
+    "key": "A#/Bb major"
+  },
+  {
+    "id": "benson-boone-beautiful-things",
+    "title": "Beautiful Things",
+    "album": "Beautiful Things",
+    "singers": [
+      "Benson Boone"
+    ],
+    "key": "A#/Bb major"
+  },
+  {
+    "id": "olivia-rodrigo-vampire",
+    "title": "vampire",
+    "album": "GUTS",
+    "singers": [
+      "Olivia Rodrigo"
+    ],
+    "key": "F major"
+  },
+  {
+    "id": "sabrina-carpenter-manchild",
+    "title": "Manchild",
+    "album": "Manchild",
+    "singers": [
+      "Sabrina Carpenter"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "taylor-swift-cruel-summer",
+    "title": "Cruel Summer",
+    "album": "Lover",
+    "singers": [
+      "Taylor Swift"
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "taylor-swift-style",
+    "title": "Style",
+    "album": "1989",
+    "singers": [
+      "Taylor Swift"
+    ],
+    "key": "D major"
+  },
+  {
+    "id": "benson-boone-sorry-i-m-here-for-someone-else",
+    "title": "Sorry I'm Here For Someone Else",
+    "album": "American Heart",
+    "singers": [
+      "Benson Boone"
+    ],
+    "key": "D major"
+  },
+  {
+    "id": "grouplove-tongue-tied",
+    "title": "Tongue Tied",
+    "album": "Never Trust a Happy Song",
+    "singers": [
+      "GROUPLOVE"
+    ],
+    "key": "D#/Eb major"
+  },
+  {
+    "id": "plain-white-t-s-rhythm-of-love",
+    "title": "Rhythm Of Love",
+    "album": "Wonders Of The Younger",
+    "singers": [
+      "Plain White T's"
+    ],
+    "key": "G#/Ab major"
+  },
+  {
+    "id": "lovelytheband-broken",
+    "title": "broken",
+    "album": "finding it hard to smile",
+    "singers": [
+      "lovelytheband"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "hozier-too-sweet",
+    "title": "Too Sweet",
+    "album": "Unreal Unearth: Unaired",
+    "singers": [
+      "Hozier"
+    ],
+    "key": "A#/Bb major"
+  },
+  {
+    "id": "clean-bandit-anne-marie-sean-paul-rockabye-feat-sean-paul-anne-marie",
+    "title": "Rockabye (feat. Sean Paul & Anne-Marie)",
+    "album": "What Is Love? (Deluxe Edition)",
+    "singers": [
+      "Clean Bandit;Anne-Marie;Sean Paul"
+    ],
+    "key": "A minor"
+  },
+  {
+    "id": "vance-joy-mess-is-mine",
+    "title": "Mess Is Mine",
+    "album": "Dream Your Life Away (Deluxe Edition)",
+    "singers": [
+      "Vance Joy"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "banners-someone-to-you",
+    "title": "Someone To You",
+    "album": "Where The Shadow Ends",
+    "singers": [
+      "BANNERS"
+    ],
+    "key": "D major"
+  },
+  {
+    "id": "aly-aj-potential-breakup-song",
+    "title": "Potential Breakup Song",
+    "album": "Potential Breakup Song",
+    "singers": [
+      "Aly & AJ"
+    ],
+    "key": "F#/Gb minor"
+  },
+  {
+    "id": "jonas-brothers-what-a-man-gotta-do",
+    "title": "What A Man Gotta Do",
+    "album": "What A Man Gotta Do",
+    "singers": [
+      "Jonas Brothers"
+    ],
+    "key": "A major"
+  },
+  {
+    "id": "carly-rae-jepsen-call-me-maybe",
+    "title": "Call Me Maybe",
+    "album": "Kiss (Deluxe)",
+    "singers": [
+      "Carly Rae Jepsen"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "marshmello-bastille-happier",
+    "title": "Happier",
+    "album": "Happier",
+    "singers": [
+      "Marshmello;Bastille"
+    ],
+    "key": "F major"
+  },
+  {
+    "id": "meghan-trainor-made-you-look",
+    "title": "Made You Look",
+    "album": "Takin' It Back",
+    "singers": [
+      "Meghan Trainor"
+    ],
+    "key": "A#/Bb major"
+  },
+  {
+    "id": "alessia-cara-scars-to-your-beautiful",
+    "title": "Scars To Your Beautiful",
+    "album": "Know-It-All",
+    "singers": [
+      "Alessia Cara"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "kesha-blow",
+    "title": "Blow",
+    "album": "Cannibal (Expanded Edition)",
+    "singers": [
+      "Kesha"
+    ],
+    "key": "B minor"
+  },
+  {
+    "id": "neon-trees-sleeping-with-a-friend",
+    "title": "Sleeping With A Friend",
+    "album": "Pop Psychology",
+    "singers": [
+      "Neon Trees"
+    ],
+    "key": "D major"
+  },
+  {
+    "id": "bridgit-mendler-ready-or-not",
+    "title": "Ready or Not",
+    "album": "Hello My Name Is...",
+    "singers": [
+      "Bridgit Mendler"
+    ],
+    "key": "D major"
+  },
+  {
+    "id": "bridgit-mendler-hurricane",
+    "title": "Hurricane",
+    "album": "Hello My Name Is...",
+    "singers": [
+      "Bridgit Mendler"
+    ],
+    "key": "G minor"
+  },
+  {
+    "id": "vance-joy-saturday-sun",
+    "title": "Saturday Sun",
+    "album": "Nation of Two",
+    "singers": [
+      "Vance Joy"
+    ],
+    "key": "G#/Ab major"
+  },
+  {
+    "id": "olivia-rodrigo-drivers-license",
+    "title": "drivers license",
+    "album": "SOUR",
+    "singers": [
+      "Olivia Rodrigo"
+    ],
+    "key": "A#/Bb major"
+  },
+  {
+    "id": "alex-warren-ordinary",
+    "title": "Ordinary",
+    "album": "You'll Be Alright, Kid (Chapter 1)",
+    "singers": [
+      "Alex Warren"
+    ],
+    "key": "D major"
+  },
+  {
+    "id": "myles-smith-stargazing",
+    "title": "Stargazing",
+    "album": "Stargazing",
+    "singers": [
+      "Myles Smith"
+    ],
+    "key": "C#/Db minor"
+  },
+  {
+    "id": "new-politics-harlem",
+    "title": "Harlem",
+    "album": "A Bad Girl In Harlem",
+    "singers": [
+      "New Politics"
+    ],
+    "key": "F#/Gb major"
+  },
+  {
+    "id": "jonas-brothers-sucker",
+    "title": "Sucker",
+    "album": "Happiness Begins",
+    "singers": [
+      "Jonas Brothers"
+    ],
+    "key": "C#/Db minor"
+  },
+  {
+    "id": "b-o-b-rivers-cuomo-magic-feat-rivers-cuomo",
+    "title": "Magic (feat. Rivers Cuomo)",
+    "album": "B.o.B Presents: The Adventures of Bobby Ray",
+    "singers": [
+      "B.o.B;Rivers Cuomo"
+    ],
+    "key": "G#/Ab minor"
+  },
+  {
+    "id": "reckless-love-monster",
+    "title": "Monster",
+    "album": "InVader",
+    "singers": [
+      "Reckless Love"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "sabrina-carpenter-tears",
+    "title": "Tears",
+    "album": "Man’s Best Friend",
+    "singers": [
+      "Sabrina Carpenter"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "sabrina-carpenter-we-almost-broke-up-again-last-night",
+    "title": "We Almost Broke Up Again Last Night",
+    "album": "Man’s Best Friend",
+    "singers": [
+      "Sabrina Carpenter"
+    ],
+    "key": "E major"
+  },
+  {
+    "id": "sabrina-carpenter-house-tour",
+    "title": "House Tour",
+    "album": "Man’s Best Friend",
+    "singers": [
+      "Sabrina Carpenter"
+    ],
+    "key": "F#/Gb major"
+  },
+  {
+    "id": "gracie-abrams-close-to-you",
+    "title": "Close To You",
+    "album": "The Secret of Us",
+    "singers": [
+      "Gracie Abrams"
+    ],
+    "key": "F#/Gb major"
+  },
+  {
+    "id": "of-monsters-and-men-king-and-lionheart",
+    "title": "King And Lionheart",
+    "album": "My Head Is An Animal",
+    "singers": [
+      "Of Monsters and Men"
+    ],
+    "key": "D#/Eb major"
+  },
+  {
+    "id": "the-lumineers-ophelia",
+    "title": "Ophelia",
+    "album": "Cleopatra",
+    "singers": [
+      "The Lumineers"
+    ],
+    "key": "F major"
+  },
+  {
+    "id": "taylor-swift-you-need-to-calm-down",
+    "title": "You Need To Calm Down",
+    "album": "Lover",
+    "singers": [
+      "Taylor Swift"
+    ],
+    "key": "D major"
+  },
+  {
+    "id": "myles-smith-nice-to-meet-you",
+    "title": "Nice To Meet You",
+    "album": "A Minute...",
+    "singers": [
+      "Myles Smith"
+    ],
+    "key": "F minor"
+  },
+  {
+    "id": "benson-boone-mystical-magical",
+    "title": "Mystical Magical",
+    "album": "American Heart",
+    "singers": [
+      "Benson Boone"
+    ],
+    "key": "B major"
+  },
+  {
+    "id": "sabrina-carpenter-nobody-s-son",
+    "title": "Nobody’s Son",
+    "album": "Man’s Best Friend",
+    "singers": [
+      "Sabrina Carpenter"
+    ],
+    "key": "D major"
+  },
+  {
+    "id": "phillip-phillips-gone-gone-gone",
+    "title": "Gone, Gone, Gone",
+    "album": "The World From The Side Of The Moon",
+    "singers": [
+      "Phillip Phillips"
+    ],
+    "key": "F#/Gb major"
+  },
+  {
+    "id": "sabrina-carpenter-when-did-you-get-hot",
+    "title": "When Did You Get Hot?",
+    "album": "Man’s Best Friend",
+    "singers": [
+      "Sabrina Carpenter"
+    ],
+    "key": "F major"
+  },
+  {
+    "id": "sabrina-carpenter-go-go-juice",
+    "title": "Go Go Juice",
+    "album": "Man’s Best Friend",
+    "singers": [
+      "Sabrina Carpenter"
+    ],
+    "key": "A#/Bb major"
+  },
+  {
+    "id": "taylor-swift-opalite",
+    "title": "Opalite",
+    "album": "The Life of a Showgirl",
+    "singers": [
+      "Taylor Swift"
+    ],
+    "key": "E minor"
+  },
+  {
+    "id": "taylor-swift-sabrina-carpenter-the-life-of-a-showgirl-feat-sabrina-carpenter",
+    "title": "The Life of a Showgirl (feat. Sabrina Carpenter)",
+    "album": "The Life of a Showgirl",
+    "singers": [
+      "Taylor Swift;Sabrina Carpenter"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "capital-cities-safe-and-sound-5jvbvchx",
+    "title": "Safe and Sound",
+    "album": "In A Tidal Wave of Mystery",
+    "singers": [
+      "Capital Cities"
+    ],
+    "key": "C major"
+  },
+  {
+    "id": "nicky-youre-hey-daisy-sunroof",
+    "title": "Sunroof",
+    "album": "Good Times Go",
+    "singers": [
+      "Nicky Youre;hey daisy"
+    ],
+    "key": "A#/Bb major"
+  },
+  {
+    "id": "taylor-swift-the-fate-of-ophelia",
+    "title": "The Fate of Ophelia",
+    "album": "The Life of a Showgirl",
+    "singers": [
+      "Taylor Swift"
+    ],
+    "key": "F major"
+  },
+  {
+    "id": "death-cab-for-cutie-soul-meets-body",
+    "title": "Soul Meets Body",
+    "album": "Plans",
+    "singers": [
+      "Death Cab for Cutie"
+    ],
+    "key": "D minor"
+  },
+  {
+    "id": "flo-rida-kesha-right-round",
+    "title": "Right Round",
+    "album": "R.O.O.T.S. (Route of Overcoming the Struggle)",
+    "singers": [
+      "Flo Rida;Kesha"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "taylor-swift-shake-it-off",
+    "title": "Shake It Off",
+    "album": "1989",
+    "singers": [
+      "Taylor Swift"
+    ],
+    "key": "G major"
+  },
+  {
+    "id": "role-model-sally-when-the-wine-runs-out",
+    "title": "Sally, When The Wine Runs Out",
+    "album": "Kansas Anymore (The Longest Goodbye)",
+    "singers": [
+      "ROLE MODEL"
+    ],
+    "key": "C#/Db major"
+  },
+  {
+    "id": "alessi-rose-first-original-thought",
+    "title": "First Original Thought",
+    "album": "First Original Thought",
+    "singers": [
+      "Alessi Rose"
+    ],
+    "key": "E minor"
+  }
+]

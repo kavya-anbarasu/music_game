@@ -1,36 +1,27 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { supabase } from '@/lib/supabase';
+import { useTodaysSongs } from '../lib/useTodaysSongs';
+import { audioPublicUrl, clipObjectPath } from '../lib/storage';
 
 export default function Home() {
-  const [players, setPlayers] = useState<any[]>([]);
+  const { songs, loading, error } = useTodaysSongs();
 
-  useEffect(() => {
-    const loadPlayers = async () => {
-      const { data, error } = await supabase
-        .from('players')
-        .select('*');
+  if (loading) return <main className="p-8">Loading…</main>;
+  if (error) return <main className="p-8">Error: {error}</main>;
+  if (songs.length === 0) return <main className="p-8">No songs for today.</main>;
 
-      if (error) {
-        console.error(error);
-      } else {
-        setPlayers(data || []);
-      }
-    };
-
-    loadPlayers();
-  }, []);
+  const songId = songs[0].song_id;
+  const url = audioPublicUrl(clipObjectPath('english', songId, 30));
 
   return (
     <main className="p-8">
-      <h1 className="text-2xl font-bold mb-4">
-        Supabase Connection Test
-      </h1>
+      <h1 className="text-xl font-bold mb-4">Today’s first song (test)</h1>
 
-      <pre className="bg-gray-100 p-4 rounded">
-        {JSON.stringify(players, null, 2)}
-      </pre>
+      <div className="mb-2 text-sm">song_id: <span className="font-mono">{songId}</span></div>
+
+      <audio controls src={url} />
+
+      <div className="mt-4 text-xs break-all opacity-70">{url}</div>
     </main>
   );
 }

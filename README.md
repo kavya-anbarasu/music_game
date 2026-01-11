@@ -30,3 +30,11 @@ Cut each 30s preview into multiple clip lengths (writes to `audio_files/english/
 
 Build metadata JSON (includes key name mapping from Spotify `Key` + `Mode`):
 - `python3 scripts/build_english_metadata.py --out metadata/en.json --public-audio-prefix /audio`
+
+## Metadata (Tamil)
+
+Cut Tamil previews into clips:
+- `python3 scripts/cut_audio_clips.py --language tamil`
+
+Build Tamil metadata JSON (heuristics + optional overrides in `metadata/tamil_overrides.csv`):
+- `python3 scripts/build_tamil_metadata.py --out metadata/ta.json --public-audio-prefix /audio`
