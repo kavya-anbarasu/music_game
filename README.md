@@ -19,3 +19,6 @@ Dry run (just print chosen URL):
 
 CSV mode (defaults to `spotify_song_lists/2010's_to_present.csv`):
 - `python3 scripts/youtube_audio_preview.py --max-tracks 5 --out-dir audio_files`
+
+Re-runs:
+- By default it skips tracks whose output file already exists; use `--overwrite` to force re-download.

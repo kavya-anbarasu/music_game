@@ -164,6 +164,11 @@ def main(argv: list[str]) -> int:
         action="store_true",
         help="Only print the chosen YouTube URL and exit",
     )
+    parser.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="Redownload even if the output file already exists",
+    )
     args = parser.parse_args(argv)
 
     if args.seconds <= 0:
@@ -181,6 +186,11 @@ def main(argv: list[str]) -> int:
 
         base_name = _safe_filename(f"{artist} - {title}")
         out_base = out_dir / base_name
+        expected_out = out_base.with_suffix(f".{args.format}")
+        if expected_out.exists() and not args.overwrite:
+            print(f"Skip (already exists): {expected_out}")
+            return
+
         out_path = _download_audio_preview(
             url=url,
             out_base=out_base,
