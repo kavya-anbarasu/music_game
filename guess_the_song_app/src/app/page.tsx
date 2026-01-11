@@ -1,10 +1,8 @@
 'use client';
 
-import { useMemo, useState, useEffect } from 'react';
+import { useMemo, useState, useEffect, useRef } from 'react';
 import { useTodaysSongs } from '../lib/useTodaysSongs';
 import { audioPublicUrl, clipObjectPath } from '../lib/storage';
-
-// ✅ Import your metadata JSON (must be inside the Next app folder, e.g. src/data/)
 import english_songs from '../data/english_songs.json';
 
 const CLIP_SECONDS = [1, 3, 5, 10, 20, 30] as const;
@@ -28,11 +26,14 @@ export default function Home() {
   const [songIndex, setSongIndex] = useState(0);
   const [revealIndex, setRevealIndex] = useState(0);
 
-  // Guess UI state
+  // Guess UI
   const [guess, setGuess] = useState('');
   const [submitted, setSubmitted] = useState<string | null>(null);
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
   const [showSuggestions, setShowSuggestions] = useState(false);
+
+  // For autoplay
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const metaById = useMemo(() => {
     const m = new Map<string, SongMeta>();
@@ -40,7 +41,6 @@ export default function Home() {
     return m;
   }, []);
 
-  // Build list for search dropdown
   const allTitles = useMemo(() => {
     return (english_songs as SongMeta[])
       .filter((s) => s.title && s.id)
@@ -67,7 +67,7 @@ export default function Home() {
     resetForSong();
   }
 
-  // If daily set loads and songIndex becomes invalid (rare), clamp it
+  // Clamp if needed
   useEffect(() => {
     if (!songs || songs.length === 0) return;
     if (songIndex > songs.length - 1) setSongIndex(0);
@@ -80,18 +80,11 @@ export default function Home() {
     return audioPublicUrl(clipObjectPath('english', currentSongId, seconds));
   }, [currentSongId, seconds]);
 
-  // Suggestions: substring match on title
+  // Suggestions dropdown
   const suggestions = useMemo(() => {
     const q = normalize(guess);
-    if (!q) return [];
-    // only start suggesting after 2 chars so it’s not noisy
-    if (q.length < 2) return [];
-
-    const out = allTitles
-      .filter((s) => s.titleNorm.includes(q))
-      .slice(0, 8);
-
-    return out;
+    if (!q || q.length < 2) return [];
+    return allTitles.filter((s) => s.titleNorm.includes(q)).slice(0, 8);
   }, [guess, allTitles]);
 
   function handlePickSuggestion(title: string) {
@@ -100,16 +93,24 @@ export default function Home() {
   }
 
   function handleSubmitGuess() {
-    if (!currentMeta?.title) {
-      setSubmitted(guess);
-      setIsCorrect(false);
-      return;
-    }
-    const ok = normalize(guess) === normalize(currentMeta.title);
+    const answer = currentMeta?.title ?? '';
+    const ok = normalize(guess) === normalize(answer);
     setSubmitted(guess);
     setIsCorrect(ok);
     setShowSuggestions(false);
   }
+
+  // ✅ Autoplay whenever the clip URL changes (reveal more OR song change)
+  useEffect(() => {
+    if (!audioUrl) return;
+    const el = audioRef.current;
+    if (!el) return;
+
+    // attempt autoplay; browsers may block unless user interacted
+    el.load();
+    const p = el.play();
+    if (p && typeof p.catch === 'function') p.catch(() => {});
+  }, [audioUrl]);
 
   if (loading) return <main className="p-8">Loading…</main>;
   if (error) return <main className="p-8">Error: {error}</main>;
@@ -117,6 +118,9 @@ export default function Home() {
 
   const isLastReveal = revealIndex >= CLIP_SECONDS.length - 1;
   const canSubmit = normalize(guess).length > 0;
+  const isLastSong = songIndex >= songs.length - 1;
+
+  const nextSongEnabled = isCorrect === true && !isLastSong;
 
   return (
     <main className="p-8 space-y-6">
@@ -133,7 +137,7 @@ export default function Home() {
       {/* Audio */}
       <section className="space-y-2">
         {audioUrl ? (
-          <audio key={`${currentSongId}-${seconds}`} controls src={audioUrl} />
+          <audio ref={audioRef} key={`${currentSongId}-${seconds}`} controls src={audioUrl} />
         ) : (
           <div>No audio URL</div>
         )}
@@ -156,13 +160,10 @@ export default function Home() {
               setIsCorrect(null);
             }}
             onFocus={() => setShowSuggestions(true)}
-            onBlur={() => {
-              // Delay so a click on a suggestion still registers
-              setTimeout(() => setShowSuggestions(false), 120);
-            }}
+            onBlur={() => setTimeout(() => setShowSuggestions(false), 120)}
+            disabled={isCorrect === true} // lock after correct
           />
 
-          {/* Suggestions dropdown */}
           {showSuggestions && suggestions.length > 0 && (
             <div className="absolute z-10 mt-1 w-full rounded border bg-black/90 backdrop-blur">
               {suggestions.map((s) => (
@@ -170,7 +171,7 @@ export default function Home() {
                   key={s.id}
                   type="button"
                   className="block w-full text-left px-3 py-2 hover:bg-white/10"
-                  onMouseDown={(e) => e.preventDefault()} // keep input focus
+                  onMouseDown={(e) => e.preventDefault()}
                   onClick={() => handlePickSuggestion(s.title)}
                 >
                   {s.title}
@@ -184,7 +185,7 @@ export default function Home() {
           <button
             className="px-4 py-2 rounded border font-medium"
             onClick={handleSubmitGuess}
-            disabled={!canSubmit}
+            disabled={!canSubmit || isCorrect === true}
           >
             Submit
           </button>
@@ -197,22 +198,28 @@ export default function Home() {
           )}
         </div>
 
-        {/* Optional: show answer while testing */}
+        {/* Debug (remove later) */}
         <div className="text-xs opacity-60">
           (debug) answer: <span className="font-mono">{currentMeta?.title ?? 'unknown in metadata'}</span>
         </div>
+
+        {/* ✅ Next song CTA appears only when correct */}
+        {nextSongEnabled && (
+          <button
+            className="mt-2 px-4 py-2 rounded border font-semibold"
+            onClick={() => goToSong(songIndex + 1)}
+          >
+            Next song →
+          </button>
+        )}
+
+        {isCorrect === true && isLastSong && (
+          <div className="mt-2 text-sm font-semibold">🎉 You finished today’s set!</div>
+        )}
       </section>
 
-      {/* Reveal controls */}
+      {/* Reveal controls (no “Less”) */}
       <section className="flex items-center gap-3">
-        <button
-          className="px-3 py-2 rounded border"
-          onClick={() => setRevealIndex((i) => Math.max(0, i - 1))}
-          disabled={revealIndex === 0}
-        >
-          Less
-        </button>
-
         <button
           className="px-4 py-2 rounded border font-medium"
           onClick={() => setRevealIndex((i) => Math.min(CLIP_SECONDS.length - 1, i + 1))}
@@ -256,7 +263,7 @@ export default function Home() {
         </button>
       </section>
 
-      {/* Debug: show today’s song order */}
+      {/* Debug list */}
       <section className="text-sm">
         <div className="font-semibold mb-2">Today’s set</div>
         <ol className="list-decimal ml-5 space-y-1">
