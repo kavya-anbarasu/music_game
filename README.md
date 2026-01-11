@@ -22,3 +22,11 @@ CSV mode (defaults to `spotify_song_lists/2010's_to_present.csv`):
 
 Re-runs:
 - By default it skips tracks whose output file already exists; use `--overwrite` to force re-download.
+
+## Audio clips + metadata (English)
+
+Cut each 30s preview into multiple clip lengths (writes to `audio_files/english/clips/`):
+- `python3 scripts/cut_audio_clips.py --language english`
+
+Build metadata JSON (includes key name mapping from Spotify `Key` + `Mode`):
+- `python3 scripts/build_english_metadata.py --out metadata/en.json --public-audio-prefix /audio`
