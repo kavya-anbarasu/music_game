@@ -232,6 +232,7 @@ def main(argv: list[str]) -> int:
             )
 
         processed = 0
+        errors = 0
         for row_idx, row in enumerate(reader):
             if row_idx < args.start_at:
                 continue
@@ -247,9 +248,22 @@ def main(argv: list[str]) -> int:
                 continue
 
             print(f"\n[{processed + 1}] {artist} - {title}")
-            process_one(artist=artist, title=title)
-            processed += 1
+            try:
+                process_one(artist=artist, title=title)
+                processed += 1
+            except SystemExit as e:
+                errors += 1
+                message = str(e).strip() or "Unknown error"
+                print(f"Skip (error): {message}")
+                continue
+            except Exception as e:
+                errors += 1
+                print(f"Skip (unexpected error): {e}")
+                continue
 
+    if errors:
+        print(f"\nFinished with {errors} errors.")
+        return 1
     return 0
 
 
