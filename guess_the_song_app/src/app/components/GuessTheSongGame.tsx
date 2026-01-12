@@ -69,6 +69,15 @@ export default function GuessTheSongGame(props: { lang: Language }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentSongId]);
 
+  // If a song is finished, always let the user listen to the full 30s clip.
+  useEffect(() => {
+    if (!currentSongId) return;
+    if (progress.status !== 'solved' && progress.status !== 'gave_up') return;
+    if (progress.revealedSeconds >= 30) return;
+    setRevealIndex(CLIP_SECONDS.length - 1);
+    updateProgress(currentSongId, (p) => ({ ...p, revealedSeconds: 30 as ClipSeconds }));
+  }, [currentSongId, progress.status, progress.revealedSeconds, updateProgress]);
+
   const seconds: ClipSeconds = CLIP_SECONDS[Math.min(revealIndex, CLIP_SECONDS.length - 1)];
   const isLastReveal = revealIndex >= CLIP_SECONDS.length - 1;
 
@@ -103,7 +112,8 @@ export default function GuessTheSongGame(props: { lang: Language }) {
     if (!currentSongId) return;
     setSubmitted('(gave up)');
     setIsCorrect(false);
-    updateProgress(currentSongId, (p) => ({ ...p, status: 'gave_up' }));
+    setRevealIndex(CLIP_SECONDS.length - 1);
+    updateProgress(currentSongId, (p) => ({ ...p, status: 'gave_up', revealedSeconds: 30 as ClipSeconds }));
   }
 
   function handleSubmitGuess() {
@@ -119,7 +129,7 @@ export default function GuessTheSongGame(props: { lang: Language }) {
       const nextGuesses = p.guesses + 1;
 
       if (ok) {
-        return { ...p, guesses: nextGuesses, status: 'solved' };
+        return { ...p, guesses: nextGuesses, status: 'solved', revealedSeconds: 30 as ClipSeconds };
       }
 
       const curIdx = revealIndexFromSeconds(p.revealedSeconds);
@@ -140,6 +150,8 @@ export default function GuessTheSongGame(props: { lang: Language }) {
 
     if (!ok) {
       if (!isLastReveal) setRevealIndex((i) => Math.min(CLIP_SECONDS.length - 1, i + 1));
+    } else {
+      setRevealIndex(CLIP_SECONDS.length - 1);
     }
   }
 
@@ -283,4 +295,3 @@ export default function GuessTheSongGame(props: { lang: Language }) {
     </main>
   );
 }
-

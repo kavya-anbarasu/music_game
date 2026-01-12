@@ -9,15 +9,16 @@ export function AutocompleteInput(props: {
   options: string[];
   placeholder?: string;
   disabled?: boolean;
+  minChars?: number;
 }) {
-  const { value, onChange, options, placeholder, disabled } = props;
+  const { value, onChange, options, placeholder, disabled, minChars = 2 } = props;
   const [open, setOpen] = useState(false);
 
   const suggestions = useMemo(() => {
     const q = normalize(value);
-    if (!q || q.length < 2) return [];
+    if (!q || q.length < minChars) return [];
     return options.filter((opt) => normalize(opt).includes(q)).slice(0, 8);
-  }, [value, options]);
+  }, [value, options, minChars]);
 
   return (
     <div className="relative">
@@ -55,4 +56,3 @@ export function AutocompleteInput(props: {
     </div>
   );
 }
-
