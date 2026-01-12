@@ -34,7 +34,7 @@ export function BonusSection(props: {
   if (!showBonus || bonusKeys.length === 0) return null;
 
   return (
-    <Card className="space-y-3">
+    <Card className="relative z-30 space-y-3">
       <div>
         <div className="text-sm font-semibold">Bonus</div>
         <div className="text-xs opacity-70">Extra points for hints you didn’t flip.</div>

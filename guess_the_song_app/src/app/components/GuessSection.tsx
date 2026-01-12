@@ -20,7 +20,7 @@ export function GuessSection(props: {
     props;
 
   return (
-    <Card className="space-y-3">
+    <Card className="relative z-30 space-y-3">
       <div>
         <div className="text-sm font-semibold">Your guess</div>
         <div className="text-xs opacity-70">Type the song title.</div>

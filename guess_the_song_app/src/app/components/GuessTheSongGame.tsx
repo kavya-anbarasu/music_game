@@ -241,19 +241,22 @@ export default function GuessTheSongGame(props: { lang: Language }) {
             Song {songIndex + 1} / {songs.length} • Clip: {seconds}s
           </div>
         </div>
-        <div className="flex items-center gap-2">
-          <Link href="/" className="text-sm text-white/70 hover:text-white">
-            Change language
+        <div className="flex flex-col items-end gap-2">
+          <Link
+            href="/"
+            className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm hover:bg-white/10"
+          >
+            Home
           </Link>
           {!locked && (
-            <>
+            <div className="flex items-center gap-2">
               <Button onClick={handleRevealMore} disabled={isLastReveal} variant="primary" size="sm">
                 Reveal more
               </Button>
               <Button onClick={handleJump30} disabled={isLastReveal} size="sm">
                 Jump to 30s
               </Button>
-            </>
+            </div>
           )}
         </div>
       </header>

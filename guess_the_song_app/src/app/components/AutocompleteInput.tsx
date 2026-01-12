@@ -22,7 +22,7 @@ export function AutocompleteInput(props: {
   }, [value, options, minChars]);
 
   return (
-    <div className="relative">
+    <div className="relative z-50">
       <input
         className={cn(
           'w-full rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm sm:text-base',
@@ -40,7 +40,7 @@ export function AutocompleteInput(props: {
       />
 
       {!disabled && open && suggestions.length > 0 && (
-        <div className="absolute z-10 mt-2 w-full overflow-hidden rounded-xl border border-white/10 bg-zinc-950/95 backdrop-blur">
+        <div className="absolute z-50 mt-2 w-full overflow-hidden rounded-xl border border-white/10 bg-zinc-950/95 backdrop-blur">
           {suggestions.map((sug) => (
             <button
               key={sug}
