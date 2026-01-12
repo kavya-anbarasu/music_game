@@ -19,6 +19,7 @@ import { HintsSection } from './HintsSection';
 import { BonusSection } from './BonusSection';
 import { SongNav } from './SongNav';
 import { TodaysSetList } from './TodaysSetList';
+import { LeaderboardSection } from './LeaderboardSection';
 
 export default function GuessTheSongGame(props: { lang: Language }) {
   const { lang } = props;
@@ -113,7 +114,12 @@ export default function GuessTheSongGame(props: { lang: Language }) {
     setSubmitted('(gave up)');
     setIsCorrect(false);
     setRevealIndex(CLIP_SECONDS.length - 1);
-    updateProgress(currentSongId, (p) => ({ ...p, status: 'gave_up', revealedSeconds: 30 as ClipSeconds }));
+    updateProgress(currentSongId, (p) => ({
+      ...p,
+      status: 'gave_up',
+      finalSeconds: (p.finalSeconds ?? seconds) as ClipSeconds,
+      revealedSeconds: 30 as ClipSeconds,
+    }));
   }
 
   function handleSubmitGuess() {
@@ -129,7 +135,14 @@ export default function GuessTheSongGame(props: { lang: Language }) {
       const nextGuesses = p.guesses + 1;
 
       if (ok) {
-        return { ...p, guesses: nextGuesses, status: 'solved', revealedSeconds: 30 as ClipSeconds };
+        const solvedAt = Math.max(p.revealedSeconds, seconds) as ClipSeconds;
+        return {
+          ...p,
+          guesses: nextGuesses,
+          status: 'solved',
+          finalSeconds: solvedAt,
+          revealedSeconds: 30 as ClipSeconds,
+        };
       }
 
       const curIdx = revealIndexFromSeconds(p.revealedSeconds);
@@ -289,6 +302,8 @@ export default function GuessTheSongGame(props: { lang: Language }) {
       />
 
       <TodaysSetList songs={songs} songIndex={songIndex} progressMap={progressMap} />
+
+      <LeaderboardSection lang={lang} songs={songs} progressMap={progressMap} />
     </main>
   );
 }

@@ -22,6 +22,7 @@ export type SongProgress = {
   status: 'in_progress' | 'solved' | 'gave_up';
   guesses: number;
   revealedSeconds: ClipSeconds;
+  finalSeconds?: ClipSeconds;
   revealedHints: Record<HintKey, boolean>;
   bonus: Partial<Record<HintKey, BonusResult>>;
 };
@@ -32,4 +33,3 @@ export type OptionPools = {
   keys: string[];
   singers: string[];
 };
-
