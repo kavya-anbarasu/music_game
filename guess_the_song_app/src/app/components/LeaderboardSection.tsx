@@ -7,6 +7,9 @@ import { defaultProgress } from '@/lib/gts/defaults';
 import type { TodaysSongRow } from '@/lib/useTodaysSongs';
 import { fetchLeaderboard, submitLeaderboardScore, type LeaderboardEntry } from '@/lib/leaderboard';
 import { scoreSong } from '@/lib/gts/scoring';
+import { Card } from './ui/Card';
+import { Button } from './ui/Button';
+import { TextInput } from './ui/TextInput';
 
 function nameStorageKey(lang: Language) {
   return `gts_player_name_${lang}`;
@@ -94,41 +97,57 @@ export function LeaderboardSection(props: {
   }
 
   return (
-    <section className="space-y-3 max-w-xl">
-      <div className="font-semibold">Leaderboard</div>
+    <Card className="space-y-3">
+      <div>
+        <div className="text-sm font-semibold">Leaderboard</div>
+        <div className="text-xs opacity-70">
+          {lang} • {playDate}
+        </div>
+      </div>
 
-      <div className="text-sm opacity-80">
-        Your score today: <b>{totalScore}</b> / {maxScore} • Solved: {solvedCount} / {songs.length}
+      <div className="grid grid-cols-3 gap-2">
+        <div className="rounded-xl border border-white/10 bg-white/5 p-3">
+          <div className="text-xs opacity-70">Score</div>
+          <div className="text-lg font-semibold">{totalScore}</div>
+        </div>
+        <div className="rounded-xl border border-white/10 bg-white/5 p-3">
+          <div className="text-xs opacity-70">Solved</div>
+          <div className="text-lg font-semibold">
+            {solvedCount}/{songs.length}
+          </div>
+        </div>
+        <div className="rounded-xl border border-white/10 bg-white/5 p-3">
+          <div className="text-xs opacity-70">Max</div>
+          <div className="text-lg font-semibold">{maxScore}</div>
+        </div>
       </div>
 
       <div className="flex gap-2">
-        <input
-          className="flex-1 px-3 py-2 rounded border bg-transparent"
+        <TextInput
+          className="flex-1"
           placeholder="Your name"
           value={playerName}
           onChange={(e) => setPlayerName(e.target.value)}
           disabled={submitting}
           maxLength={40}
         />
-        <button
-          className="px-3 py-2 rounded border font-medium"
+        <Button
           onClick={handleSubmit}
           disabled={submitting || playerName.trim().length === 0}
+          variant="primary"
         >
-          Submit score
-        </button>
+          Submit
+        </Button>
       </div>
 
       {error && <div className="text-sm">Error: {error}</div>}
 
-      <div className="rounded border p-3">
+      <div className="rounded-xl border border-white/10 bg-white/5 p-3">
         <div className="flex items-center justify-between mb-2">
-          <div className="text-sm font-semibold">
-            {lang} • {playDate}
-          </div>
-          <button className="text-xs px-2 py-1 rounded border" onClick={refresh} disabled={loading}>
+          <div className="text-sm font-semibold">Top today</div>
+          <Button onClick={refresh} disabled={loading} size="sm" variant="ghost">
             Refresh
-          </button>
+          </Button>
         </div>
 
         {loading ? (
@@ -140,7 +159,7 @@ export function LeaderboardSection(props: {
             {entries.map((e, i) => (
               <li key={`${e.player_name}-${i}`} className="flex items-center justify-between gap-3 text-sm">
                 <div className="truncate">
-                  {i + 1}. {e.player_name}
+                  <span className="opacity-60">{i + 1}.</span> {e.player_name}
                 </div>
                 <div className="font-mono">{e.score}</div>
               </li>
@@ -148,7 +167,6 @@ export function LeaderboardSection(props: {
           </ol>
         )}
       </div>
-    </section>
+    </Card>
   );
 }
-

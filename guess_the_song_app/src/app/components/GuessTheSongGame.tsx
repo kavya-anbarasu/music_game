@@ -20,6 +20,7 @@ import { BonusSection } from './BonusSection';
 import { SongNav } from './SongNav';
 import { TodaysSetList } from './TodaysSetList';
 import { LeaderboardSection } from './LeaderboardSection';
+import { Button } from './ui/Button';
 
 export default function GuessTheSongGame(props: { lang: Language }) {
   const { lang } = props;
@@ -213,97 +214,97 @@ export default function GuessTheSongGame(props: { lang: Language }) {
   const bonusKeys: HintKey[] = (['album', 'singers', 'key'] as HintKey[]).filter((k) => !progress.revealedHints[k]);
 
   return (
-    <main className="p-8 space-y-6">
-      <header className="space-y-2">
-        <div className="flex items-center justify-between gap-4">
-          <div>
-            <h1 className="text-2xl font-bold">Daily Guess-the-Song (MVP)</h1>
-            <div className="text-sm opacity-80">
-              Song {songIndex + 1} / {songs.length} • Revealed: {seconds}s
-            </div>
+    <main className="mx-auto w-full max-w-6xl px-4 py-8 sm:px-6">
+      <header className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <div className="text-xs uppercase tracking-wider text-white/50">Daily game</div>
+          <h1 className="text-3xl font-semibold tracking-tight">Guess the Song</h1>
+          <div className="mt-1 text-sm text-white/70">
+            Song {songIndex + 1} / {songs.length} • Clip: {seconds}s
           </div>
         </div>
-
-        {progress.status === 'solved' && (
-          <div className="rounded border p-3">
-            ✅ Solved in <b>{progress.guesses}</b> {progress.guesses === 1 ? 'guess' : 'guesses'}.
-          </div>
-        )}
-        {progress.status === 'gave_up' && (
-          <div className="rounded border p-3">
-            🟨 You lost / gave up. Answer was: <b>{answerTitle}</b>
-          </div>
-        )}
+        <div className="flex items-center gap-2">
+          {!locked && (
+            <>
+              <Button onClick={handleRevealMore} disabled={isLastReveal} variant="primary" size="sm">
+                Reveal more
+              </Button>
+              <Button onClick={handleJump30} disabled={isLastReveal} size="sm">
+                Jump to 30s
+              </Button>
+            </>
+          )}
+        </div>
       </header>
 
-      <AudioSection audioUrl={audioUrl} audioKey={`${currentSongId}-${seconds}`} />
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-[1fr_380px] lg:items-start">
+        <div className="space-y-4">
+          {progress.status === 'solved' && (
+            <div className="rounded-2xl border border-green-400/20 bg-green-500/10 p-4 text-sm">
+              <span className="font-semibold">Solved.</span> {progress.guesses} {progress.guesses === 1 ? 'guess' : 'guesses'}.
+            </div>
+          )}
+          {progress.status === 'gave_up' && (
+            <div className="rounded-2xl border border-yellow-400/20 bg-yellow-500/10 p-4 text-sm">
+              <span className="font-semibold">Gave up.</span> Answer: <b>{answerTitle}</b>
+            </div>
+          )}
 
-      <GuessSection
-        locked={locked}
-        guess={guess}
-        setGuess={(v) => {
-          setGuess(v);
-          setSubmitted(null);
-          setIsCorrect(null);
-        }}
-        submitted={submitted}
-        isCorrect={isCorrect}
-        onSubmit={handleSubmitGuess}
-        onGiveUp={handleGiveUp}
-        answerTitle={answerTitle}
-        titleOptions={optionPools.titles}
-      />
+          <AudioSection audioUrl={audioUrl} audioKey={`${currentSongId}-${seconds}`} />
 
-      {!locked && (
-        <section className="flex items-center gap-3">
-          <button
-            className="px-4 py-2 rounded border font-medium"
-            onClick={handleRevealMore}
-            disabled={isLastReveal}
-          >
-            Reveal more
-          </button>
+          <GuessSection
+            locked={locked}
+            guess={guess}
+            setGuess={(v) => {
+              setGuess(v);
+              setSubmitted(null);
+              setIsCorrect(null);
+            }}
+            submitted={submitted}
+            isCorrect={isCorrect}
+            onSubmit={handleSubmitGuess}
+            onGiveUp={handleGiveUp}
+            answerTitle={answerTitle}
+            titleOptions={optionPools.titles}
+          />
 
-          <button className="px-3 py-2 rounded border" onClick={handleJump30} disabled={isLastReveal}>
-            Jump to 30s
-          </button>
-        </section>
-      )}
+          <HintsSection
+            showHints={showHints}
+            progress={progress}
+            onFlip={flipHint}
+            answerAlbum={answerAlbum}
+            answerSingers={answerSingers}
+            answerKey={answerKey}
+          />
 
-      <HintsSection
-        showHints={showHints}
-        progress={progress}
-        onFlip={flipHint}
-        answerAlbum={answerAlbum}
-        answerSingers={answerSingers}
-        answerKey={answerKey}
-      />
+          <BonusSection
+            showBonus={showBonus}
+            bonusKeys={bonusKeys}
+            progress={progress}
+            bonusInput={bonusInput}
+            setBonusInput={setBonusInput}
+            optionPools={optionPools}
+            answerAlbum={answerAlbum}
+            answerSingers={answerSingers}
+            answerKey={answerKey}
+            onSubmitBonus={submitBonus}
+            onPassBonus={passBonus}
+          />
 
-      <BonusSection
-        showBonus={showBonus}
-        bonusKeys={bonusKeys}
-        progress={progress}
-        bonusInput={bonusInput}
-        setBonusInput={setBonusInput}
-        optionPools={optionPools}
-        answerAlbum={answerAlbum}
-        answerSingers={answerSingers}
-        answerKey={answerKey}
-        onSubmitBonus={submitBonus}
-        onPassBonus={passBonus}
-      />
+          <SongNav
+            songIndex={songIndex}
+            songCount={songs.length}
+            locked={locked}
+            onPrev={() => setSongIndex((i) => Math.max(0, i - 1))}
+            onNext={() => setSongIndex((i) => Math.min(songs.length - 1, i + 1))}
+          />
+        </div>
 
-      <SongNav
-        songIndex={songIndex}
-        songCount={songs.length}
-        locked={locked}
-        onPrev={() => setSongIndex((i) => Math.max(0, i - 1))}
-        onNext={() => setSongIndex((i) => Math.min(songs.length - 1, i + 1))}
-      />
-
-      <TodaysSetList songs={songs} songIndex={songIndex} progressMap={progressMap} />
-
-      <LeaderboardSection lang={lang} songs={songs} progressMap={progressMap} />
+        <div className="space-y-4">
+          <TodaysSetList songs={songs} songIndex={songIndex} progressMap={progressMap} />
+          <LeaderboardSection lang={lang} songs={songs} progressMap={progressMap} />
+        </div>
+      </div>
     </main>
   );
 }

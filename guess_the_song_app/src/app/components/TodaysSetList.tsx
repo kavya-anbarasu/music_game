@@ -2,6 +2,7 @@
 
 import type { SongProgress } from '@/lib/gts/types';
 import type { TodaysSongRow } from '@/lib/useTodaysSongs';
+import { Card } from './ui/Card';
 
 export function TodaysSetList(props: {
   songs: TodaysSongRow[];
@@ -11,8 +12,14 @@ export function TodaysSetList(props: {
   const { songs, songIndex, progressMap } = props;
 
   return (
-    <section className="text-sm">
-      <div className="font-semibold mb-2">Today’s set</div>
+    <Card>
+      <div className="flex items-center justify-between gap-3 mb-3">
+        <div>
+          <div className="text-sm font-semibold">Today</div>
+          <div className="text-xs opacity-70">Progress across today’s songs.</div>
+        </div>
+      </div>
+
       <div className="flex flex-wrap gap-2">
         {songs.map((s, i) => {
           const p = progressMap[s.song_id];
@@ -38,6 +45,17 @@ export function TodaysSetList(props: {
           );
         })}
       </div>
-    </section>
+      <div className="mt-3 flex items-center gap-3 text-xs opacity-70">
+        <div className="flex items-center gap-2">
+          <span className="inline-block w-3 h-3 rounded border border-white/30" /> Unplayed
+        </div>
+        <div className="flex items-center gap-2">
+          <span className="inline-block w-3 h-3 rounded bg-green-600/80 border border-green-400" /> Solved
+        </div>
+        <div className="flex items-center gap-2">
+          <span className="inline-block w-3 h-3 rounded bg-yellow-600/80 border border-yellow-400" /> Gave up
+        </div>
+      </div>
+    </Card>
   );
 }

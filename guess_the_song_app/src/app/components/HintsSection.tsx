@@ -1,6 +1,8 @@
 'use client';
 
 import type { HintKey, SongProgress } from '@/lib/gts/types';
+import { Card } from './ui/Card';
+import { Button } from './ui/Button';
 
 export function HintsSection(props: {
   showHints: boolean;
@@ -14,8 +16,11 @@ export function HintsSection(props: {
   if (!showHints) return null;
 
   return (
-    <section className="space-y-2 max-w-xl">
-      <div className="font-semibold">Hints (flip any order)</div>
+    <Card className="space-y-3">
+      <div>
+        <div className="text-sm font-semibold">Hints</div>
+        <div className="text-xs opacity-70">Flip any order (reduces score).</div>
+      </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
         {(['album', 'singers', 'key'] as HintKey[]).map((k) => {
@@ -24,20 +29,21 @@ export function HintsSection(props: {
           const value = k === 'album' ? answerAlbum : k === 'singers' ? answerSingers : answerKey;
 
           return (
-            <button
+            <Button
               key={k}
-              className="rounded border p-3 text-left"
+              className="h-auto items-start justify-start rounded-xl p-3 text-left"
               onClick={() => onFlip(k)}
               disabled={flipped}
               title={flipped ? 'Already revealed' : 'Click to reveal'}
             >
-              <div className="text-sm font-semibold">{label}</div>
-              <div className="mt-1 text-sm opacity-80">{flipped ? value : 'Click to reveal'}</div>
-            </button>
+              <div className="w-full">
+                <div className="text-sm font-semibold">{label}</div>
+                <div className="mt-1 text-sm opacity-80">{flipped ? value : 'Click to reveal'}</div>
+              </div>
+            </Button>
           );
         })}
       </div>
-    </section>
+    </Card>
   );
 }
-

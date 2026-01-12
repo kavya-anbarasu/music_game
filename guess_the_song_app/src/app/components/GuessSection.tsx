@@ -2,6 +2,8 @@
 
 import { AutocompleteInput } from './AutocompleteInput';
 import { normalize } from '@/lib/gts/text';
+import { Card } from './ui/Card';
+import { Button } from './ui/Button';
 
 export function GuessSection(props: {
   locked: boolean;
@@ -18,8 +20,11 @@ export function GuessSection(props: {
     props;
 
   return (
-    <section className="space-y-2 max-w-xl">
-      <div className="font-semibold">Your guess</div>
+    <Card className="space-y-3">
+      <div>
+        <div className="text-sm font-semibold">Your guess</div>
+        <div className="text-xs opacity-70">Type the song title.</div>
+      </div>
 
       {!locked ? (
         <>
@@ -33,17 +38,13 @@ export function GuessSection(props: {
           />
 
           <div className="flex items-center gap-3">
-            <button
-              className="px-4 py-2 rounded border font-medium"
-              onClick={onSubmit}
-              disabled={normalize(guess).length === 0}
-            >
+            <Button onClick={onSubmit} disabled={normalize(guess).length === 0} variant="primary">
               Submit
-            </button>
+            </Button>
 
-            <button className="px-4 py-2 rounded border" onClick={onGiveUp}>
+            <Button onClick={onGiveUp} variant="secondary">
               Give up
-            </button>
+            </Button>
 
             {submitted !== null && isCorrect === true && <div className="text-sm font-semibold">✅ Correct!</div>}
             {submitted !== null && isCorrect === false && (
@@ -58,7 +59,6 @@ export function GuessSection(props: {
           </div>
         </div>
       )}
-    </section>
+    </Card>
   );
 }
-

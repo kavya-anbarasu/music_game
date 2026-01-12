@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { Card } from './ui/Card';
 
 export function AudioSection(props: { audioUrl: string | null; audioKey: string }) {
   const { audioUrl, audioKey } = props;
@@ -16,8 +17,19 @@ export function AudioSection(props: { audioUrl: string | null; audioKey: string 
   }, [audioUrl]);
 
   return (
-    <section className="space-y-2">
-      {audioUrl ? <audio ref={audioRef} key={audioKey} controls src={audioUrl} /> : <div>No audio URL</div>}
-    </section>
+    <Card className="space-y-3">
+      <div className="flex items-center justify-between gap-3">
+        <div>
+          <div className="text-sm font-semibold">Listen</div>
+          <div className="text-xs opacity-70">Try to guess from the clip.</div>
+        </div>
+      </div>
+
+      {audioUrl ? (
+        <audio className="w-full" ref={audioRef} key={audioKey} controls src={audioUrl} />
+      ) : (
+        <div className="text-sm opacity-70">No audio available.</div>
+      )}
+    </Card>
   );
 }

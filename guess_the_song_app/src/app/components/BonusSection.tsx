@@ -3,6 +3,8 @@
 import type { HintKey, OptionPools, SongProgress } from '@/lib/gts/types';
 import { normalize } from '@/lib/gts/text';
 import { AutocompleteInput } from './AutocompleteInput';
+import { Card } from './ui/Card';
+import { Button } from './ui/Button';
 
 export function BonusSection(props: {
   showBonus: boolean;
@@ -34,8 +36,11 @@ export function BonusSection(props: {
   if (!showBonus || bonusKeys.length === 0) return null;
 
   return (
-    <section className="space-y-3 max-w-xl">
-      <div className="font-semibold">Bonus questions (only for hints you didn’t flip)</div>
+    <Card className="space-y-3">
+      <div>
+        <div className="text-sm font-semibold">Bonus</div>
+        <div className="text-xs opacity-70">Extra points for hints you didn’t flip.</div>
+      </div>
 
       {bonusKeys.map((k) => {
         const label = k === 'album' ? 'Album' : k === 'singers' ? 'Singer' : 'Key';
@@ -46,7 +51,7 @@ export function BonusSection(props: {
         const placeholder = k === 'singers' ? 'Pick a singer…' : `Pick ${label.toLowerCase()}…`;
 
         return (
-          <div key={k} className="rounded border p-3 space-y-2">
+          <div key={k} className="rounded-xl border border-white/10 bg-white/5 p-3 space-y-2">
             <div className="text-sm font-semibold">
               {k === 'singers' ? 'Bonus: Who is a singer on this track?' : `Bonus: What is the ${label.toLowerCase()}?`}
             </div>
@@ -61,17 +66,18 @@ export function BonusSection(props: {
             />
 
             <div className="flex gap-2">
-              <button
-                className="px-3 py-2 rounded border"
+              <Button
                 onClick={() => onSubmitBonus(k)}
                 disabled={disabled || normalize(bonusInput[k] ?? '').length === 0}
+                variant="primary"
+                size="sm"
               >
                 Submit
-              </button>
+              </Button>
 
-              <button className="px-3 py-2 rounded border" onClick={() => onPassBonus(k)} disabled={disabled}>
+              <Button onClick={() => onPassBonus(k)} disabled={disabled} size="sm">
                 Pass
-              </button>
+              </Button>
             </div>
 
             {prev && (
@@ -96,6 +102,6 @@ export function BonusSection(props: {
           </div>
         );
       })}
-    </section>
+    </Card>
   );
 }

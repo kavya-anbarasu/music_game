@@ -1,5 +1,7 @@
 'use client';
 
+import { Button } from './ui/Button';
+
 export function SongNav(props: {
   songIndex: number;
   songCount: number;
@@ -12,16 +14,15 @@ export function SongNav(props: {
 
   return (
     <section className="flex items-center gap-3">
-      <button className="px-3 py-2 rounded border" onClick={onPrev} disabled={songIndex === 0}>
+      <Button onClick={onPrev} disabled={songIndex === 0} size="sm">
         Prev song
-      </button>
+      </Button>
 
-      <button className="px-3 py-2 rounded border" onClick={onNext} disabled={songIndex >= songCount - 1}>
+      <Button onClick={onNext} disabled={songIndex >= songCount - 1} size="sm">
         Next song
-      </button>
+      </Button>
 
       {locked && isLastSong && <div className="text-sm font-semibold">🎉 Done!</div>}
     </section>
   );
 }
-

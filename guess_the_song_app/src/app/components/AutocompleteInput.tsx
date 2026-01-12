@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import { normalize } from '@/lib/gts/text';
+import { cn } from '@/lib/cn';
 
 export function AutocompleteInput(props: {
   value: string;
@@ -23,7 +24,10 @@ export function AutocompleteInput(props: {
   return (
     <div className="relative">
       <input
-        className="w-full px-3 py-2 rounded border bg-transparent"
+        className={cn(
+          'w-full rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm sm:text-base',
+          'placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-indigo-500/40'
+        )}
         placeholder={placeholder}
         value={value}
         disabled={disabled}
@@ -36,12 +40,12 @@ export function AutocompleteInput(props: {
       />
 
       {!disabled && open && suggestions.length > 0 && (
-        <div className="absolute z-10 mt-1 w-full rounded border bg-black/90 backdrop-blur">
+        <div className="absolute z-10 mt-2 w-full overflow-hidden rounded-xl border border-white/10 bg-zinc-950/95 backdrop-blur">
           {suggestions.map((sug) => (
             <button
               key={sug}
               type="button"
-              className="block w-full text-left px-3 py-2 hover:bg-white/10"
+              className="block w-full text-left px-3 py-2 text-sm hover:bg-white/10"
               onMouseDown={(e) => e.preventDefault()}
               onClick={() => {
                 onChange(sug);
