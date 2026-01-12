@@ -6,11 +6,13 @@ export type SongMeta = {
   id: string;
   title: string;
   album?: string;
+  movie?: string | null;
+  music_director?: string | null;
   singers?: string[];
   key?: string;
 };
 
-export type HintKey = 'album' | 'singers' | 'key';
+export type HintKey = 'album' | 'movie' | 'music_director' | 'singers' | 'key';
 
 export type BonusResult = {
   answer: string;
@@ -30,6 +32,8 @@ export type SongProgress = {
 export type OptionPools = {
   titles: string[];
   albums: string[];
+  movies: string[];
+  musicDirectors: string[];
   keys: string[];
   singers: string[];
 };

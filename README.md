@@ -38,3 +38,10 @@ Cut Tamil previews into clips:
 
 Build Tamil metadata JSON (heuristics + optional overrides in `metadata/tamil_overrides.csv`):
 - `python3 scripts/build_tamil_metadata.py --out metadata/ta.json --public-audio-prefix /audio`
+
+## Utility: move Tamil clips to id folders
+
+If you already cut Tamil clips into `audio_files/tamil/clips/<base>/clip_...`, this remaps them into
+`audio_files/tamil/by_id/<song_id>/clip_...` using `metadata/ta.json` as the mapping source.
+
+- Dry run: `python3 scripts/migrate_tamil_clips_to_ids.py --dry-run`

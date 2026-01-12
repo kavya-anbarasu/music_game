@@ -13,9 +13,8 @@ export function BonusSection(props: {
   bonusInput: Partial<Record<HintKey, string>>;
   setBonusInput: (updater: (p: Partial<Record<HintKey, string>>) => Partial<Record<HintKey, string>>) => void;
   optionPools: OptionPools;
-  answerAlbum: string;
-  answerSingers: string;
-  answerKey: string;
+  labels: Record<HintKey, string>;
+  values: Record<HintKey, string>;
   onSubmitBonus: (k: HintKey) => void;
   onPassBonus: (k: HintKey) => void;
 }) {
@@ -26,9 +25,8 @@ export function BonusSection(props: {
     bonusInput,
     setBonusInput,
     optionPools,
-    answerAlbum,
-    answerSingers,
-    answerKey,
+    labels,
+    values,
     onSubmitBonus,
     onPassBonus,
   } = props;
@@ -43,17 +41,29 @@ export function BonusSection(props: {
       </div>
 
       {bonusKeys.map((k) => {
-        const label = k === 'album' ? 'Album' : k === 'singers' ? 'Singer' : 'Key';
+        const label = labels[k];
         const prev = progress.bonus?.[k];
         const disabled = !!prev;
 
-        const options = k === 'album' ? optionPools.albums : k === 'key' ? optionPools.keys : optionPools.singers;
-        const placeholder = k === 'singers' ? 'Pick a singer…' : `Pick ${label.toLowerCase()}…`;
+        const options =
+          k === 'album'
+            ? optionPools.albums
+            : k === 'movie'
+            ? optionPools.movies
+            : k === 'music_director'
+            ? optionPools.musicDirectors
+            : k === 'key'
+            ? optionPools.keys
+            : optionPools.singers;
+
+        const placeholder = k === 'singers' ? `Pick ${label.toLowerCase()}…` : `Pick ${label.toLowerCase()}…`;
 
         return (
           <div key={k} className="rounded-xl border border-white/10 bg-white/5 p-3 space-y-2">
             <div className="text-sm font-semibold">
-              {k === 'singers' ? 'Bonus: Who is a singer on this track?' : `Bonus: What is the ${label.toLowerCase()}?`}
+              {k === 'singers'
+                ? `Bonus: Name one ${label.toLowerCase()} on this track.`
+                : `Bonus: What is the ${label.toLowerCase()}?`}
             </div>
 
             <AutocompleteInput
@@ -94,7 +104,7 @@ export function BonusSection(props: {
                 {(prev.passed || !prev.correct) && (
                   <div className="opacity-90">
                     Correct answer:{' '}
-                    <b>{k === 'album' ? answerAlbum : k === 'key' ? answerKey : answerSingers}</b>
+                    <b>{values[k]}</b>
                   </div>
                 )}
               </div>

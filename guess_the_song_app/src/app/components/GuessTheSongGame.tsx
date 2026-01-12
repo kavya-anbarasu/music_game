@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
+import Link from 'next/link';
 import { useTodaysSongs } from '@/lib/useTodaysSongs';
 import { audioPublicUrl, clipObjectPath } from '@/lib/storage';
 import englishSongs from '@/data/english_songs.json';
@@ -12,7 +13,7 @@ import { useProgressMap } from '@/lib/gts/useProgressMap';
 import { defaultProgress } from '@/lib/gts/defaults';
 import { normalize } from '@/lib/gts/text';
 import { revealIndexFromSeconds, secondsFromRevealIndex } from '@/lib/gts/reveal';
-import { matchAlbum, matchKey, matchSingerPick } from '@/lib/gts/matchers';
+import { matchSingerPick, matchTextExact } from '@/lib/gts/matchers';
 import { AudioSection } from './AudioSection';
 import { GuessSection } from './GuessSection';
 import { HintsSection } from './HintsSection';
@@ -24,7 +25,7 @@ import { Button } from './ui/Button';
 
 export default function GuessTheSongGame(props: { lang: Language }) {
   const { lang } = props;
-  const { songs, loading, error } = useTodaysSongs();
+  const { songs, loading, error } = useTodaysSongs(lang);
 
   const [songIndex, setSongIndex] = useState(0);
   const [revealIndex, setRevealIndex] = useState(0);
@@ -184,8 +185,10 @@ export default function GuessTheSongGame(props: { lang: Language }) {
     const user = (bonusInput[h] ?? '').trim();
 
     let correct = false;
-    if (h === 'album') correct = matchAlbum(user, currentMeta?.album);
-    if (h === 'key') correct = matchKey(user, currentMeta?.key);
+    if (h === 'album') correct = matchTextExact(user, currentMeta?.album);
+    if (h === 'movie') correct = matchTextExact(user, currentMeta?.movie);
+    if (h === 'music_director') correct = matchTextExact(user, currentMeta?.music_director);
+    if (h === 'key') correct = matchTextExact(user, currentMeta?.key);
     if (h === 'singers') correct = matchSingerPick(user, currentMeta?.singers);
 
     updateProgress(currentSongId, (p) => ({
@@ -208,10 +211,25 @@ export default function GuessTheSongGame(props: { lang: Language }) {
 
   const answerTitle = currentMeta?.title ?? '(unknown title in metadata)';
   const answerAlbum = currentMeta?.album ?? '(none)';
+  const answerMovie = currentMeta?.movie ?? '(none)';
+  const answerMusicDirector = currentMeta?.music_director ?? '(none)';
   const answerKey = currentMeta?.key ?? '(none)';
   const answerSingers = (currentMeta?.singers ?? []).join(', ') || '(none)';
 
-  const bonusKeys: HintKey[] = (['album', 'singers', 'key'] as HintKey[]).filter((k) => !progress.revealedHints[k]);
+  const hintKeys: HintKey[] =
+    lang === 'tamil' ? (['movie', 'music_director', 'singers'] as HintKey[]) : (['album', 'singers', 'key'] as HintKey[]);
+
+  const availableHintKeys = hintKeys.filter((k) => {
+    if (!currentMeta) return true;
+    if (k === 'album') return !!currentMeta.album;
+    if (k === 'movie') return !!currentMeta.movie;
+    if (k === 'music_director') return !!currentMeta.music_director;
+    if (k === 'key') return !!currentMeta.key;
+    if (k === 'singers') return (currentMeta.singers ?? []).length > 0;
+    return true;
+  });
+
+  const bonusKeys: HintKey[] = availableHintKeys.filter((k) => !progress.revealedHints[k]);
 
   return (
     <main className="mx-auto w-full max-w-6xl px-4 py-8 sm:px-6">
@@ -224,6 +242,9 @@ export default function GuessTheSongGame(props: { lang: Language }) {
           </div>
         </div>
         <div className="flex items-center gap-2">
+          <Link href="/" className="text-sm text-white/70 hover:text-white">
+            Change language
+          </Link>
           {!locked && (
             <>
               <Button onClick={handleRevealMore} disabled={isLastReveal} variant="primary" size="sm">
@@ -272,9 +293,21 @@ export default function GuessTheSongGame(props: { lang: Language }) {
             showHints={showHints}
             progress={progress}
             onFlip={flipHint}
-            answerAlbum={answerAlbum}
-            answerSingers={answerSingers}
-            answerKey={answerKey}
+            hintKeys={availableHintKeys}
+            labels={{
+              album: 'Album',
+              movie: 'Movie',
+              music_director: 'Music director',
+              singers: lang === 'tamil' ? 'Singers' : 'Artist',
+              key: 'Key',
+            }}
+            values={{
+              album: answerAlbum,
+              movie: answerMovie,
+              music_director: answerMusicDirector,
+              singers: answerSingers,
+              key: answerKey,
+            }}
           />
 
           <BonusSection
@@ -284,9 +317,20 @@ export default function GuessTheSongGame(props: { lang: Language }) {
             bonusInput={bonusInput}
             setBonusInput={setBonusInput}
             optionPools={optionPools}
-            answerAlbum={answerAlbum}
-            answerSingers={answerSingers}
-            answerKey={answerKey}
+            labels={{
+              album: 'Album',
+              movie: 'Movie',
+              music_director: 'Music director',
+              singers: lang === 'tamil' ? 'Singer' : 'Artist',
+              key: 'Key',
+            }}
+            values={{
+              album: answerAlbum,
+              movie: answerMovie,
+              music_director: answerMusicDirector,
+              singers: answerSingers,
+              key: answerKey,
+            }}
             onSubmitBonus={submitBonus}
             onPassBonus={passBonus}
           />

@@ -2,11 +2,12 @@
 
 import { useEffect, useState } from 'react';
 import { supabase } from './supabase';
+import type { Language } from './gts/types';
 
 type DailySet = { id: string };
 export type TodaysSongRow = { song_id: string; order_index: number };
 
-export function useTodaysSongs() {
+export function useTodaysSongs(lang: Language) {
   const [songs, setSongs] = useState<TodaysSongRow[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -26,6 +27,7 @@ export function useTodaysSongs() {
         .from('daily_sets')
         .select('id')
         .eq('play_date', todayUTC)
+        .eq('language', lang)
         .single<DailySet>();
 
       if (setErr || !dailySet) {
@@ -63,7 +65,7 @@ export function useTodaysSongs() {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [lang]);
 
   return { songs, loading, error };
 }

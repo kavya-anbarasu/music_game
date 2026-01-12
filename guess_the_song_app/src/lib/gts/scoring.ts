@@ -13,12 +13,16 @@ const BASE_POINTS: Record<ClipSeconds, number> = {
 const HINT_PENALTY: Record<HintKey, number> = {
   singers: 10,
   album: 5,
+  movie: 5,
+  music_director: 5,
   key: 5,
 };
 
 const BONUS_POINTS: Record<HintKey, number> = {
   singers: 10,
   album: 5,
+  movie: 5,
+  music_director: 5,
   key: 5,
 };
 
@@ -49,11 +53,15 @@ export function scoreSong(progress: SongProgress): SongScoreBreakdown {
 
   const hintPenalty =
     (progress.revealedHints.album ? HINT_PENALTY.album : 0) +
+    (progress.revealedHints.movie ? HINT_PENALTY.movie : 0) +
+    (progress.revealedHints.music_director ? HINT_PENALTY.music_director : 0) +
     (progress.revealedHints.key ? HINT_PENALTY.key : 0) +
     (progress.revealedHints.singers ? HINT_PENALTY.singers : 0);
 
   const bonusPoints =
     (progress.bonus.album?.correct ? BONUS_POINTS.album : 0) +
+    (progress.bonus.movie?.correct ? BONUS_POINTS.movie : 0) +
+    (progress.bonus.music_director?.correct ? BONUS_POINTS.music_director : 0) +
     (progress.bonus.key?.correct ? BONUS_POINTS.key : 0) +
     (progress.bonus.singers?.correct ? BONUS_POINTS.singers : 0);
 
@@ -66,4 +74,3 @@ export function scoreSong(progress: SongProgress): SongScoreBreakdown {
     total: Math.max(0, basePoints - hintPenalty + bonusPoints),
   };
 }
-

@@ -8,11 +8,11 @@ export function HintsSection(props: {
   showHints: boolean;
   progress: SongProgress;
   onFlip: (k: HintKey) => void;
-  answerAlbum: string;
-  answerSingers: string;
-  answerKey: string;
+  hintKeys: HintKey[];
+  labels: Record<HintKey, string>;
+  values: Record<HintKey, string>;
 }) {
-  const { showHints, progress, onFlip, answerAlbum, answerSingers, answerKey } = props;
+  const { showHints, progress, onFlip, hintKeys, labels, values } = props;
   if (!showHints) return null;
 
   return (
@@ -23,10 +23,10 @@ export function HintsSection(props: {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-        {(['album', 'singers', 'key'] as HintKey[]).map((k) => {
+        {hintKeys.map((k) => {
           const flipped = progress.revealedHints[k];
-          const label = k === 'album' ? 'Album' : k === 'singers' ? 'Singers' : 'Key';
-          const value = k === 'album' ? answerAlbum : k === 'singers' ? answerSingers : answerKey;
+          const label = labels[k];
+          const value = values[k];
 
           return (
             <Button

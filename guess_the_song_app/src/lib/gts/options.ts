@@ -7,6 +7,10 @@ function isNonEmptyString(value: unknown): value is string {
 export function buildOptionPools(songs: SongMeta[]): OptionPools {
   const titles = Array.from(new Set(songs.map((s) => s.title).filter(isNonEmptyString)));
   const albums = Array.from(new Set(songs.map((s) => s.album).filter(isNonEmptyString)));
+  const movies = Array.from(new Set(songs.map((s) => s.movie ?? undefined).filter(isNonEmptyString)));
+  const musicDirectors = Array.from(
+    new Set(songs.map((s) => s.music_director ?? undefined).filter(isNonEmptyString))
+  );
   const keys = Array.from(new Set(songs.map((s) => s.key).filter(isNonEmptyString)));
   const singers = Array.from(
     new Set(
@@ -19,8 +23,10 @@ export function buildOptionPools(songs: SongMeta[]): OptionPools {
 
   titles.sort((a, b) => a.localeCompare(b));
   albums.sort((a, b) => a.localeCompare(b));
+  movies.sort((a, b) => a.localeCompare(b));
+  musicDirectors.sort((a, b) => a.localeCompare(b));
   keys.sort((a, b) => a.localeCompare(b));
   singers.sort((a, b) => a.localeCompare(b));
 
-  return { titles, albums, keys, singers };
+  return { titles, albums, movies, musicDirectors, keys, singers };
 }
