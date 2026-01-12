@@ -208,9 +208,6 @@ export default function GuessTheSongGame(props: { lang: Language }) {
             <div className="text-sm opacity-80">
               Song {songIndex + 1} / {songs.length} • Revealed: {seconds}s
             </div>
-            <div className="text-xs opacity-60">
-              song_id: <span className="font-mono">{currentSongId}</span>
-            </div>
           </div>
         </div>
 

@@ -18,8 +18,6 @@ export function AudioSection(props: { audioUrl: string | null; audioKey: string 
   return (
     <section className="space-y-2">
       {audioUrl ? <audio ref={audioRef} key={audioKey} controls src={audioUrl} /> : <div>No audio URL</div>}
-      <div className="text-xs break-all opacity-60">{audioUrl}</div>
     </section>
   );
 }
-

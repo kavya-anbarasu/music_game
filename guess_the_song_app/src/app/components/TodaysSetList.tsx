@@ -13,19 +13,31 @@ export function TodaysSetList(props: {
   return (
     <section className="text-sm">
       <div className="font-semibold mb-2">Today’s set</div>
-      <ol className="list-decimal ml-5 space-y-1">
+      <div className="flex flex-wrap gap-2">
         {songs.map((s, i) => {
           const p = progressMap[s.song_id];
-          const badge = p?.status === 'solved' ? `✅ ${p.guesses}` : p?.status === 'gave_up' ? `🟨 ${p.guesses}` : '';
+          const status = p?.status ?? 'in_progress';
+          const isCurrent = i === songIndex;
+
+          const base = 'w-7 h-7 rounded border';
+          const current = isCurrent ? ' ring-2 ring-white/70' : '';
+          const color =
+            status === 'solved'
+              ? ' bg-green-600/80 border-green-400'
+              : status === 'gave_up'
+              ? ' bg-yellow-600/80 border-yellow-400'
+              : ' bg-transparent border-white/30';
+
           return (
-            <li key={s.song_id} className={i === songIndex ? 'font-semibold' : ''}>
-              <span className="font-mono">{s.song_id}</span>
-              {badge && <span className="ml-2 opacity-70">{badge}</span>}
-            </li>
+            <div
+              key={s.song_id}
+              className={base + color + current}
+              aria-label={`Song ${i + 1}: ${status.replace('_', ' ')}`}
+              title={`Song ${i + 1}: ${status.replace('_', ' ')}`}
+            />
           );
         })}
-      </ol>
+      </div>
     </section>
   );
 }
-
