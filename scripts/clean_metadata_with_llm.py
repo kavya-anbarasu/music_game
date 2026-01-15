@@ -11,10 +11,18 @@ import time
 from pathlib import Path
 from typing import Any
 from urllib import request
+from urllib.parse import urlencode
+
+try:
+    from tqdm import tqdm
+except ImportError:
+    tqdm = None
 
 
 FROM_TITLE_PATTERNS = [
     re.compile(r"\s*[\(\[]\s*from\b[^)\]]*[\)\]]", re.IGNORECASE),
+    re.compile(r"\s*-\s*from\b.*$", re.IGNORECASE),
+    re.compile(r"\s+from\b\s+\"?.+\"?$", re.IGNORECASE),
 ]
 
 ENGLISH_FEAT_PATTERNS = [
@@ -22,6 +30,10 @@ ENGLISH_FEAT_PATTERNS = [
     re.compile(r"\s*-\s*(?:feat\.?|ft\.?|featuring)\s+.*$", re.IGNORECASE),
     re.compile(r"\s+(?:feat\.?|ft\.?|featuring)\s+.*$", re.IGNORECASE),
 ]
+
+WIKI_REF_PAT = re.compile(r"<ref[^>]*>.*?</ref>", re.IGNORECASE | re.DOTALL)
+WIKI_SELF_REF_PAT = re.compile(r"<ref[^/>]*/>", re.IGNORECASE)
+WIKI_TEMPLATE_PAT = re.compile(r"\{\{[^{}]*\}\}")
 
 
 def _normalize_title(title: str, *, language: str) -> str:
@@ -57,6 +69,16 @@ def _normalize_singers(singers: Any) -> list[str]:
     return [p.strip() for p in parts if p and p.strip()]
 
 
+def _split_people(value: str) -> list[str]:
+    if not value:
+        return []
+    text = re.sub(r"<br\s*/?>", "|", value, flags=re.IGNORECASE)
+    text = text.replace(" and ", "|").replace("&", "|")
+    text = re.sub(r"\s*(,|/|;|\|)\s*", "|", text)
+    parts = [p.strip() for p in text.split("|") if p.strip()]
+    return parts
+
+
 def _needs_llm(item: dict[str, Any]) -> bool:
     if any(v is None for v in item.values()):
         return True
@@ -69,6 +91,117 @@ def _needs_llm(item: dict[str, Any]) -> bool:
     if isinstance(singers, list) and any(re.search(r"[;,]", str(s)) for s in singers):
         return True
     return False
+
+
+def _wiki_api_get(base_url: str, params: dict[str, Any]) -> dict[str, Any]:
+    url = f"{base_url.rstrip('/')}/w/api.php?{urlencode(params)}"
+    req = request.Request(url, headers={"User-Agent": "music_game_metadata_cleaner/1.0"})
+    with request.urlopen(req, timeout=30) as resp:
+        return json.loads(resp.read().decode("utf-8"))
+
+
+def _wiki_search_title(movie: str, base_url: str) -> str | None:
+    for query in (f"{movie} Tamil film", f"{movie} film", movie):
+        data = _wiki_api_get(
+            base_url,
+            {
+                "action": "query",
+                "list": "search",
+                "srsearch": query,
+                "format": "json",
+            },
+        )
+        results = data.get("query", {}).get("search", [])
+        if results:
+            return results[0].get("title")
+    return None
+
+
+def _clean_wiki_text(value: str) -> str:
+    text = value or ""
+    text = WIKI_REF_PAT.sub("", text)
+    text = WIKI_SELF_REF_PAT.sub("", text)
+    while True:
+        new = WIKI_TEMPLATE_PAT.sub("", text)
+        if new == text:
+            break
+        text = new
+    text = re.sub(r"\[\[([^|\]]+)\|([^\]]+)\]\]", r"\2", text)
+    text = re.sub(r"\[\[([^\]]+)\]\]", r"\1", text)
+    text = text.replace("'''", "").replace("''", "")
+    text = re.sub(r"\s+", " ", text)
+    return text.strip(" ,")
+
+
+def _extract_infobox_field(wikitext: str, field_names: list[str]) -> str | None:
+    for field in field_names:
+        match = re.search(rf"\|\s*{re.escape(field)}\s*=\s*(.+)", wikitext, re.IGNORECASE)
+        if match:
+            value = match.group(1).split("\n")[0]
+            return _clean_wiki_text(value)
+    return None
+
+
+def _fetch_wikipedia_data(movie: str, base_url: str, cache: dict[str, Any]) -> dict[str, Any] | None:
+    key = movie.lower().strip()
+    if not key:
+        return None
+    wiki_cache = cache.setdefault("_wiki", {})
+    if key in wiki_cache:
+        return wiki_cache[key]
+
+    title = _wiki_search_title(movie, base_url)
+    if not title:
+        wiki_cache[key] = None
+        return None
+
+    page_data = _wiki_api_get(
+        base_url,
+        {
+            "action": "query",
+            "prop": "revisions",
+            "rvprop": "content",
+            "rvslots": "main",
+            "format": "json",
+            "titles": title,
+        },
+    )
+    pages = page_data.get("query", {}).get("pages", {})
+    page = next(iter(pages.values()), {})
+    revisions = page.get("revisions") or []
+    wikitext = None
+    if revisions:
+        wikitext = revisions[0].get("slots", {}).get("main", {}).get("*")
+
+    extract_data = _wiki_api_get(
+        base_url,
+        {
+            "action": "query",
+            "prop": "extracts",
+            "exintro": 1,
+            "explaintext": 1,
+            "format": "json",
+            "titles": title,
+        },
+    )
+    extract_pages = extract_data.get("query", {}).get("pages", {})
+    extract_page = next(iter(extract_pages.values()), {})
+    summary = extract_page.get("extract")
+
+    starring = None
+    music_by = None
+    if wikitext:
+        starring = _extract_infobox_field(wikitext, ["starring"])
+        music_by = _extract_infobox_field(wikitext, ["music", "music by", "music_by"])
+
+    result = {
+        "page_title": title,
+        "summary": summary,
+        "starring": _split_people(starring) if starring else None,
+        "music_by": music_by,
+    }
+    wiki_cache[key] = result
+    return result
 
 
 def _input_hash(payload: dict[str, Any]) -> str:
@@ -101,7 +234,9 @@ def _call_openai(
         "You clean music metadata. Return ONLY a JSON object with the same keys as input, "
         "using strings or null for scalar fields and a list of strings for singers. "
         "Strip '(From ...)' or '[From ...]' from titles. Split singers on ';' or ','. "
-        "If a field is missing, infer it using the title/singers context; if truly unknown, return null."
+        "If a field is missing, infer it using the title/singers context; if truly unknown, return null. "
+        "For Tamil movies, use only the provided wikipedia fields (summary/starring/music_by). "
+        "If hero/heroine is unclear (e.g., many starring names), return null rather than guessing."
     )
 
     messages = [
@@ -167,6 +302,10 @@ def _build_llm_payload(item: dict[str, Any], language: str) -> dict[str, Any]:
     }
     if "track_uri" in item:
         payload["track_uri"] = item.get("track_uri")
+    if language == "tamil":
+        movie = item.get("movie")
+        if movie:
+            payload["query_hint"] = f"{movie} tamil movie hero heroine music director"
     return payload
 
 
@@ -209,6 +348,16 @@ def main(argv: list[str]) -> int:
         "--cache",
         default=".llm_cache/clean_metadata_cache.json",
         help="Cache file path (default: .llm_cache/clean_metadata_cache.json)",
+    )
+    parser.add_argument(
+        "--wiki",
+        action="store_true",
+        help="Use Wikipedia lookups for Tamil movie details",
+    )
+    parser.add_argument(
+        "--wiki-base-url",
+        default="https://en.wikipedia.org",
+        help="Wikipedia base URL (default: https://en.wikipedia.org)",
     )
     parser.add_argument(
         "--force-llm",
@@ -255,7 +404,10 @@ def main(argv: list[str]) -> int:
         touched = 0
         processed = 0
 
-        for idx, item in enumerate(items):
+        iterator = enumerate(items)
+        if tqdm is not None:
+            iterator = tqdm(iterator, total=len(items), desc=input_path.name)
+        for idx, item in iterator:
             if idx < args.start_at:
                 updated.append(item)
                 continue
@@ -268,11 +420,22 @@ def main(argv: list[str]) -> int:
             cleaned["singers"] = _normalize_singers(cleaned.get("singers"))
 
             should_call = args.force_llm or _needs_llm(cleaned)
+            wiki_data = None
+            if args.wiki and language == "tamil":
+                movie = cleaned.get("movie")
+                if movie:
+                    try:
+                        wiki_data = _fetch_wikipedia_data(movie, args.wiki_base_url, cache)
+                    except Exception as exc:
+                        print(f"Wiki lookup failed for {movie!r}: {exc}")
+
             if should_call:
                 api_key = os.environ.get(args.api_key_env)
                 if not api_key:
                     raise SystemExit(f"Missing API key in env var: {args.api_key_env}")
                 payload = _build_llm_payload(cleaned, language)
+                if wiki_data:
+                    payload["wikipedia"] = wiki_data
                 key = f"{input_path.name}:{item.get('id', idx)}"
                 payload_hash = _input_hash(payload)
                 cached = cache.get(key)
