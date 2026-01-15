@@ -28,6 +28,21 @@ def _safe_filename(value: str, *, max_len: int = 160) -> str:
     return value[:max_len]
 
 
+def _slugify(value: str, *, max_len: int = 80) -> str:
+    value = value.lower().strip()
+    value = re.sub(r"[^a-z0-9]+", "-", value).strip("-")
+    if not value:
+        value = "song"
+    return value[:max_len].strip("-")
+
+
+def _parse_track_id(track_uri: str) -> str | None:
+    track_uri = (track_uri or "").strip()
+    if track_uri.startswith("spotify:track:"):
+        return track_uri.split(":")[-1] or None
+    return None
+
+
 def _require_cmd(name: str) -> str:
     path = shutil.which(name)
     if not path:
@@ -112,6 +127,28 @@ def _download_audio_preview(
     return expected
 
 
+def _build_unique_id(base_id: str, track_id: str | None, used_ids: set[str]) -> str:
+    unique_id = base_id
+    if unique_id in used_ids:
+        suffix = track_id[:8] if track_id else "dup"
+        unique_id = _slugify(f"{base_id}-{suffix}")
+    counter = 2
+    while unique_id in used_ids:
+        unique_id = _slugify(f"{base_id}-{counter}")
+        counter += 1
+    return unique_id
+
+
+def _has_existing_output(out_dir: Path, base_names: list[str], audio_format: str) -> bool:
+    for name in base_names:
+        if not name:
+            continue
+        candidate = out_dir / f"{name}.{audio_format}"
+        if candidate.exists():
+            return True
+    return False
+
+
 def main(argv: list[str]) -> int:
     parser = argparse.ArgumentParser(
         description=(
@@ -176,7 +213,7 @@ def main(argv: list[str]) -> int:
 
     out_dir = Path(args.out_dir)
 
-    def process_one(*, artist: str, title: str) -> None:
+    def process_one(*, artist: str, title: str, out_name: str) -> None:
         query = args.query or f"{artist} {title} official audio"
         url, yt_title = _find_first_youtube_result(query)
         print(f"Chosen YouTube result: {yt_title}")
@@ -184,7 +221,7 @@ def main(argv: list[str]) -> int:
         if args.dry_run:
             return
 
-        base_name = _safe_filename(f"{artist} - {title}")
+        base_name = out_name
         out_base = out_dir / base_name
         expected_out = out_base.with_suffix(f".{args.format}")
         if expected_out.exists() and not args.overwrite:
@@ -206,7 +243,8 @@ def main(argv: list[str]) -> int:
             )
 
     if args.artist and args.title:
-        process_one(artist=args.artist, title=args.title)
+        base_name = _safe_filename(f"{args.artist} - {args.title}")
+        process_one(artist=args.artist, title=args.title, out_name=base_name)
         return 0
 
     if args.artist or args.title:
@@ -217,39 +255,53 @@ def main(argv: list[str]) -> int:
         raise SystemExit(f"CSV not found: {csv_path}")
 
     with csv_path.open(newline="", encoding="utf-8-sig") as f:
-        reader = csv.reader(f)
-        header = next(reader, None)
-        if not header:
+        reader = csv.DictReader(f)
+        if not reader.fieldnames:
             raise SystemExit(f"CSV appears empty: {csv_path}")
-
-        try:
-            title_idx = header.index("Track Name")
-            artist_idx = header.index("Artist Name(s)")
-        except ValueError:
+        required = {"Track Name", "Artist Name(s)"}
+        missing = sorted(required - set(reader.fieldnames))
+        if missing:
             raise SystemExit(
                 "CSV header did not match expected columns.\n"
-                f"Got: {header!r}"
+                f"Missing: {missing!r}\n"
+                f"Got: {reader.fieldnames!r}"
             )
 
         processed = 0
         errors = 0
+        used_ids: set[str] = set()
         for row_idx, row in enumerate(reader):
             if row_idx < args.start_at:
+                title = (row.get("Track Name") or "").strip()
+                artist = (row.get("Artist Name(s)") or "").strip()
+                if not title or not artist:
+                    continue
+                track_id = _parse_track_id(row.get("Track URI") or "")
+                base_id = _slugify(f"{artist}-{title}")
+                unique_id = _build_unique_id(base_id, track_id, used_ids)
+                legacy_name = _safe_filename(f"{artist} - {title}")
+                if _has_existing_output(
+                    out_dir,
+                    [unique_id, track_id, legacy_name],
+                    args.format,
+                ):
+                    used_ids.add(unique_id)
                 continue
             if args.max_tracks is not None and processed >= args.max_tracks:
                 break
 
-            if len(row) <= max(title_idx, artist_idx):
-                continue
-
-            title = (row[title_idx] or "").strip()
-            artist = (row[artist_idx] or "").strip()
+            title = (row.get("Track Name") or "").strip()
+            artist = (row.get("Artist Name(s)") or "").strip()
             if not title or not artist:
                 continue
 
-            print(f"\n[{processed + 1}] {artist} - {title}")
+            track_id = _parse_track_id(row.get("Track URI") or "")
+            base_id = _slugify(f"{artist}-{title}")
+            unique_id = _build_unique_id(base_id, track_id, used_ids)
+            print(f"\n[{processed + 1}] {artist} - {title} ({unique_id})")
             try:
-                process_one(artist=artist, title=title)
+                process_one(artist=artist, title=title, out_name=unique_id)
+                used_ids.add(unique_id)
                 processed += 1
             except SystemExit as e:
                 errors += 1

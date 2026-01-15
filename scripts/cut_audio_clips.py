@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 import argparse
+import csv
+import re
 import shutil
 import subprocess
 import sys
@@ -53,6 +55,83 @@ def _cut_clip(*, src: Path, dst: Path, seconds: int, overwrite: bool) -> None:
     _run(cmd)
 
 
+def _safe_filename(value: str, *, max_len: int = 160) -> str:
+    value = value.strip()
+    value = re.sub(r"\s+", " ", value)
+    value = re.sub(r"[^A-Za-z0-9 _.-]+", "_", value)
+    value = value.strip(" ._-")
+    if not value:
+        return "audio_preview"
+    return value[:max_len]
+
+
+def _slugify(value: str, *, max_len: int = 80) -> str:
+    value = value.lower().strip()
+    value = re.sub(r"[^a-z0-9]+", "-", value).strip("-")
+    if not value:
+        value = "song"
+    return value[:max_len].strip("-")
+
+
+def _parse_track_id(track_uri: str) -> str | None:
+    track_uri = (track_uri or "").strip()
+    if track_uri.startswith("spotify:track:"):
+        return track_uri.split(":")[-1] or None
+    return None
+
+
+def _build_id_map(csv_path: Path, *, id_style: str) -> dict[str, str]:
+    id_map: dict[str, str] = {}
+    used_ids: set[str] = set()
+    with csv_path.open(newline="", encoding="utf-8-sig") as f:
+        reader = csv.DictReader(f)
+        if not reader.fieldnames:
+            raise SystemExit(f"CSV appears empty: {csv_path}")
+        required = {"Track Name"}
+        if id_style == "english":
+            required.add("Artist Name(s)")
+        missing = sorted(required - set(reader.fieldnames))
+        if missing:
+            raise SystemExit(
+                "CSV header did not match expected columns.\n"
+                f"Missing: {missing!r}\n"
+                f"Got: {reader.fieldnames!r}"
+            )
+
+        for row in reader:
+            title = (row.get("Track Name") or "").strip()
+            if not title:
+                continue
+            artist = (row.get("Artist Name(s)") or "").strip()
+            track_id = _parse_track_id(row.get("Track URI") or "")
+
+            if id_style == "tamil":
+                base_id = _slugify(title)
+            else:
+                if not artist:
+                    continue
+                base_id = _slugify(f"{artist}-{title}")
+
+            unique_id = base_id
+            if unique_id in used_ids:
+                suffix = track_id[:8] if track_id else "dup"
+                unique_id = _slugify(f"{base_id}-{suffix}")
+            counter = 2
+            while unique_id in used_ids:
+                unique_id = _slugify(f"{base_id}-{counter}")
+                counter += 1
+            used_ids.add(unique_id)
+
+            id_map[unique_id] = unique_id
+            if artist:
+                legacy_name = _safe_filename(f"{artist} - {title}")
+                id_map[legacy_name] = unique_id
+            if track_id:
+                id_map[track_id] = unique_id
+
+    return id_map
+
+
 def main(argv: list[str]) -> int:
     parser = argparse.ArgumentParser(
         description="Cut 30s preview MP3s into multiple duration clips (1/3/5/10/20/30 seconds)."
@@ -71,6 +150,17 @@ def main(argv: list[str]) -> int:
         "--durations",
         default="1,3,5,10,20,30",
         help="Comma-separated clip durations in seconds (default: 1,3,5,10,20,30)",
+    )
+    parser.add_argument(
+        "--csv",
+        default=None,
+        help="Optional Spotify-export CSV used to map filenames to slug ids for clip folders",
+    )
+    parser.add_argument(
+        "--id-style",
+        default="auto",
+        choices=("auto", "english", "tamil"),
+        help="Slug id style to use with --csv (default: auto)",
     )
     parser.add_argument(
         "--src",
@@ -105,6 +195,15 @@ def main(argv: list[str]) -> int:
         raise SystemExit(f"Language folder not found: {lang_dir}")
 
     clip_root = lang_dir / "clips"
+    id_style = args.id_style
+    if id_style == "auto":
+        id_style = "tamil" if args.language.lower() == "tamil" else "english"
+    id_map = None
+    if args.csv:
+        csv_path = Path(args.csv)
+        if not csv_path.exists():
+            raise SystemExit(f"CSV not found: {csv_path}")
+        id_map = _build_id_map(csv_path, id_style=id_style)
 
     def resolve_src(src_arg: str) -> Path:
         raw = Path(src_arg)
@@ -150,7 +249,8 @@ def main(argv: list[str]) -> int:
 
     for idx, src in enumerate(sources, start=1):
         base = src.stem
-        out_dir = clip_root / base
+        out_base = id_map.get(base, base) if id_map else base
+        out_dir = clip_root / out_base
         print(f"[{idx}/{len(sources)}] {src.name}")
         for d in durations:
             dst = out_dir / f"clip_{d}s.mp3"
