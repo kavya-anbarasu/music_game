@@ -37,6 +37,16 @@ def _parse_track_id(track_uri: str) -> str | None:
     return None
 
 
+def _select_preview_base(candidates: list[str], *, lang_dir: Path) -> str | None:
+    for name in candidates:
+        if not name:
+            continue
+        candidate = lang_dir / f"{name}.mp3"
+        if candidate.exists():
+            return name
+    return None
+
+
 def _split_people(value: str) -> list[str]:
     value = (value or "").strip()
     if not value:
@@ -318,37 +328,11 @@ def main(argv: list[str]) -> int:
             if not track_uri or not title or not artists_raw:
                 continue
 
+            track_id = _parse_track_id(track_uri)
             artists_list = _parse_artists_field(artists_raw)
             base = _safe_filename(f"{artists_raw} - {title}")
-            preview_path = lang_dir / f"{base}.mp3"
-            if not preview_path.exists():
-                continue
-
-            clip_dir = clip_root / base
-            audio: dict[str, str] = {}
-            for d in durations:
-                clip_path = clip_dir / f"clip_{d}s.mp3"
-                if clip_path.exists():
-                    audio[str(d)] = _join_url(
-                        args.public_audio_prefix,
-                        args.language,
-                        "clips",
-                        base,
-                        f"clip_{d}s.mp3",
-                    )
-
-            if args.require_all_durations and len(audio) != len(durations):
-                continue
-            if not audio:
-                continue
 
             movie = _extract_movie_from_text(title) or _extract_movie_from_text(album) or _clean_album_to_movie(album)
-            music_director = _guess_music_director(artists_list)
-            singers = _guess_singers(artists_list, music_director)
-
-            key_name = _format_key(row.get("Key", ""), row.get("Mode", ""))
-
-            track_id = _parse_track_id(track_uri)
             base_id = _slugify(title)
             unique_id = base_id
             if unique_id in used_ids:
@@ -358,6 +342,38 @@ def main(argv: list[str]) -> int:
             while unique_id in used_ids:
                 unique_id = _slugify(f"{base_id}-{counter}")
                 counter += 1
+
+            candidates = [unique_id]
+            if track_id:
+                candidates.append(track_id)
+            if unique_id == base_id:
+                candidates.append(base)
+            preview_base = _select_preview_base(candidates, lang_dir=lang_dir)
+            if not preview_base:
+                continue
+
+            clip_dir = clip_root / preview_base
+            audio: dict[str, str] = {}
+            for d in durations:
+                clip_path = clip_dir / f"clip_{d}s.mp3"
+                if clip_path.exists():
+                    audio[str(d)] = _join_url(
+                        args.public_audio_prefix,
+                        args.language,
+                        "clips",
+                        preview_base,
+                        f"clip_{d}s.mp3",
+                    )
+
+            if args.require_all_durations and len(audio) != len(durations):
+                continue
+            if not audio:
+                continue
+
+            music_director = _guess_music_director(artists_list)
+            singers = _guess_singers(artists_list, music_director)
+
+            key_name = _format_key(row.get("Key", ""), row.get("Mode", ""))
 
             item = {
                 "id": unique_id,
@@ -409,4 +425,3 @@ def main(argv: list[str]) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main(sys.argv[1:]))
-

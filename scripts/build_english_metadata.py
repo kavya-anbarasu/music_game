@@ -37,6 +37,16 @@ def _parse_track_id(track_uri: str) -> str | None:
     return None
 
 
+def _select_preview_base(candidates: list[str], *, lang_dir: Path) -> str | None:
+    for name in candidates:
+        if not name:
+            continue
+        candidate = lang_dir / f"{name}.mp3"
+        if candidate.exists():
+            return name
+    return None
+
+
 def _parse_singers(artists: str) -> list[str]:
     artists = (artists or "").strip()
     if not artists:
@@ -157,32 +167,8 @@ def main(argv: list[str]) -> int:
             if not title or not artists:
                 continue
 
-            base = _safe_filename(f"{artists} - {title}")
-            if only_preview and base != only_preview:
-                continue
-            preview_path = lang_dir / f"{base}.mp3"
-            if not preview_path.exists():
-                continue
-
-            clip_dir = clip_root / base
-            audio: dict[str, str] = {}
-            for d in durations:
-                clip_path = clip_dir / f"clip_{d}s.mp3"
-                if clip_path.exists():
-                    audio[str(d)] = _join_url(
-                        args.public_audio_prefix,
-                        args.language,
-                        "clips",
-                        base,
-                        f"clip_{d}s.mp3",
-                    )
-
-            if args.require_all_durations and len(audio) != len(durations):
-                continue
-            if not audio:
-                continue
-
             track_id = _parse_track_id(track_uri)
+            base = _safe_filename(f"{artists} - {title}")
             base_id = _slugify(f"{artists}-{title}")
             unique_id = base_id
             if unique_id in used_ids:
@@ -192,6 +178,36 @@ def main(argv: list[str]) -> int:
             while unique_id in used_ids:
                 unique_id = _slugify(f"{base_id}-{counter}")
                 counter += 1
+
+            candidates = [unique_id]
+            if track_id:
+                candidates.append(track_id)
+            if unique_id == base_id:
+                candidates.append(base)
+            preview_base = _select_preview_base(candidates, lang_dir=lang_dir)
+            if not preview_base:
+                continue
+            if only_preview and preview_base != only_preview:
+                continue
+
+            clip_dir = clip_root / preview_base
+            audio: dict[str, str] = {}
+            for d in durations:
+                clip_path = clip_dir / f"clip_{d}s.mp3"
+                if clip_path.exists():
+                    audio[str(d)] = _join_url(
+                        args.public_audio_prefix,
+                        args.language,
+                        "clips",
+                        preview_base,
+                        f"clip_{d}s.mp3",
+                    )
+
+            if args.require_all_durations and len(audio) != len(durations):
+                continue
+            if not audio:
+                continue
+
             used_ids.add(unique_id)
 
             items.append(
