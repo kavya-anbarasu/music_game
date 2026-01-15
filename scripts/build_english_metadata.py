@@ -76,15 +76,9 @@ def _format_key(key_raw: str, mode_raw: str) -> str | None:
     return f"{name} {mode}" if mode else name
 
 
-def _join_url(prefix: str, *parts: str) -> str:
-    prefix = prefix.rstrip("/")
-    clean = [p.strip("/").replace("\\", "/") for p in parts if p]
-    return "/".join([prefix, *clean])
-
-
 def main(argv: list[str]) -> int:
     parser = argparse.ArgumentParser(
-        description="Build English song metadata JSON mapping songs to available audio clip filepaths."
+        description="Build English song metadata JSON for songs that have audio clips."
     )
     parser.add_argument(
         "--csv",
@@ -109,7 +103,7 @@ def main(argv: list[str]) -> int:
     parser.add_argument(
         "--public-audio-prefix",
         default="/audio",
-        help="Public URL prefix that serves audio-root (default: /audio)",
+        help="Public URL prefix that serves audio-root (unused; audio field removed)",
     )
     parser.add_argument(
         "--durations",
@@ -191,21 +185,15 @@ def main(argv: list[str]) -> int:
                 continue
 
             clip_dir = clip_root / preview_base
-            audio: dict[str, str] = {}
+            available_clips: set[int] = set()
             for d in durations:
                 clip_path = clip_dir / f"clip_{d}s.mp3"
                 if clip_path.exists():
-                    audio[str(d)] = _join_url(
-                        args.public_audio_prefix,
-                        args.language,
-                        "clips",
-                        preview_base,
-                        f"clip_{d}s.mp3",
-                    )
+                    available_clips.add(d)
 
-            if args.require_all_durations and len(audio) != len(durations):
+            if args.require_all_durations and len(available_clips) != len(durations):
                 continue
-            if not audio:
+            if not available_clips:
                 continue
 
             used_ids.add(unique_id)
@@ -217,7 +205,6 @@ def main(argv: list[str]) -> int:
                     "album": album,
                     "singers": _parse_singers(artists),
                     "key": _format_key(row.get("Key", ""), row.get("Mode", "")),
-                    "audio": audio,
                 }
             )
 

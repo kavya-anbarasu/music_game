@@ -226,12 +226,6 @@ def _guess_singers(artists_list: list[str], music_director: str | None) -> list[
     return keep
 
 
-def _join_url(prefix: str, *parts: str) -> str:
-    prefix = prefix.rstrip("/")
-    clean = [p.strip("/").replace("\\", "/") for p in parts if p]
-    return "/".join([prefix, *clean])
-
-
 def _load_overrides(path: Path) -> dict[str, dict[str, str]]:
     if not path.exists():
         return {}
@@ -248,7 +242,7 @@ def _load_overrides(path: Path) -> dict[str, dict[str, str]]:
 
 def main(argv: list[str]) -> int:
     parser = argparse.ArgumentParser(
-        description="Build Tamil song metadata JSON using Spotify CSV + heuristics + manual overrides."
+        description="Build Tamil song metadata JSON for songs that have audio clips."
     )
     parser.add_argument(
         "--csv",
@@ -278,7 +272,7 @@ def main(argv: list[str]) -> int:
     parser.add_argument(
         "--public-audio-prefix",
         default="/audio",
-        help="Public URL prefix that serves audio-root (default: /audio)",
+        help="Public URL prefix that serves audio-root (unused; audio field removed)",
     )
     parser.add_argument(
         "--durations",
@@ -353,21 +347,15 @@ def main(argv: list[str]) -> int:
                 continue
 
             clip_dir = clip_root / preview_base
-            audio: dict[str, str] = {}
+            available_clips: set[int] = set()
             for d in durations:
                 clip_path = clip_dir / f"clip_{d}s.mp3"
                 if clip_path.exists():
-                    audio[str(d)] = _join_url(
-                        args.public_audio_prefix,
-                        args.language,
-                        "clips",
-                        preview_base,
-                        f"clip_{d}s.mp3",
-                    )
+                    available_clips.add(d)
 
-            if args.require_all_durations and len(audio) != len(durations):
+            if args.require_all_durations and len(available_clips) != len(durations):
                 continue
-            if not audio:
+            if not available_clips:
                 continue
 
             music_director = _guess_music_director(artists_list)
@@ -385,7 +373,6 @@ def main(argv: list[str]) -> int:
                 "hero": None,
                 "heroine": None,
                 "key": key_name,
-                "audio": audio,
                 "track_uri": track_uri,
             }
 
