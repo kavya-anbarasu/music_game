@@ -46,10 +46,13 @@
   },
   {
     "id": "macklemore-ryan-lewis-macklemore-ryan-lewis-ray-dalton-can-t-hold-us-feat-ray-da",
-    "title": "Can't Hold Us (feat. Ray Dalton)",
+    "title": "Can't Hold Us",
     "album": "The Heist",
     "singers": [
-      "Macklemore;Ryan Lewis;Macklemore & Ryan Lewis;Ray Dalton"
+      "Macklemore",
+      "Ryan Lewis",
+      "Macklemore & Ryan Lewis",
+      "Ray Dalton"
     ],
     "key": "D major"
   },
@@ -100,10 +103,11 @@
   },
   {
     "id": "cobra-starship-sabi-you-make-me-feel-feat-sabi",
-    "title": "You Make Me Feel... (feat. Sabi)",
+    "title": "You Make Me Feel...",
     "album": "You Make Me Feel... (feat. Sabi)",
     "singers": [
-      "Cobra Starship;Sabi"
+      "Cobra Starship",
+      "Sabi"
     ],
     "key": "G minor"
   },
@@ -127,10 +131,13 @@
   },
   {
     "id": "pitbull-afrojack-ne-yo-nayer-give-me-everything-feat-nayer",
-    "title": "Give Me Everything (feat. Nayer)",
+    "title": "Give Me Everything",
     "album": "Planet Pit (Deluxe Version)",
     "singers": [
-      "Pitbull;AFROJACK;Ne-Yo;Nayer"
+      "Pitbull",
+      "AFROJACK",
+      "Ne-Yo",
+      "Nayer"
     ],
     "key": "G#/Ab major"
   },
@@ -184,7 +191,8 @@
     "title": "Price Tag",
     "album": "Who You Are",
     "singers": [
-      "Jessie J;B.o.B"
+      "Jessie J",
+      "B.o.B"
     ],
     "key": "F major"
   },
@@ -226,10 +234,12 @@
   },
   {
     "id": "daft-punk-pharrell-williams-nile-rodgers-get-lucky-radio-edit-feat-pharrell-will",
-    "title": "Get Lucky (Radio Edit) [feat. Pharrell Williams and Nile Rodgers]",
+    "title": "Get Lucky (Radio Edit)",
     "album": "Get Lucky (Radio Edit) [feat. Pharrell Williams and Nile Rodgers]",
     "singers": [
-      "Daft Punk;Pharrell Williams;Nile Rodgers"
+      "Daft Punk",
+      "Pharrell Williams",
+      "Nile Rodgers"
     ],
     "key": "F#/Gb minor"
   },
@@ -256,7 +266,8 @@
     "title": "The Monster",
     "album": "The Monster",
     "singers": [
-      "Eminem;Rihanna"
+      "Eminem",
+      "Rihanna"
     ],
     "key": "A major"
   },
@@ -307,10 +318,11 @@
   },
   {
     "id": "macklemore-ryan-lewis-wanz-thrift-shop-feat-wanz",
-    "title": "Thrift Shop (feat. Wanz)",
+    "title": "Thrift Shop",
     "album": "The Heist",
     "singers": [
-      "Macklemore & Ryan Lewis;Wanz"
+      "Macklemore & Ryan Lewis",
+      "Wanz"
     ],
     "key": "F#/Gb minor"
   },
@@ -352,10 +364,11 @@
   },
   {
     "id": "david-guetta-sia-titanium-feat-sia",
-    "title": "Titanium (feat. Sia)",
+    "title": "Titanium",
     "album": "Nothing but the Beat",
     "singers": [
-      "David Guetta;Sia"
+      "David Guetta",
+      "Sia"
     ],
     "key": "C minor"
   },
@@ -400,7 +413,8 @@
     "title": "We Found Love",
     "album": "We Found Love",
     "singers": [
-      "Rihanna;Calvin Harris"
+      "Rihanna",
+      "Calvin Harris"
     ],
     "key": "C#/Db major"
   },
@@ -553,7 +567,9 @@
     "title": "Bang Bang",
     "album": "Bang Bang",
     "singers": [
-      "Jessie J;Ariana Grande;Nicki Minaj"
+      "Jessie J",
+      "Ariana Grande",
+      "Nicki Minaj"
     ],
     "key": "C minor"
   },
@@ -571,7 +587,8 @@
     "title": "Problem",
     "album": "Problem",
     "singers": [
-      "Ariana Grande;Iggy Azalea"
+      "Ariana Grande",
+      "Iggy Azalea"
     ],
     "key": "C#/Db minor"
   },
@@ -580,7 +597,8 @@
     "title": "Sleepless - Radio Edit",
     "album": "Sleepless",
     "singers": [
-      "CAZZETTE;The High"
+      "CAZZETTE",
+      "The High"
     ],
     "key": "F#/Gb minor"
   },
@@ -622,10 +640,11 @@
   },
   {
     "id": "cobra-starship-leighton-meester-good-girls-go-bad-feat-leighton-meester",
-    "title": "Good Girls Go Bad (feat. Leighton Meester)",
+    "title": "Good Girls Go Bad",
     "album": "Good Girls Go Bad (feat. Leighton Meester)",
     "singers": [
-      "Cobra Starship;Leighton Meester"
+      "Cobra Starship",
+      "Leighton Meester"
     ],
     "key": "C major"
   },
@@ -634,7 +653,8 @@
     "title": "Just Dance",
     "album": "The Fame",
     "singers": [
-      "Lady Gaga;Colby O'Donis"
+      "Lady Gaga",
+      "Colby O'Donis"
     ],
     "key": "C#/Db minor"
   },
@@ -661,13 +681,14 @@
     "title": "Love The Way You Lie",
     "album": "Recovery",
     "singers": [
-      "Eminem;Rihanna"
+      "Eminem",
+      "Rihanna"
     ],
     "key": "A#/Bb major"
   },
   {
     "id": "b-o-b-nothin-on-you-feat-bruno-mars",
-    "title": "Nothin' On You - feat. Bruno Mars",
+    "title": "Nothin' On You",
     "album": "Nothin' On You [feat. Bruno Mars]",
     "singers": [
       "B.o.B"
@@ -688,16 +709,18 @@
     "title": "OMG",
     "album": "OMG",
     "singers": [
-      "USHER;will.i.am"
+      "USHER",
+      "will.i.am"
     ],
     "key": "E minor"
   },
   {
     "id": "usher-pitbull-dj-got-us-fallin-in-love-feat-pitbull",
-    "title": "DJ Got Us Fallin' In Love (feat. Pitbull)",
+    "title": "DJ Got Us Fallin' In Love",
     "album": "DJ Got Us Fallin' In Love (feat. Pitbull)",
     "singers": [
-      "USHER;Pitbull"
+      "USHER",
+      "Pitbull"
     ],
     "key": "G minor"
   },
@@ -706,7 +729,8 @@
     "title": "Telephone",
     "album": "The Fame Monster (International Deluxe)",
     "singers": [
-      "Lady Gaga;Beyoncé"
+      "Lady Gaga",
+      "Beyoncé"
     ],
     "key": "F minor"
   },
@@ -721,10 +745,11 @@
   },
   {
     "id": "3oh-3-kesha-my-first-kiss-feat-ke-ha",
-    "title": "My First Kiss (feat. Ke$ha)",
+    "title": "My First Kiss",
     "album": "My First Kiss (feat. Ke$ha)",
     "singers": [
-      "3OH!3;Kesha"
+      "3OH!3",
+      "Kesha"
     ],
     "key": "G major"
   },
@@ -739,19 +764,21 @@
   },
   {
     "id": "tinie-tempah-eric-turner-written-in-the-stars-feat-eric-turner",
-    "title": "Written in the Stars (feat. Eric Turner)",
+    "title": "Written in the Stars",
     "album": "Written in the Stars (feat. Eric Turner)",
     "singers": [
-      "Tinie Tempah;Eric Turner"
+      "Tinie Tempah",
+      "Eric Turner"
     ],
     "key": "G major"
   },
   {
     "id": "travie-mccoy-bruno-mars-billionaire-feat-bruno-mars",
-    "title": "Billionaire (feat. Bruno Mars)",
+    "title": "Billionaire",
     "album": "Billionaire (feat. Bruno Mars)",
     "singers": [
-      "Travie McCoy;Bruno Mars"
+      "Travie McCoy",
+      "Bruno Mars"
     ],
     "key": "F#/Gb minor"
   },
@@ -775,10 +802,11 @@
   },
   {
     "id": "cash-cash-bebe-rexha-take-me-home-feat-bebe-rexha",
-    "title": "Take Me Home (feat. Bebe Rexha)",
+    "title": "Take Me Home",
     "album": "Take Me Home (feat. Bebe Rexha)",
     "singers": [
-      "Cash Cash;Bebe Rexha"
+      "Cash Cash",
+      "Bebe Rexha"
     ],
     "key": "G major"
   },
@@ -823,7 +851,8 @@
     "title": "Ten Feet Tall",
     "album": "Ten Feet Tall",
     "singers": [
-      "AFROJACK;WRABEL"
+      "AFROJACK",
+      "WRABEL"
     ],
     "key": "C major"
   },
@@ -841,7 +870,8 @@
     "title": "Really Don't Care",
     "album": "Demi",
     "singers": [
-      "Demi Lovato;Cher Lloyd"
+      "Demi Lovato",
+      "Cher Lloyd"
     ],
     "key": "G major"
   },
@@ -856,10 +886,11 @@
   },
   {
     "id": "icona-pop-charli-xcx-i-love-it-feat-charli-xcx",
-    "title": "I Love It (feat. Charli XCX)",
+    "title": "I Love It",
     "album": "I Love It (feat. Charli XCX)",
     "singers": [
-      "Icona Pop;Charli xcx"
+      "Icona Pop",
+      "Charli xcx"
     ],
     "key": "G#/Ab major"
   },
@@ -913,22 +944,24 @@
     "title": "Simple Song",
     "album": "Port Of Morrow",
     "singers": [
-      "The Shins;James Mercer"
+      "The Shins",
+      "James Mercer"
     ],
     "key": "G major"
   },
   {
     "id": "glee-cast-adam-lambert-marry-the-night-glee-cast-version-feat-adam-lambert",
-    "title": "Marry the Night (Glee Cast Version) (feat. Adam Lambert)",
+    "title": "Marry the Night (Glee Cast Version)",
     "album": "Playlist: The Very Best Of Adam Lambert",
     "singers": [
-      "Glee Cast;Adam Lambert"
+      "Glee Cast",
+      "Adam Lambert"
     ],
     "key": "A minor"
   },
   {
     "id": "macklemore-and-we-danced-feat-ziggy-stardust",
-    "title": "And We Danced (feat. Ziggy Stardust)",
+    "title": "And We Danced",
     "album": "The Unplanned Mixtape",
     "singers": [
       "Macklemore"
@@ -955,10 +988,11 @@
   },
   {
     "id": "gym-class-heroes-adam-levine-stereo-hearts-feat-adam-levine",
-    "title": "Stereo Hearts (feat. Adam Levine)",
+    "title": "Stereo Hearts",
     "album": "The Papercut Chronicles II",
     "singers": [
-      "Gym Class Heroes;Adam Levine"
+      "Gym Class Heroes",
+      "Adam Levine"
     ],
     "key": "A major"
   },
@@ -967,16 +1001,18 @@
     "title": "The Fighter",
     "album": "The Papercut Chronicles II",
     "singers": [
-      "Gym Class Heroes;Ryan Tedder"
+      "Gym Class Heroes",
+      "Ryan Tedder"
     ],
     "key": "G major"
   },
   {
     "id": "the-script-will-i-am-hall-of-fame-feat-will-i-am",
-    "title": "Hall of Fame (feat. will.i.am)",
+    "title": "Hall of Fame",
     "album": "#3",
     "singers": [
-      "The Script;will.i.am"
+      "The Script",
+      "will.i.am"
     ],
     "key": "A#/Bb major"
   },
@@ -994,7 +1030,8 @@
     "title": "Waves - Robin Schulz Radio Edit",
     "album": "Waves (Robin Schulz Radio Edit)",
     "singers": [
-      "Mr. Probz;Robin Schulz"
+      "Mr. Probz",
+      "Robin Schulz"
     ],
     "key": "F minor"
   },
@@ -1009,10 +1046,11 @@
   },
   {
     "id": "fun-janelle-mon-e-we-are-young-feat-janelle-mon-e",
-    "title": "We Are Young (feat. Janelle Monáe)",
+    "title": "We Are Young",
     "album": "Some Nights",
     "singers": [
-      "fun.;Janelle Monáe"
+      "fun.",
+      "Janelle Monáe"
     ],
     "key": "A#/Bb major"
   },
@@ -1063,19 +1101,21 @@
   },
   {
     "id": "gym-class-heroes-neon-hitch-ass-back-home-feat-neon-hitch",
-    "title": "Ass Back Home (feat. Neon Hitch)",
+    "title": "Ass Back Home",
     "album": "The Papercut Chronicles II",
     "singers": [
-      "Gym Class Heroes;Neon Hitch"
+      "Gym Class Heroes",
+      "Neon Hitch"
     ],
     "key": "A#/Bb major"
   },
   {
     "id": "b-o-b-hayley-williams-airplanes-feat-hayley-williams-of-paramore",
-    "title": "Airplanes (feat. Hayley Williams of Paramore)",
+    "title": "Airplanes",
     "album": "B.o.B Presents: The Adventures of Bobby Ray",
     "singers": [
-      "B.o.B;Hayley Williams"
+      "B.o.B",
+      "Hayley Williams"
     ],
     "key": "F#/Gb minor"
   },
@@ -1144,10 +1184,11 @@
   },
   {
     "id": "wiz-khalifa-charlie-puth-see-you-again-feat-charlie-puth",
-    "title": "See You Again (feat. Charlie Puth)",
+    "title": "See You Again",
     "album": "See You Again (feat. Charlie Puth)",
     "singers": [
-      "Wiz Khalifa;Charlie Puth"
+      "Wiz Khalifa",
+      "Charlie Puth"
     ],
     "key": "A#/Bb major"
   },
@@ -1180,10 +1221,11 @@
   },
   {
     "id": "david-guetta-sam-martin-dangerous-feat-sam-martin",
-    "title": "Dangerous (feat. Sam Martin)",
+    "title": "Dangerous",
     "album": "Listen",
     "singers": [
-      "David Guetta;Sam Martin"
+      "David Guetta",
+      "Sam Martin"
     ],
     "key": "E minor"
   },
@@ -1243,10 +1285,12 @@
   },
   {
     "id": "fences-macklemore-ryan-lewis-arrows-feat-macklemore-ryan-lewis",
-    "title": "Arrows (feat. Macklemore & Ryan Lewis)",
+    "title": "Arrows",
     "album": "Arrows (feat. Macklemore & Ryan Lewis)",
     "singers": [
-      "Fences;Macklemore;Ryan Lewis"
+      "Fences",
+      "Macklemore",
+      "Ryan Lewis"
     ],
     "key": "G major"
   },
@@ -1363,7 +1407,9 @@
     "title": "Popular Song",
     "album": "Popular Song",
     "singers": [
-      "MIKA;Ariana Grande;Jason Nevins"
+      "MIKA",
+      "Ariana Grande",
+      "Jason Nevins"
     ],
     "key": "G#/Ab major"
   },
@@ -1381,7 +1427,8 @@
     "title": "Fast Car",
     "album": "Fast Car",
     "singers": [
-      "Jonas Blue;Dakota"
+      "Jonas Blue",
+      "Dakota"
     ],
     "key": "A major"
   },
@@ -1408,7 +1455,8 @@
     "title": "Roses",
     "album": "Roses",
     "singers": [
-      "The Chainsmokers;ROZES"
+      "The Chainsmokers",
+      "ROZES"
     ],
     "key": "E major"
   },
@@ -1468,10 +1516,11 @@
   },
   {
     "id": "panic-at-the-disco-lolo-miss-jackson-feat-lolo",
-    "title": "Miss Jackson (feat. LOLO)",
+    "title": "Miss Jackson",
     "album": "Too Weird to Live, Too Rare to Die!",
     "singers": [
-      "Panic! At The Disco;LOLO"
+      "Panic! At The Disco",
+      "LOLO"
     ],
     "key": "D major"
   },
@@ -1579,7 +1628,8 @@
     "title": "Really Don't Care",
     "album": "Demi",
     "singers": [
-      "Demi Lovato;Cher Lloyd"
+      "Demi Lovato",
+      "Cher Lloyd"
     ],
     "key": "G major"
   },
@@ -1597,7 +1647,8 @@
     "title": "Don't Let Me Down",
     "album": "Don't Let Me Down",
     "singers": [
-      "The Chainsmokers;Daya"
+      "The Chainsmokers",
+      "Daya"
     ],
     "key": "B major"
   },
@@ -1621,10 +1672,11 @@
   },
   {
     "id": "charlie-puth-selena-gomez-we-don-t-talk-anymore-feat-selena-gomez",
-    "title": "We Don't Talk Anymore (feat. Selena Gomez)",
+    "title": "We Don't Talk Anymore",
     "album": "Nine Track Mind",
     "singers": [
-      "Charlie Puth;Selena Gomez"
+      "Charlie Puth",
+      "Selena Gomez"
     ],
     "key": "C#/Db minor"
   },
@@ -1660,7 +1712,8 @@
     "title": "Good Time",
     "album": "The Midsummer Station",
     "singers": [
-      "Owl City;Carly Rae Jepsen"
+      "Owl City",
+      "Carly Rae Jepsen"
     ],
     "key": "D#/Eb major"
   },
@@ -1678,7 +1731,8 @@
     "title": "Timber",
     "album": "Global Warming: Meltdown (Deluxe Version)",
     "singers": [
-      "Pitbull;Kesha"
+      "Pitbull",
+      "Kesha"
     ],
     "key": "B major"
   },
@@ -1783,10 +1837,11 @@
   },
   {
     "id": "clean-bandit-jess-glynne-rather-be-feat-jess-glynne",
-    "title": "Rather Be (feat. Jess Glynne)",
+    "title": "Rather Be",
     "album": "New Eyes",
     "singers": [
-      "Clean Bandit;Jess Glynne"
+      "Clean Bandit",
+      "Jess Glynne"
     ],
     "key": "B major"
   },
@@ -1804,7 +1859,8 @@
     "title": "Heroes (we could be)",
     "album": "Forever",
     "singers": [
-      "Alesso;Tove Lo"
+      "Alesso",
+      "Tove Lo"
     ],
     "key": "F major"
   },
@@ -1867,7 +1923,8 @@
     "title": "Cheerleader (Felix Jaehn Remix) - Radio Edit",
     "album": "Me 4 U",
     "singers": [
-      "OMI;Felix Jaehn"
+      "OMI",
+      "Felix Jaehn"
     ],
     "key": "E major"
   },
@@ -1891,10 +1948,13 @@
   },
   {
     "id": "macklemore-ryan-lewis-macklemore-ryan-lewis-mary-lambert-same-love-feat-mary-lam",
-    "title": "Same Love (feat. Mary Lambert)",
+    "title": "Same Love",
     "album": "The Heist",
     "singers": [
-      "Macklemore & Ryan Lewis;Macklemore;Ryan Lewis;Mary Lambert"
+      "Macklemore & Ryan Lewis",
+      "Macklemore",
+      "Ryan Lewis",
+      "Mary Lambert"
     ],
     "key": "G#/Ab major"
   },
@@ -1921,7 +1981,8 @@
     "title": "Closer",
     "album": "Closer",
     "singers": [
-      "The Chainsmokers;Halsey"
+      "The Chainsmokers",
+      "Halsey"
     ],
     "key": "G#/Ab major"
   },
@@ -2002,7 +2063,8 @@
     "title": "I Don’t Wanna Live Forever (Fifty Shades Darker)",
     "album": "I Don’t Wanna Live Forever (Fifty Shades Darker)",
     "singers": [
-      "ZAYN;Taylor Swift"
+      "ZAYN",
+      "Taylor Swift"
     ],
     "key": "C major"
   },
@@ -2092,7 +2154,8 @@
     "title": "Stole the Show",
     "album": "Cloud Nine",
     "singers": [
-      "Kygo;Parson James"
+      "Kygo",
+      "Parson James"
     ],
     "key": "G#/Ab minor"
   },
@@ -2281,7 +2344,8 @@
     "title": "Nobody Speak",
     "album": "The Mountain Will Fall",
     "singers": [
-      "DJ Shadow;Run The Jewels"
+      "DJ Shadow",
+      "Run The Jewels"
     ],
     "key": "D major"
   },
@@ -2353,7 +2417,8 @@
     "title": "In a Black Out",
     "album": "I Had a Dream That You Were Mine",
     "singers": [
-      "Hamilton Leithauser;Rostam"
+      "Hamilton Leithauser",
+      "Rostam"
     ],
     "key": "D#/Eb major"
   },
@@ -2377,10 +2442,11 @@
   },
   {
     "id": "taylor-swift-haim-no-body-no-crime-feat-haim",
-    "title": "no body, no crime (feat. HAIM)",
+    "title": "no body, no crime",
     "album": "evermore",
     "singers": [
-      "Taylor Swift;HAIM"
+      "Taylor Swift",
+      "HAIM"
     ],
     "key": "G minor"
   },
@@ -2389,7 +2455,8 @@
     "title": "Black Sheep - Brie Larson Vocal Version",
     "album": "Black Sheep (Brie Larson Vocal Version)",
     "singers": [
-      "Metric;Brie Larson"
+      "Metric",
+      "Brie Larson"
     ],
     "key": "B minor"
   },
@@ -2497,7 +2564,8 @@
     "title": "HEY HOW YOU DOING",
     "album": "The Saint Lazare Sample Pack",
     "singers": [
-      "Saint Lazare;Prhymekid"
+      "Saint Lazare",
+      "Prhymekid"
     ],
     "key": "G major"
   },
@@ -2575,10 +2643,11 @@
   },
   {
     "id": "carly-rae-jepsen-rufus-wainwright-the-loneliest-time-feat-rufus-wainwright",
-    "title": "The Loneliest Time (feat. Rufus Wainwright)",
+    "title": "The Loneliest Time",
     "album": "The Loneliest Time",
     "singers": [
-      "Carly Rae Jepsen;Rufus Wainwright"
+      "Carly Rae Jepsen",
+      "Rufus Wainwright"
     ],
     "key": "D major"
   },
@@ -2614,7 +2683,8 @@
     "title": "Until I Found You (with Em Beihold) - Em Beihold Version",
     "album": "Until I Found You (Em Beihold Version)",
     "singers": [
-      "Stephen Sanchez;Em Beihold"
+      "Stephen Sanchez",
+      "Em Beihold"
     ],
     "key": "A#/Bb major"
   },
@@ -2683,10 +2753,11 @@
   },
   {
     "id": "hot-chelle-rae-new-boyz-i-like-it-like-that-feat-new-boyz",
-    "title": "I Like It Like That (feat. New Boyz)",
+    "title": "I Like It Like That",
     "album": "Whatever",
     "singers": [
-      "Hot Chelle Rae;New Boyz"
+      "Hot Chelle Rae",
+      "New Boyz"
     ],
     "key": "C#/Db major"
   },
@@ -2737,10 +2808,11 @@
   },
   {
     "id": "meghan-trainor-john-legend-like-i-m-gonna-lose-you-feat-john-legend",
-    "title": "Like I'm Gonna Lose You (feat. John Legend)",
+    "title": "Like I'm Gonna Lose You",
     "album": "Title (Deluxe)",
     "singers": [
-      "Meghan Trainor;John Legend"
+      "Meghan Trainor",
+      "John Legend"
     ],
     "key": "C major"
   },
@@ -2803,7 +2875,8 @@
     "title": "Say Something",
     "album": "Is There Anybody Out There?",
     "singers": [
-      "A Great Big World;Christina Aguilera"
+      "A Great Big World",
+      "Christina Aguilera"
     ],
     "key": "D major"
   },
@@ -2821,7 +2894,8 @@
     "title": "Shallow",
     "album": "A Star Is Born Soundtrack",
     "singers": [
-      "Lady Gaga;Bradley Cooper"
+      "Lady Gaga",
+      "Bradley Cooper"
     ],
     "key": "G major"
   },
@@ -2839,7 +2913,8 @@
     "title": "Somebody That I Used To Know",
     "album": "Making Mirrors",
     "singers": [
-      "Gotye;Kimbra"
+      "Gotye",
+      "Kimbra"
     ],
     "key": "C major"
   },
@@ -2911,7 +2986,8 @@
     "title": "Something Just Like This",
     "album": "Memories...Do Not Open",
     "singers": [
-      "The Chainsmokers;Coldplay"
+      "The Chainsmokers",
+      "Coldplay"
     ],
     "key": "B minor"
   },
@@ -2926,7 +3002,7 @@
   },
   {
     "id": "madison-shamoun-you-gotta-be-from-the-amazon-original-series-the-lake",
-    "title": "You Gotta Be (From the Amazon Original Series The Lake)",
+    "title": "You Gotta Be",
     "album": "You Gotta Be (From the Amazon Original Series The Lake)",
     "singers": [
       "Madison Shamoun"
@@ -2980,10 +3056,11 @@
   },
   {
     "id": "brandi-carlile-catherine-carlile-closer-to-fine-from-barbie-the-album",
-    "title": "Closer To Fine (From Barbie The Album)",
+    "title": "Closer To Fine",
     "album": "Closer To Fine (From Barbie The Album)",
     "singers": [
-      "Brandi Carlile;Catherine Carlile"
+      "Brandi Carlile",
+      "Catherine Carlile"
     ],
     "key": "A major"
   },
@@ -3160,10 +3237,11 @@
   },
   {
     "id": "taylor-swift-florence-the-machine-florida-feat-florence-the-machine",
-    "title": "Florida!!! (feat. Florence + The Machine)",
+    "title": "Florida!!!",
     "album": "THE TORTURED POETS DEPARTMENT",
     "singers": [
-      "Taylor Swift;Florence + The Machine"
+      "Taylor Swift",
+      "Florence + The Machine"
     ],
     "key": "C major"
   },
@@ -3259,10 +3337,12 @@
   },
   {
     "id": "taylor-swift-brendon-urie-panic-at-the-disco-me-feat-brendon-urie-of-panic-at-th",
-    "title": "ME! (feat. Brendon Urie of Panic! At The Disco)",
+    "title": "ME!",
     "album": "Lover",
     "singers": [
-      "Taylor Swift;Brendon Urie;Panic! At The Disco"
+      "Taylor Swift",
+      "Brendon Urie",
+      "Panic! At The Disco"
     ],
     "key": "C major"
   },
@@ -3307,7 +3387,13 @@
     "title": "The Ballad of the Witches' Road (Cover Version)",
     "album": "Songs from Agatha All Along (Episode 4)",
     "singers": [
-      "Kathryn Hahn;Sasheer Zamata;Ali Ahn;Patti LuPone;Aubrey Plaza;Joe Locke;Agatha All Along - Cast"
+      "Kathryn Hahn",
+      "Sasheer Zamata",
+      "Ali Ahn",
+      "Patti LuPone",
+      "Aubrey Plaza",
+      "Joe Locke",
+      "Agatha All Along - Cast"
     ],
     "key": "C minor"
   },
@@ -3334,7 +3420,8 @@
     "title": "Let It Go",
     "album": "A Whole New Sound",
     "singers": [
-      "LØLØ;Disney"
+      "LØLØ",
+      "Disney"
     ],
     "key": "F#/Gb major"
   },
@@ -3370,7 +3457,8 @@
     "title": "debbie downer",
     "album": "debbie downer",
     "singers": [
-      "LØLØ;Maggie Lindemann"
+      "LØLØ",
+      "Maggie Lindemann"
     ],
     "key": "D major"
   },
@@ -3403,7 +3491,7 @@
   },
   {
     "id": "robbie-williams-rock-dj-from-better-man-original-motion-picture-soundtrack",
-    "title": "Rock DJ (From Better Man: Original Motion Picture Soundtrack)",
+    "title": "Rock DJ",
     "album": "Better Man (Original Motion Picture Soundtrack)",
     "singers": [
       "Robbie Williams"
@@ -3412,19 +3500,21 @@
   },
   {
     "id": "robbie-williams-adam-tucker-angels-from-better-man-original-motion-picture-sound",
-    "title": "Angels (From Better Man: Original Motion Picture Soundtrack) (feat. Adam Tucker)",
+    "title": "Angels",
     "album": "Better Man (Original Motion Picture Soundtrack)",
     "singers": [
-      "Robbie Williams;Adam Tucker"
+      "Robbie Williams",
+      "Adam Tucker"
     ],
     "key": "E major"
   },
   {
     "id": "robbie-williams-adam-tucker-let-me-entertain-you-from-better-man-original-motion",
-    "title": "Let Me Entertain You (From Better Man: Original Motion Picture Soundtrack) (feat. Adam Tucker)",
+    "title": "Let Me Entertain You",
     "album": "Better Man (Original Motion Picture Soundtrack)",
     "singers": [
-      "Robbie Williams;Adam Tucker"
+      "Robbie Williams",
+      "Adam Tucker"
     ],
     "key": "A#/Bb major"
   },
@@ -3574,10 +3664,12 @@
   },
   {
     "id": "clean-bandit-anne-marie-sean-paul-rockabye-feat-sean-paul-anne-marie",
-    "title": "Rockabye (feat. Sean Paul & Anne-Marie)",
+    "title": "Rockabye",
     "album": "What Is Love? (Deluxe Edition)",
     "singers": [
-      "Clean Bandit;Anne-Marie;Sean Paul"
+      "Clean Bandit",
+      "Anne-Marie",
+      "Sean Paul"
     ],
     "key": "A minor"
   },
@@ -3631,7 +3723,8 @@
     "title": "Happier",
     "album": "Happier",
     "singers": [
-      "Marshmello;Bastille"
+      "Marshmello",
+      "Bastille"
     ],
     "key": "F major"
   },
@@ -3745,10 +3838,11 @@
   },
   {
     "id": "b-o-b-rivers-cuomo-magic-feat-rivers-cuomo",
-    "title": "Magic (feat. Rivers Cuomo)",
+    "title": "Magic",
     "album": "B.o.B Presents: The Adventures of Bobby Ray",
     "singers": [
-      "B.o.B;Rivers Cuomo"
+      "B.o.B",
+      "Rivers Cuomo"
     ],
     "key": "G#/Ab minor"
   },
@@ -3889,10 +3983,11 @@
   },
   {
     "id": "taylor-swift-sabrina-carpenter-the-life-of-a-showgirl-feat-sabrina-carpenter",
-    "title": "The Life of a Showgirl (feat. Sabrina Carpenter)",
+    "title": "The Life of a Showgirl",
     "album": "The Life of a Showgirl",
     "singers": [
-      "Taylor Swift;Sabrina Carpenter"
+      "Taylor Swift",
+      "Sabrina Carpenter"
     ],
     "key": "C major"
   },
@@ -3910,7 +4005,8 @@
     "title": "Sunroof",
     "album": "Good Times Go",
     "singers": [
-      "Nicky Youre;hey daisy"
+      "Nicky Youre",
+      "hey daisy"
     ],
     "key": "A#/Bb major"
   },
@@ -3937,7 +4033,8 @@
     "title": "Right Round",
     "album": "R.O.O.T.S. (Route of Overcoming the Struggle)",
     "singers": [
-      "Flo Rida;Kesha"
+      "Flo Rida",
+      "Kesha"
     ],
     "key": "G major"
   },
