@@ -21,6 +21,7 @@ import { BonusSection } from './BonusSection';
 import { SongNav } from './SongNav';
 import { TodaysSetList } from './TodaysSetList';
 import { LeaderboardSection } from './LeaderboardSection';
+import { ThemeToggle } from './ThemeToggle';
 import { Button } from './ui/Button';
 
 export default function GuessTheSongGame(props: { lang: Language }) {
@@ -250,12 +251,15 @@ export default function GuessTheSongGame(props: { lang: Language }) {
           </div>
         </div>
         <div className="flex flex-col items-end gap-2">
-          <Link
-            href="/"
-            className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm hover:bg-white/10"
-          >
-            Home
-          </Link>
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <Link
+              href="/"
+              className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm hover:bg-white/10"
+            >
+              Home
+            </Link>
+          </div>
           {!locked && (
             <div className="flex items-center gap-2">
               <Button onClick={handleRevealMore} disabled={isLastReveal} variant="primary" size="sm">

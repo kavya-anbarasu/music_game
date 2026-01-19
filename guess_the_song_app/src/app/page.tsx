@@ -1,13 +1,17 @@
 import Link from 'next/link';
 import { Card } from './components/ui/Card';
+import { ThemeToggle } from './components/ThemeToggle';
 
 export default function Home() {
   return (
     <main className="mx-auto w-full max-w-4xl px-4 py-12 sm:px-6">
-      <div className="mb-8">
-        <div className="text-xs uppercase tracking-wider text-white/50">Daily game</div>
-        <h1 className="text-4xl font-semibold tracking-tight">Guess the Song</h1>
-        <div className="mt-2 text-sm text-white/70">Pick a language to start today’s set.</div>
+      <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+        <div>
+          <div className="text-xs uppercase tracking-wider text-white/50">Daily game</div>
+          <h1 className="text-4xl font-semibold tracking-tight">Guess the Song</h1>
+          <div className="mt-2 text-sm text-white/70">Pick a language to start today’s set.</div>
+        </div>
+        <ThemeToggle />
       </div>
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">

@@ -23,15 +23,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="dark">
       <body
         className={[
           geistSans.variable,
           geistMono.variable,
           "antialiased",
           "min-h-screen",
-          "bg-gradient-to-b from-zinc-950 via-zinc-950 to-black",
-          "text-zinc-100",
+          "transition-colors duration-200",
         ].join(" ")}
       >
         {children}
