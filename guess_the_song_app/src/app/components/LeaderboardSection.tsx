@@ -49,7 +49,7 @@ export function LeaderboardSection(props: {
     setPlayerName(loadName(lang));
   }, [lang]);
 
-  const { totalScore, maxScore, solvedCount } = useMemo(() => {
+  const { totalScore, solvedCount } = useMemo(() => {
     let total = 0;
     let solved = 0;
     for (const row of songs) {
@@ -58,7 +58,7 @@ export function LeaderboardSection(props: {
       total += breakdown.total;
       if (p.status === 'solved') solved += 1;
     }
-    return { totalScore: total, maxScore: songs.length * 100, solvedCount: solved };
+    return { totalScore: total, solvedCount: solved };
   }, [songs, progressMap]);
 
   async function refresh() {
@@ -105,7 +105,7 @@ export function LeaderboardSection(props: {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-2">
+      <div className="grid grid-cols-2 gap-2">
         <div className="rounded-xl border border-white/10 bg-white/5 p-3">
           <div className="text-xs opacity-70">Score</div>
           <div className="text-lg font-semibold">{totalScore}</div>
@@ -115,10 +115,6 @@ export function LeaderboardSection(props: {
           <div className="text-lg font-semibold">
             {solvedCount}/{songs.length}
           </div>
-        </div>
-        <div className="rounded-xl border border-white/10 bg-white/5 p-3">
-          <div className="text-xs opacity-70">Max</div>
-          <div className="text-lg font-semibold">{maxScore}</div>
         </div>
       </div>
 
