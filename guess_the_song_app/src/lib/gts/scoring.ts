@@ -15,6 +15,8 @@ const HINT_PENALTY: Record<HintKey, number> = {
   album: 5,
   movie: 5,
   music_director: 5,
+  hero: 5,
+  heroine: 5,
   key: 5,
 };
 
@@ -23,6 +25,8 @@ const BONUS_POINTS: Record<HintKey, number> = {
   album: 5,
   movie: 5,
   music_director: 5,
+  hero: 5,
+  heroine: 5,
   key: 5,
 };
 
@@ -55,6 +59,8 @@ export function scoreSong(progress: SongProgress): SongScoreBreakdown {
     (progress.revealedHints.album ? HINT_PENALTY.album : 0) +
     (progress.revealedHints.movie ? HINT_PENALTY.movie : 0) +
     (progress.revealedHints.music_director ? HINT_PENALTY.music_director : 0) +
+    (progress.revealedHints.hero ? HINT_PENALTY.hero : 0) +
+    (progress.revealedHints.heroine ? HINT_PENALTY.heroine : 0) +
     (progress.revealedHints.key ? HINT_PENALTY.key : 0) +
     (progress.revealedHints.singers ? HINT_PENALTY.singers : 0);
 
@@ -62,6 +68,8 @@ export function scoreSong(progress: SongProgress): SongScoreBreakdown {
     (progress.bonus.album?.correct ? BONUS_POINTS.album : 0) +
     (progress.bonus.movie?.correct ? BONUS_POINTS.movie : 0) +
     (progress.bonus.music_director?.correct ? BONUS_POINTS.music_director : 0) +
+    (progress.bonus.hero?.correct ? BONUS_POINTS.hero : 0) +
+    (progress.bonus.heroine?.correct ? BONUS_POINTS.heroine : 0) +
     (progress.bonus.key?.correct ? BONUS_POINTS.key : 0) +
     (progress.bonus.singers?.correct ? BONUS_POINTS.singers : 0);
 

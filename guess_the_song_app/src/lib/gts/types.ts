@@ -9,10 +9,12 @@ export type SongMeta = {
   movie?: string | null;
   music_director?: string | null;
   singers?: string[];
+  hero?: string | null;
+  heroine?: string | null;
   key?: string;
 };
 
-export type HintKey = 'album' | 'movie' | 'music_director' | 'singers' | 'key';
+export type HintKey = 'album' | 'movie' | 'music_director' | 'singers' | 'hero' | 'heroine' | 'key';
 
 export type BonusResult = {
   answer: string;
@@ -34,6 +36,8 @@ export type OptionPools = {
   albums: string[];
   movies: string[];
   musicDirectors: string[];
+  heroes: string[];
+  heroines: string[];
   keys: string[];
   singers: string[];
 };

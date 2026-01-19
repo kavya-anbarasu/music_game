@@ -11,6 +11,8 @@ export function buildOptionPools(songs: SongMeta[]): OptionPools {
   const musicDirectors = Array.from(
     new Set(songs.map((s) => s.music_director ?? undefined).filter(isNonEmptyString))
   );
+  const heroes = Array.from(new Set(songs.map((s) => s.hero ?? undefined).filter(isNonEmptyString)));
+  const heroines = Array.from(new Set(songs.map((s) => s.heroine ?? undefined).filter(isNonEmptyString)));
   const keys = Array.from(new Set(songs.map((s) => s.key).filter(isNonEmptyString)));
   const singers = Array.from(
     new Set(
@@ -25,8 +27,10 @@ export function buildOptionPools(songs: SongMeta[]): OptionPools {
   albums.sort((a, b) => a.localeCompare(b));
   movies.sort((a, b) => a.localeCompare(b));
   musicDirectors.sort((a, b) => a.localeCompare(b));
+  heroes.sort((a, b) => a.localeCompare(b));
+  heroines.sort((a, b) => a.localeCompare(b));
   keys.sort((a, b) => a.localeCompare(b));
   singers.sort((a, b) => a.localeCompare(b));
 
-  return { titles, albums, movies, musicDirectors, keys, singers };
+  return { titles, albums, movies, musicDirectors, heroes, heroines, keys, singers };
 }

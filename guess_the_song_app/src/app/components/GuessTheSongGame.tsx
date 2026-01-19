@@ -188,6 +188,8 @@ export default function GuessTheSongGame(props: { lang: Language }) {
     if (h === 'album') correct = matchTextExact(user, currentMeta?.album);
     if (h === 'movie') correct = matchTextExact(user, currentMeta?.movie);
     if (h === 'music_director') correct = matchTextExact(user, currentMeta?.music_director);
+    if (h === 'hero') correct = matchTextExact(user, currentMeta?.hero);
+    if (h === 'heroine') correct = matchTextExact(user, currentMeta?.heroine);
     if (h === 'key') correct = matchTextExact(user, currentMeta?.key);
     if (h === 'singers') correct = matchSingerPick(user, currentMeta?.singers);
 
@@ -213,17 +215,23 @@ export default function GuessTheSongGame(props: { lang: Language }) {
   const answerAlbum = currentMeta?.album ?? '(none)';
   const answerMovie = currentMeta?.movie ?? '(none)';
   const answerMusicDirector = currentMeta?.music_director ?? '(none)';
+  const answerHero = currentMeta?.hero ?? '(none)';
+  const answerHeroine = currentMeta?.heroine ?? '(none)';
   const answerKey = currentMeta?.key ?? '(none)';
   const answerSingers = (currentMeta?.singers ?? []).join(', ') || '(none)';
 
   const hintKeys: HintKey[] =
-    lang === 'tamil' ? (['movie', 'music_director', 'singers'] as HintKey[]) : (['album', 'singers', 'key'] as HintKey[]);
+    lang === 'tamil'
+      ? (['movie', 'album', 'music_director', 'singers', 'hero', 'heroine'] as HintKey[])
+      : (['album', 'singers', 'key'] as HintKey[]);
 
   const availableHintKeys = hintKeys.filter((k) => {
     if (!currentMeta) return true;
     if (k === 'album') return !!currentMeta.album;
     if (k === 'movie') return !!currentMeta.movie;
     if (k === 'music_director') return !!currentMeta.music_director;
+    if (k === 'hero') return !!currentMeta.hero;
+    if (k === 'heroine') return !!currentMeta.heroine;
     if (k === 'key') return !!currentMeta.key;
     if (k === 'singers') return (currentMeta.singers ?? []).length > 0;
     return true;
@@ -301,6 +309,8 @@ export default function GuessTheSongGame(props: { lang: Language }) {
               album: 'Album',
               movie: 'Movie',
               music_director: 'Music director',
+              hero: 'Hero',
+              heroine: 'Heroine',
               singers: lang === 'tamil' ? 'Singers' : 'Artist',
               key: 'Key',
             }}
@@ -308,6 +318,8 @@ export default function GuessTheSongGame(props: { lang: Language }) {
               album: answerAlbum,
               movie: answerMovie,
               music_director: answerMusicDirector,
+              hero: answerHero,
+              heroine: answerHeroine,
               singers: answerSingers,
               key: answerKey,
             }}
@@ -324,6 +336,8 @@ export default function GuessTheSongGame(props: { lang: Language }) {
               album: 'Album',
               movie: 'Movie',
               music_director: 'Music director',
+              hero: 'Hero',
+              heroine: 'Heroine',
               singers: lang === 'tamil' ? 'Singer' : 'Artist',
               key: 'Key',
             }}
@@ -331,6 +345,8 @@ export default function GuessTheSongGame(props: { lang: Language }) {
               album: answerAlbum,
               movie: answerMovie,
               music_director: answerMusicDirector,
+              hero: answerHero,
+              heroine: answerHeroine,
               singers: answerSingers,
               key: answerKey,
             }}

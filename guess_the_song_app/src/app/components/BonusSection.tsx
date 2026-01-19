@@ -52,6 +52,10 @@ export function BonusSection(props: {
             ? optionPools.movies
             : k === 'music_director'
             ? optionPools.musicDirectors
+            : k === 'hero'
+            ? optionPools.heroes
+            : k === 'heroine'
+            ? optionPools.heroines
             : k === 'key'
             ? optionPools.keys
             : optionPools.singers;

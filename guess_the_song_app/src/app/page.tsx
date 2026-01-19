@@ -27,7 +27,7 @@ export default function Home() {
         <Card className="space-y-3">
           <div>
             <div className="text-sm font-semibold">Tamil</div>
-            <div className="text-xs opacity-70">Hints: movie, music director, singers</div>
+            <div className="text-xs opacity-70">Hints: movie, album, music director, singers, hero, heroine</div>
           </div>
           <Link
             href="/play/tamil"

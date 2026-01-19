@@ -5,7 +5,15 @@ export function defaultProgress(): SongProgress {
     status: 'in_progress',
     guesses: 0,
     revealedSeconds: 1,
-    revealedHints: { album: false, movie: false, music_director: false, singers: false, key: false },
+    revealedHints: {
+      album: false,
+      movie: false,
+      music_director: false,
+      singers: false,
+      hero: false,
+      heroine: false,
+      key: false,
+    },
     bonus: {},
   };
 }
