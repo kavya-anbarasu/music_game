@@ -223,6 +223,33 @@ def _save_cache(path: Path, data: dict[str, Any]) -> None:
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def _load_progress(path: Path) -> list[dict[str, Any]]:
+    if not path.exists():
+        return []
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(data, list):
+        raise SystemExit(f"Progress file is not a JSON list: {path}")
+    return data
+
+
+def _index_progress(entries: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
+    index: dict[str, dict[str, Any]] = {}
+    for entry in entries:
+        if not isinstance(entry, dict):
+            continue
+        key = entry.get("key")
+        item = entry.get("item")
+        if isinstance(key, str) and isinstance(item, dict):
+            index[key] = item
+    return index
+
+
+def _append_progress(path: Path, entries: list[dict[str, Any]], key: str, item: dict[str, Any]) -> None:
+    entries.append({"key": key, "item": item})
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(entries, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
 def _call_openai(
     *,
     api_key: str,
@@ -350,6 +377,11 @@ def main(argv: list[str]) -> int:
         help="Cache file path (default: .llm_cache/clean_metadata_cache.json)",
     )
     parser.add_argument(
+        "--progress-file",
+        default=".llm_cache/clean_metadata_progress.json",
+        help="Progress file to resume work (default: .llm_cache/clean_metadata_progress.json)",
+    )
+    parser.add_argument(
         "--wiki",
         action="store_true",
         help="Use Wikipedia lookups for Tamil movie details",
@@ -392,6 +424,9 @@ def main(argv: list[str]) -> int:
 
     cache_path = Path(args.cache)
     cache = _load_cache(cache_path)
+    progress_path = Path(args.progress_file)
+    progress_entries = _load_progress(progress_path)
+    progress_index = _index_progress(progress_entries)
 
     for input_str in args.inputs:
         input_path = Path(input_str)
@@ -419,6 +454,11 @@ def main(argv: list[str]) -> int:
             cleaned["title"] = _normalize_title(cleaned.get("title") or "", language=language)
             cleaned["singers"] = _normalize_singers(cleaned.get("singers"))
 
+            progress_key = f"{input_path.name}:{item.get('id', idx)}"
+            if progress_key in progress_index:
+                updated.append(progress_index[progress_key])
+                processed += 1
+                continue
             should_call = args.force_llm or _needs_llm(cleaned)
             wiki_data = None
             if args.wiki and language == "tamil":
@@ -436,9 +476,8 @@ def main(argv: list[str]) -> int:
                 payload = _build_llm_payload(cleaned, language)
                 if wiki_data:
                     payload["wikipedia"] = wiki_data
-                key = f"{input_path.name}:{item.get('id', idx)}"
                 payload_hash = _input_hash(payload)
-                cached = cache.get(key)
+                cached = cache.get(progress_key)
                 if cached and cached.get("input_hash") == payload_hash:
                     result = cached["result"]
                 else:
@@ -448,7 +487,7 @@ def main(argv: list[str]) -> int:
                         input_payload=payload,
                         base_url=args.base_url,
                     )
-                    cache[key] = {"input_hash": payload_hash, "result": result}
+                    cache[progress_key] = {"input_hash": payload_hash, "result": result}
                     if args.sleep:
                         time.sleep(args.sleep)
                 cleaned = _apply_result(cleaned, result, language=language)
@@ -462,6 +501,9 @@ def main(argv: list[str]) -> int:
                 touched += 1
             processed += 1
             updated.append(cleaned)
+            if progress_key not in progress_index:
+                _append_progress(progress_path, progress_entries, progress_key, cleaned)
+                progress_index[progress_key] = cleaned
 
         if args.in_place:
             out_path = input_path
