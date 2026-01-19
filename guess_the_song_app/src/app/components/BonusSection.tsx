@@ -111,6 +111,13 @@ export function BonusSection(props: {
                     <b>{values[k]}</b>
                   </div>
                 )}
+
+                {prev.correct && k === 'singers' && (
+                  <div className="opacity-90">
+                    All singers:{' '}
+                    <b>{values[k]}</b>
+                  </div>
+                )}
               </div>
             )}
           </div>
