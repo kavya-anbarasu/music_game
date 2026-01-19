@@ -19,7 +19,7 @@ export function HintsSection(props: {
     <Card className="space-y-3">
       <div>
         <div className="text-sm font-semibold">Hints</div>
-        <div className="text-xs opacity-70">Flip any order (reduces score).</div>
+        <div className="text-xs opacity-70">Flip any order (disables bonus for that hint).</div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">

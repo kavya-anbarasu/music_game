@@ -10,16 +10,6 @@ const BASE_POINTS: Record<ClipSeconds, number> = {
   30: 20,
 };
 
-const HINT_PENALTY: Record<HintKey, number> = {
-  singers: 10,
-  album: 5,
-  movie: 5,
-  music_director: 5,
-  hero: 5,
-  heroine: 5,
-  key: 5,
-};
-
 const BONUS_POINTS: Record<HintKey, number> = {
   singers: 10,
   album: 5,
@@ -42,27 +32,9 @@ export type SongScoreBreakdown = {
 export function scoreSong(progress: SongProgress): SongScoreBreakdown {
   const baseSeconds = (progress.finalSeconds ?? progress.revealedSeconds) as ClipSeconds;
 
-  if (progress.status !== 'solved') {
-    return {
-      status: progress.status,
-      baseSeconds,
-      basePoints: 0,
-      hintPenalty: 0,
-      bonusPoints: 0,
-      total: 0,
-    };
-  }
+  const basePoints = progress.status === 'solved' ? BASE_POINTS[baseSeconds] ?? 0 : 0;
 
-  const basePoints = BASE_POINTS[baseSeconds] ?? 0;
-
-  const hintPenalty =
-    (progress.revealedHints.album ? HINT_PENALTY.album : 0) +
-    (progress.revealedHints.movie ? HINT_PENALTY.movie : 0) +
-    (progress.revealedHints.music_director ? HINT_PENALTY.music_director : 0) +
-    (progress.revealedHints.hero ? HINT_PENALTY.hero : 0) +
-    (progress.revealedHints.heroine ? HINT_PENALTY.heroine : 0) +
-    (progress.revealedHints.key ? HINT_PENALTY.key : 0) +
-    (progress.revealedHints.singers ? HINT_PENALTY.singers : 0);
+  const hintPenalty = 0;
 
   const bonusPoints =
     (progress.bonus.album?.correct ? BONUS_POINTS.album : 0) +
