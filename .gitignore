@@ -4,3 +4,4 @@ __pycache__/
 .DS_Store
 metadata/
 scripts/migrate_tamil_clips_to_ids.py
+.llm_cache
