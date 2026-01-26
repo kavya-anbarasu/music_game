@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import type { Language, SongProgress } from '@/lib/gts/types';
-import { todayUTC } from '@/lib/gts/progressStorage';
+import { todayPacific } from '@/lib/gts/progressStorage';
 import { defaultProgress } from '@/lib/gts/defaults';
 import type { TodaysSongRow } from '@/lib/useTodaysSongs';
 import { fetchLeaderboard, submitLeaderboardScore, type LeaderboardEntry } from '@/lib/leaderboard';
@@ -38,7 +38,7 @@ export function LeaderboardSection(props: {
 }) {
   const { lang, songs, progressMap } = props;
 
-  const playDate = todayUTC();
+  const playDate = todayPacific();
   const [playerName, setPlayerName] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [loading, setLoading] = useState(false);

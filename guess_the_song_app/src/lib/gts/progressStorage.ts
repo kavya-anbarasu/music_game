@@ -1,7 +1,12 @@
 import type { Language, SongProgress } from './types';
 
-export function todayUTC() {
-  return new Date().toISOString().slice(0, 10);
+export function todayPacific() {
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'America/Los_Angeles',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).format(new Date());
 }
 
 export function tabSessionId() {
@@ -15,7 +20,7 @@ export function tabSessionId() {
 }
 
 export function storageKey(lang: Language) {
-  return `gts_progress_${lang}_${todayUTC()}_${tabSessionId()}`;
+  return `gts_progress_${lang}_${todayPacific()}_${tabSessionId()}`;
 }
 
 export function loadProgressMap(lang: Language): Record<string, SongProgress> {
@@ -31,4 +36,3 @@ export function loadProgressMap(lang: Language): Record<string, SongProgress> {
 export function saveProgressMap(lang: Language, obj: Record<string, SongProgress>) {
   localStorage.setItem(storageKey(lang), JSON.stringify(obj));
 }
-

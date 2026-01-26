@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { supabase } from './supabase';
+import { todayPacific } from './gts/progressStorage';
 import type { Language } from './gts/types';
 
 type DailySet = { id: string };
@@ -19,14 +20,13 @@ export function useTodaysSongs(lang: Language) {
       setLoading(true);
       setError(null);
 
-      // IMPORTANT: use UTC date so everyone sees the same "day"
-      const todayUTC = new Date().toISOString().slice(0, 10);
+      const playDate = todayPacific();
 
       // 1) fetch today's daily_set id
       const { data: dailySet, error: setErr } = await supabase
         .from('daily_sets')
         .select('id')
-        .eq('play_date', todayUTC)
+        .eq('play_date', playDate)
         .eq('language', lang)
         .single<DailySet>();
 
