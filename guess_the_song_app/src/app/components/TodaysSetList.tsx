@@ -25,6 +25,8 @@ export function TodaysSetList(props: {
           const p = progressMap[s.song_id];
           const status = p?.status ?? 'in_progress';
           const isCurrent = i === songIndex;
+          const finalSeconds = p?.finalSeconds ?? p?.revealedSeconds;
+          const secondsLabel = finalSeconds ? ` at ${finalSeconds}s` : '';
 
           const base = 'w-7 h-7 rounded border';
           const current = isCurrent ? ' ring-2 ring-white/70' : '';
@@ -39,8 +41,8 @@ export function TodaysSetList(props: {
             <div
               key={s.song_id}
               className={base + color + current}
-              aria-label={`Song ${i + 1}: ${status.replace('_', ' ')}`}
-              title={`Song ${i + 1}: ${status.replace('_', ' ')}`}
+              aria-label={`Song ${i + 1}: ${status.replace('_', ' ')}${secondsLabel}`}
+              title={`Song ${i + 1}: ${status.replace('_', ' ')}${secondsLabel}`}
             />
           );
         })}

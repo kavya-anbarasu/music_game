@@ -344,6 +344,8 @@ export default function GuessTheSongGame(props: { lang: Language }) {
   const answerHeroine = currentMeta?.heroine ?? '(none)';
   const answerKey = currentMeta?.key ?? '(none)';
   const answerSingers = (currentMeta?.singers ?? []).join(', ') || '(none)';
+  const solvedSeconds = progress.finalSeconds ?? progress.revealedSeconds;
+  const solvedSecondsLabel = `${solvedSeconds} seconds`;
 
   const hintKeys: HintKey[] =
     lang === 'tamil'
@@ -544,12 +546,13 @@ export default function GuessTheSongGame(props: { lang: Language }) {
           <div className="space-y-4">
             {progress.status === 'solved' && (
               <div className="rounded-2xl border border-green-400/20 bg-green-500/10 p-4 text-sm">
-                <span className="font-semibold">Solved.</span> {progress.guesses} {progress.guesses === 1 ? 'guess' : 'guesses'}.
+                <span className="font-semibold">Solved.</span> {solvedSecondsLabel} • {progress.guesses}{' '}
+                {progress.guesses === 1 ? 'guess' : 'guesses'}
               </div>
             )}
             {progress.status === 'gave_up' && (
               <div className="rounded-2xl border border-yellow-400/20 bg-yellow-500/10 p-4 text-sm">
-                <span className="font-semibold">Gave up.</span> Answer: <b>{answerTitle}</b>
+                <span className="font-semibold">Gave up.</span> {solvedSecondsLabel} • Answer: <b>{answerTitle}</b>
               </div>
             )}
 
