@@ -9,6 +9,7 @@ import { Button } from './ui/Button';
 export function BonusSection(props: {
   showBonus: boolean;
   bonusKeys: HintKey[];
+  revealedHintKeys: HintKey[];
   progress: SongProgress;
   bonusInput: Partial<Record<HintKey, string>>;
   setBonusInput: (updater: (p: Partial<Record<HintKey, string>>) => Partial<Record<HintKey, string>>) => void;
@@ -21,6 +22,7 @@ export function BonusSection(props: {
   const {
     showBonus,
     bonusKeys,
+    revealedHintKeys,
     progress,
     bonusInput,
     setBonusInput,
@@ -31,7 +33,7 @@ export function BonusSection(props: {
     onPassBonus,
   } = props;
 
-  if (!showBonus || bonusKeys.length === 0) return null;
+  if (!showBonus || (bonusKeys.length === 0 && revealedHintKeys.length === 0)) return null;
 
   return (
     <Card className="relative z-30 space-y-3">
@@ -39,6 +41,22 @@ export function BonusSection(props: {
         <div className="text-sm font-semibold">Bonus</div>
         <div className="text-xs opacity-70">Extra points for hints you didn’t flip.</div>
       </div>
+
+      {revealedHintKeys.length > 0 && (
+        <div className="rounded-xl border border-white/10 bg-white/5 p-3 space-y-2">
+          <div className="text-sm font-semibold">Hints revealed</div>
+          <div className="space-y-2 text-sm">
+            {revealedHintKeys.map((k) => (
+              <div key={k} className="flex items-center justify-between gap-3">
+                <div>
+                  <div className="text-xs uppercase tracking-wide text-white/60">{labels[k]}</div>
+                  <div className="font-semibold text-white/90">{values[k]}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       {bonusKeys.map((k) => {
         const label = labels[k];

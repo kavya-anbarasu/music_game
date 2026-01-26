@@ -363,6 +363,7 @@ export default function GuessTheSongGame(props: { lang: Language }) {
   });
 
   const bonusKeys: HintKey[] = availableHintKeys.filter((k) => !progress.revealedHints[k]);
+  const revealedHintKeys: HintKey[] = availableHintKeys.filter((k) => progress.revealedHints[k]);
 
   const emptyMessage =
     mode === 'free' ? 'No free play songs remaining.' : error ?? 'No songs to show for that date.';
@@ -598,6 +599,7 @@ export default function GuessTheSongGame(props: { lang: Language }) {
             <BonusSection
               showBonus={showBonus}
               bonusKeys={bonusKeys}
+              revealedHintKeys={revealedHintKeys}
               progress={progress}
               bonusInput={bonusInput}
               setBonusInput={setBonusInput}
