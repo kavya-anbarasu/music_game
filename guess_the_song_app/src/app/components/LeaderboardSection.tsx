@@ -35,8 +35,9 @@ export function LeaderboardSection(props: {
   songs: TodaysSongRow[];
   progressMap: Record<string, SongProgress>;
   playDate: string;
+  onAcknowledge?: () => void;
 }) {
-  const { lang, songs, progressMap, playDate } = props;
+  const { lang, songs, progressMap, playDate, onAcknowledge } = props;
   const [playerName, setPlayerName] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -86,12 +87,17 @@ export function LeaderboardSection(props: {
     try {
       saveName(lang, name);
       await submitLeaderboardScore({ playDate, lang, playerName: name, score: totalScore });
+      onAcknowledge?.();
       await refresh();
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Failed to submit score');
     } finally {
       setSubmitting(false);
     }
+  }
+
+  function handleSkip() {
+    onAcknowledge?.();
   }
 
   return (
@@ -131,6 +137,9 @@ export function LeaderboardSection(props: {
           variant="primary"
         >
           Submit
+        </Button>
+        <Button onClick={handleSkip} disabled={submitting} variant="secondary">
+          Skip
         </Button>
       </div>
 

@@ -49,6 +49,30 @@ export function clearFreePlayState(lang: Language, playDate: string) {
   localStorage.removeItem(freePlayStorageKey(lang, playDate));
 }
 
+function leaderboardAckKey(lang: Language, playDate: string) {
+  return `gts_leaderboard_ack_${lang}_${playDate}`;
+}
+
+export function loadLeaderboardAck(lang: Language, playDate: string) {
+  try {
+    return sessionStorage.getItem(leaderboardAckKey(lang, playDate)) === '1';
+  } catch {
+    return false;
+  }
+}
+
+export function saveLeaderboardAck(lang: Language, playDate: string, value: boolean) {
+  try {
+    if (value) {
+      sessionStorage.setItem(leaderboardAckKey(lang, playDate), '1');
+    } else {
+      sessionStorage.removeItem(leaderboardAckKey(lang, playDate));
+    }
+  } catch {
+    // ignore
+  }
+}
+
 export function loadProgressMap(lang: Language): Record<string, SongProgress> {
   try {
     const raw = localStorage.getItem(storageKey(lang));

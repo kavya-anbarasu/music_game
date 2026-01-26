@@ -12,7 +12,14 @@ import type { HintKey, Language, SongMeta, SongProgress } from '@/lib/gts/types'
 import { useProgressMap } from '@/lib/gts/useProgressMap';
 import { defaultProgress } from '@/lib/gts/defaults';
 import { normalize } from '@/lib/gts/text';
-import { todayPacific, loadFreePlayState, saveFreePlayState, type FreePlayState } from '@/lib/gts/progressStorage';
+import {
+  todayPacific,
+  loadFreePlayState,
+  saveFreePlayState,
+  loadLeaderboardAck,
+  saveLeaderboardAck,
+  type FreePlayState,
+} from '@/lib/gts/progressStorage';
 import { revealIndexFromSeconds, secondsFromRevealIndex } from '@/lib/gts/reveal';
 import { matchSingerPick, matchTextExact } from '@/lib/gts/matchers';
 import { scoreSong } from '@/lib/gts/scoring';
@@ -37,6 +44,7 @@ export default function GuessTheSongGame(props: { lang: Language }) {
   );
   const [mode, setMode] = useState<'daily' | 'free'>('daily');
   const [freePlayState, setFreePlayState] = useState<FreePlayState | null>(null);
+  const [leaderboardAck, setLeaderboardAck] = useState(false);
 
   const [songIndex, setSongIndex] = useState(0);
   const [revealIndex, setRevealIndex] = useState(0);
@@ -93,7 +101,8 @@ export default function GuessTheSongGame(props: { lang: Language }) {
     });
   const freePlayAvailable = freePlayCandidates.length > 0;
   const isToday = playDate === todayPacific();
-  const freePlayUnlocked = mode === 'daily' && isToday && dailyComplete && freePlayAvailable;
+  const freePlayEligible = isToday && dailyComplete && freePlayAvailable;
+  const freePlayUnlocked = mode === 'daily' && freePlayEligible && leaderboardAck;
   const freePlayStats = useMemo(() => {
     let solved = 0;
     let passed = 0;
@@ -112,6 +121,7 @@ export default function GuessTheSongGame(props: { lang: Language }) {
   useEffect(() => {
     setMode('daily');
     setFreePlayState(loadFreePlayState(lang, playDate));
+    setLeaderboardAck(loadLeaderboardAck(lang, playDate));
   }, [lang, playDate]);
 
   useEffect(() => {
@@ -159,7 +169,7 @@ export default function GuessTheSongGame(props: { lang: Language }) {
   }
 
   function enterFreePlay() {
-    if (!freePlayAvailable) return;
+    if (!freePlayEligible || !leaderboardAck) return;
     const existing = freePlayState;
     let nextState: FreePlayState | null = null;
     if (existing && existing.queue.length > 0) {
@@ -178,6 +188,11 @@ export default function GuessTheSongGame(props: { lang: Language }) {
     saveFreePlayState(lang, playDate, nextState);
     setMode('free');
     setSongIndex(nextState.index);
+  }
+
+  function acknowledgeLeaderboard() {
+    setLeaderboardAck(true);
+    saveLeaderboardAck(lang, playDate, true);
   }
 
   function exitFreePlay() {
@@ -420,16 +435,20 @@ export default function GuessTheSongGame(props: { lang: Language }) {
         <div className="mb-5 rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-5">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <div className="text-sm font-semibold">Free play unlocked</div>
+              <div className="text-sm font-semibold">
+                {freePlayAvailable ? (freePlayUnlocked ? 'Free play unlocked' : 'Free play') : 'Free play'}
+              </div>
               <div className="text-xs text-white/60">
                 {freePlayAvailable
-                  ? 'Keep playing with the rest of the library.'
+                  ? leaderboardAck
+                    ? 'Keep playing with the rest of the library.'
+                    : 'Submit a score or skip the leaderboard to unlock free play.'
                   : 'No extra songs available for this language.'}
               </div>
             </div>
             <Button
               onClick={enterFreePlay}
-              disabled={!freePlayAvailable || !dailyComplete || !isToday}
+              disabled={!freePlayUnlocked}
               size="md"
               variant="primary"
               className="px-5 py-3 text-base sm:text-lg shadow-[0_0_0_1px_rgba(129,140,248,0.4),0_12px_24px_rgba(79,70,229,0.25)]"
@@ -590,7 +609,13 @@ export default function GuessTheSongGame(props: { lang: Language }) {
                 </div>
               </Card>
             ) : (
-              <LeaderboardSection lang={lang} songs={songs} progressMap={progressMap} playDate={playDate} />
+              <LeaderboardSection
+                lang={lang}
+                songs={songs}
+                progressMap={progressMap}
+                playDate={playDate}
+                onAcknowledge={acknowledgeLeaderboard}
+              />
             )}
           </div>
         </div>
