@@ -375,12 +375,23 @@ export default function GuessTheSongGame(props: { lang: Language }) {
             {mode === 'free' ? 'Free Play' : 'Daily Mode'}
           </div>
           <h1 className="text-3xl font-semibold tracking-tight">Guess the Song</h1>
-          {hasSongs && (
-            <div className="mt-1 text-sm text-white/70">
-              Song {songIndex + 1} / {activeSongs.length} • Clip: {seconds}s
-              {mode === 'free' && <span className="ml-2 rounded-full bg-white/10 px-2 py-0.5 text-[11px]">Free play</span>}
+          <div className="mt-1 flex flex-wrap items-center gap-3 text-sm text-white/70">
+            {hasSongs && (
+              <div>
+                Song {songIndex + 1} / {activeSongs.length} • Clip: {seconds}s
+              </div>
+            )}
+            <div className="flex items-center gap-2">
+              <TextInput
+                type="date"
+                value={playDate}
+                min={minPlayDate ?? undefined}
+                max={maxPlayDate ?? todayPacific()}
+                onChange={(e) => setPlayDate(e.target.value)}
+                className="w-auto min-w-[150px] text-xs sm:text-sm"
+              />
             </div>
-          )}
+          </div>
         </div>
         <div className="flex flex-col items-end gap-2">
           <div className="flex items-center gap-2">
@@ -399,17 +410,6 @@ export default function GuessTheSongGame(props: { lang: Language }) {
             >
               Home
             </Link>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="text-xs uppercase tracking-wide text-white/50">Date</span>
-            <TextInput
-              type="date"
-              value={playDate}
-              min={minPlayDate ?? undefined}
-              max={maxPlayDate ?? todayPacific()}
-              onChange={(e) => setPlayDate(e.target.value)}
-              className="w-auto min-w-[150px]"
-            />
           </div>
           {sets.length > 1 && (
             <div className="flex items-center gap-2">
