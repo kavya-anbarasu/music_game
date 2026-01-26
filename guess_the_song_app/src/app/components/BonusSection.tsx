@@ -94,7 +94,7 @@ export function BonusSection(props: {
               options={options}
               placeholder={placeholder}
               disabled={disabled}
-              minChars={k === 'key' ? 1 : 2}
+              minChars={1}
             />
 
             <div className="flex gap-2">

@@ -15,7 +15,7 @@ export function AutocompleteInput(props: {
   disabled?: boolean;
   minChars?: number;
 }) {
-  const { value, onChange, options, placeholder, disabled, minChars = 2 } = props;
+  const { value, onChange, options, placeholder, disabled, minChars = 1 } = props;
   const [open, setOpen] = useState(false);
   const [anchor, setAnchor] = useState<AnchorRect | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
@@ -24,7 +24,7 @@ export function AutocompleteInput(props: {
   const suggestions = useMemo(() => {
     const q = normalize(value);
     if (!q || q.length < minChars) return [];
-    return options.filter((opt) => normalize(opt).includes(q)).slice(0, 8);
+    return options.filter((opt) => normalize(opt).includes(q));
   }, [value, options, minChars]);
 
   useEffect(() => {
