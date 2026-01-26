@@ -12,12 +12,12 @@ const BASE_POINTS: Record<ClipSeconds, number> = {
 
 const BONUS_POINTS: Record<HintKey, number> = {
   singers: 10,
-  album: 5,
-  movie: 5,
-  music_director: 5,
-  hero: 5,
-  heroine: 5,
-  key: 5,
+  album: 10,
+  movie: 10,
+  music_director: 10,
+  hero: 10,
+  heroine: 10,
+  key: 10,
 };
 
 export type SongScoreBreakdown = {
