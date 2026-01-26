@@ -12,19 +12,21 @@ import type { HintKey, Language, SongMeta, SongProgress } from '@/lib/gts/types'
 import { useProgressMap } from '@/lib/gts/useProgressMap';
 import { defaultProgress } from '@/lib/gts/defaults';
 import { normalize } from '@/lib/gts/text';
-import { todayPacific } from '@/lib/gts/progressStorage';
+import { todayPacific, loadFreePlayState, saveFreePlayState, type FreePlayState } from '@/lib/gts/progressStorage';
 import { revealIndexFromSeconds, secondsFromRevealIndex } from '@/lib/gts/reveal';
 import { matchSingerPick, matchTextExact } from '@/lib/gts/matchers';
+import { scoreSong } from '@/lib/gts/scoring';
 import { AudioSection } from './AudioSection';
 import { GuessSection } from './GuessSection';
 import { HintsSection } from './HintsSection';
 import { BonusSection } from './BonusSection';
 import { SongNav } from './SongNav';
-import { TodaysSetList } from './TodaysSetList';
 import { LeaderboardSection } from './LeaderboardSection';
 import { ThemeToggle } from './ThemeToggle';
 import { Button } from './ui/Button';
 import { TextInput } from './ui/TextInput';
+import { Card } from './ui/Card';
+import { TodaysSetList } from './TodaysSetList';
 
 export default function GuessTheSongGame(props: { lang: Language }) {
   const { lang } = props;
@@ -33,6 +35,8 @@ export default function GuessTheSongGame(props: { lang: Language }) {
     lang,
     playDate
   );
+  const [mode, setMode] = useState<'daily' | 'free'>('daily');
+  const [freePlayState, setFreePlayState] = useState<FreePlayState | null>(null);
 
   const [songIndex, setSongIndex] = useState(0);
   const [revealIndex, setRevealIndex] = useState(0);
@@ -57,7 +61,19 @@ export default function GuessTheSongGame(props: { lang: Language }) {
 
   const optionPools = useMemo(() => buildOptionPools(metaList), [metaList]);
 
-  const currentSongId = songs?.[songIndex]?.song_id;
+  const dailySongIds = useMemo(() => new Set(songs.map((s) => s.song_id)), [songs]);
+
+  const freePlayCandidates = useMemo(() => {
+    return metaList.map((s) => s.id).filter((id) => !dailySongIds.has(id));
+  }, [metaList, dailySongIds]);
+
+  const freePlaySongs = useMemo(() => {
+    if (!freePlayState) return [];
+    return freePlayState.queue.map((songId, idx) => ({ song_id: songId, order_index: idx }));
+  }, [freePlayState]);
+
+  const activeSongs = mode === 'free' ? freePlaySongs : songs;
+  const currentSongId = activeSongs?.[songIndex]?.song_id;
   const currentMeta = currentSongId ? metaById.get(currentSongId) : undefined;
 
   const progress: SongProgress = useMemo(() => {
@@ -68,11 +84,50 @@ export default function GuessTheSongGame(props: { lang: Language }) {
   const locked = progress.status === 'solved' || progress.status === 'gave_up';
   const showBonus = locked;
   const showHints = !showBonus;
-  const hasSongs = songs.length > 0;
+  const hasSongs = activeSongs.length > 0;
+  const dailyComplete =
+    songs.length > 0 &&
+    songs.every((row) => {
+      const status = progressMap[row.song_id]?.status;
+      return status === 'solved' || status === 'gave_up';
+    });
+  const freePlayAvailable = freePlayCandidates.length > 0;
+  const isToday = playDate === todayPacific();
+  const freePlayUnlocked = mode === 'daily' && isToday && dailyComplete && freePlayAvailable;
+  const freePlayStats = useMemo(() => {
+    let solved = 0;
+    let passed = 0;
+    let total = 0;
+    if (!freePlayState) return { solved, passed, total };
+    for (const id of freePlayState.queue) {
+      const p = progressMap[id];
+      if (!p) continue;
+      if (p.status === 'solved') solved += 1;
+      if (p.status === 'gave_up') passed += 1;
+      if (p.status !== 'in_progress') total += scoreSong(p).total;
+    }
+    return { solved, passed, total };
+  }, [freePlayState, progressMap]);
 
   useEffect(() => {
+    setMode('daily');
+    setFreePlayState(loadFreePlayState(lang, playDate));
+  }, [lang, playDate]);
+
+  useEffect(() => {
+    if (mode !== 'daily') return;
     setSongIndex(0);
-  }, [playDate, selectedSetId]);
+  }, [playDate, selectedSetId, mode]);
+
+  useEffect(() => {
+    if (mode !== 'free') return;
+    setFreePlayState((prev) => {
+      if (!prev || prev.index === songIndex) return prev;
+      const next = { ...prev, index: songIndex };
+      saveFreePlayState(lang, playDate, next);
+      return next;
+    });
+  }, [songIndex, mode, lang, playDate]);
 
   useEffect(() => {
     if (!minPlayDate && !maxPlayDate) return;
@@ -93,6 +148,42 @@ export default function GuessTheSongGame(props: { lang: Language }) {
     setBonusInput({});
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentSongId]);
+
+  function shuffle(list: string[]) {
+    const arr = [...list];
+    for (let i = arr.length - 1; i > 0; i -= 1) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+
+  function enterFreePlay() {
+    if (!freePlayAvailable) return;
+    const existing = freePlayState;
+    let nextState: FreePlayState | null = null;
+    if (existing && existing.queue.length > 0) {
+      const filteredQueue = existing.queue.filter((id) => freePlayCandidates.includes(id));
+      if (filteredQueue.length > 0) {
+        nextState = {
+          queue: filteredQueue,
+          index: Math.min(existing.index, filteredQueue.length - 1),
+        };
+      }
+    }
+    if (!nextState) {
+      nextState = { queue: shuffle(freePlayCandidates), index: 0 };
+    }
+    setFreePlayState(nextState);
+    saveFreePlayState(lang, playDate, nextState);
+    setMode('free');
+    setSongIndex(nextState.index);
+  }
+
+  function exitFreePlay() {
+    setMode('daily');
+    setSongIndex(0);
+  }
 
   // If a song is finished, always let the user listen to the full 30s clip.
   useEffect(() => {
@@ -257,15 +348,21 @@ export default function GuessTheSongGame(props: { lang: Language }) {
 
   const bonusKeys: HintKey[] = availableHintKeys.filter((k) => !progress.revealedHints[k]);
 
+  const emptyMessage =
+    mode === 'free' ? 'No free play songs remaining.' : error ?? 'No songs to show for that date.';
+
   return (
     <main className="mx-auto w-full max-w-6xl px-4 py-8 sm:px-6">
       <header className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <div className="text-xs uppercase tracking-wider text-white/50">Daily game</div>
+          <div className="text-xs uppercase tracking-wider text-white/50">
+            {mode === 'free' ? 'Free Play' : 'Daily Mode'}
+          </div>
           <h1 className="text-3xl font-semibold tracking-tight">Guess the Song</h1>
           {hasSongs && (
             <div className="mt-1 text-sm text-white/70">
-              Song {songIndex + 1} / {songs.length} • Clip: {seconds}s
+              Song {songIndex + 1} / {activeSongs.length} • Clip: {seconds}s
+              {mode === 'free' && <span className="ml-2 rounded-full bg-white/10 px-2 py-0.5 text-[11px]">Free play</span>}
             </div>
           )}
         </div>
@@ -319,11 +416,56 @@ export default function GuessTheSongGame(props: { lang: Language }) {
         </div>
       </header>
 
-      {loading && !hasSongs && <div className="rounded-2xl border border-white/10 bg-white/5 p-6">Loading…</div>}
-      {!loading && (error || !hasSongs) && (
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-          {error ?? 'No songs to show for that date.'}
+      {mode === 'daily' && isToday && (dailyComplete || !freePlayAvailable) && (
+        <div className="mb-5 rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-5">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <div className="text-sm font-semibold">Free play unlocked</div>
+              <div className="text-xs text-white/60">
+                {freePlayAvailable
+                  ? 'Keep playing with the rest of the library.'
+                  : 'No extra songs available for this language.'}
+              </div>
+            </div>
+            <Button
+              onClick={enterFreePlay}
+              disabled={!freePlayAvailable || !dailyComplete || !isToday}
+              size="md"
+              variant="primary"
+              className="px-5 py-3 text-base sm:text-lg shadow-[0_0_0_1px_rgba(129,140,248,0.4),0_12px_24px_rgba(79,70,229,0.25)]"
+            >
+              Enter free play
+            </Button>
+          </div>
         </div>
+      )}
+      {mode === 'free' && (
+        <div className="mb-5 rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-5">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <div className="text-sm font-semibold">Free play mode</div>
+              <div className="text-xs text-white/60">You are in free play. Daily songs are paused.</div>
+            </div>
+            <Button onClick={exitFreePlay} size="sm" variant="ghost">
+              Back to daily
+            </Button>
+          </div>
+        </div>
+      )}
+      {mode === 'daily' && isToday && !dailyComplete && (
+        <div className="mb-5 rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-5">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <div className="text-sm font-semibold">Daily mode</div>
+              <div className="text-xs text-white/60">Free play is locked. Finish today’s songs to unlock it.</div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {loading && !hasSongs && <div className="rounded-2xl border border-white/10 bg-white/5 p-6">Loading…</div>}
+      {!loading && (!hasSongs || error) && (
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-6">{emptyMessage}</div>
       )}
 
       {!loading && !error && hasSongs && (
@@ -414,16 +556,42 @@ export default function GuessTheSongGame(props: { lang: Language }) {
 
             <SongNav
               songIndex={songIndex}
-              songCount={songs.length}
+              songCount={activeSongs.length}
               locked={locked}
               onPrev={() => setSongIndex((i) => Math.max(0, i - 1))}
-              onNext={() => setSongIndex((i) => Math.min(songs.length - 1, i + 1))}
+              onNext={() => setSongIndex((i) => Math.min(activeSongs.length - 1, i + 1))}
+              doneLabel={mode === 'free' ? 'Out of songs' : '🎉 Done!'}
             />
           </div>
 
           <div className="space-y-4">
-            <TodaysSetList songs={songs} songIndex={songIndex} progressMap={progressMap} />
-            <LeaderboardSection lang={lang} songs={songs} progressMap={progressMap} playDate={playDate} />
+            {mode === 'daily' && (
+              <TodaysSetList songs={songs} songIndex={songIndex} progressMap={progressMap} />
+            )}
+            {mode === 'free' ? (
+              <Card className="space-y-3">
+                <div>
+                  <div className="text-sm font-semibold">Free play stats</div>
+                  <div className="text-xs opacity-70">Session totals for played songs.</div>
+                </div>
+                <div className="grid grid-cols-3 gap-2 text-center">
+                  <div className="rounded-xl border border-white/10 bg-white/5 p-3">
+                    <div className="text-xs opacity-70">Guessed</div>
+                    <div className="text-lg font-semibold">{freePlayStats.solved}</div>
+                  </div>
+                  <div className="rounded-xl border border-white/10 bg-white/5 p-3">
+                    <div className="text-xs opacity-70">Passed</div>
+                    <div className="text-lg font-semibold">{freePlayStats.passed}</div>
+                  </div>
+                  <div className="rounded-xl border border-white/10 bg-white/5 p-3">
+                    <div className="text-xs opacity-70">Points</div>
+                    <div className="text-lg font-semibold">{freePlayStats.total}</div>
+                  </div>
+                </div>
+              </Card>
+            ) : (
+              <LeaderboardSection lang={lang} songs={songs} progressMap={progressMap} playDate={playDate} />
+            )}
           </div>
         </div>
       )}

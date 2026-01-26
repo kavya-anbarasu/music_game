@@ -8,8 +8,9 @@ export function SongNav(props: {
   locked: boolean;
   onPrev: () => void;
   onNext: () => void;
+  doneLabel?: string;
 }) {
-  const { songIndex, songCount, locked, onPrev, onNext } = props;
+  const { songIndex, songCount, locked, onPrev, onNext, doneLabel } = props;
   const isLastSong = songIndex >= songCount - 1;
 
   return (
@@ -22,7 +23,7 @@ export function SongNav(props: {
         Next song
       </Button>
 
-      {locked && isLastSong && <div className="text-sm font-semibold">🎉 Done!</div>}
+      {locked && isLastSong && <div className="text-sm font-semibold">{doneLabel ?? '🎉 Done!'}</div>}
     </section>
   );
 }
