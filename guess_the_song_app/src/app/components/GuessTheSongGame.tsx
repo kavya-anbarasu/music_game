@@ -12,6 +12,7 @@ import type { HintKey, Language, SongMeta, SongProgress } from '@/lib/gts/types'
 import { useProgressMap } from '@/lib/gts/useProgressMap';
 import { defaultProgress } from '@/lib/gts/defaults';
 import { normalize } from '@/lib/gts/text';
+import { todayPacific } from '@/lib/gts/progressStorage';
 import { revealIndexFromSeconds, secondsFromRevealIndex } from '@/lib/gts/reveal';
 import { matchSingerPick, matchTextExact } from '@/lib/gts/matchers';
 import { AudioSection } from './AudioSection';
@@ -23,10 +24,15 @@ import { TodaysSetList } from './TodaysSetList';
 import { LeaderboardSection } from './LeaderboardSection';
 import { ThemeToggle } from './ThemeToggle';
 import { Button } from './ui/Button';
+import { TextInput } from './ui/TextInput';
 
 export default function GuessTheSongGame(props: { lang: Language }) {
   const { lang } = props;
-  const { songs, loading, error } = useTodaysSongs(lang);
+  const [playDate, setPlayDate] = useState(todayPacific());
+  const { songs, loading, error, sets, selectedSetId, setSelectedSetId, minPlayDate, maxPlayDate } = useTodaysSongs(
+    lang,
+    playDate
+  );
 
   const [songIndex, setSongIndex] = useState(0);
   const [revealIndex, setRevealIndex] = useState(0);
@@ -62,6 +68,21 @@ export default function GuessTheSongGame(props: { lang: Language }) {
   const locked = progress.status === 'solved' || progress.status === 'gave_up';
   const showBonus = locked;
   const showHints = !showBonus;
+  const hasSongs = songs.length > 0;
+
+  useEffect(() => {
+    setSongIndex(0);
+  }, [playDate, selectedSetId]);
+
+  useEffect(() => {
+    if (!minPlayDate && !maxPlayDate) return;
+    setPlayDate((prev) => {
+      if (!prev) return minPlayDate ?? maxPlayDate ?? todayPacific();
+      if (minPlayDate && prev < minPlayDate) return minPlayDate;
+      if (maxPlayDate && prev > maxPlayDate) return maxPlayDate;
+      return prev;
+    });
+  }, [minPlayDate, maxPlayDate]);
 
   useEffect(() => {
     if (!currentSongId) return;
@@ -208,10 +229,6 @@ export default function GuessTheSongGame(props: { lang: Language }) {
     }));
   }
 
-  if (loading) return <main className="p-8">Loading…</main>;
-  if (error) return <main className="p-8">Error: {error}</main>;
-  if (!songs || songs.length === 0) return <main className="p-8">No songs for today.</main>;
-
   const answerTitle = currentMeta?.title ?? '(unknown title in metadata)';
   const answerAlbum = currentMeta?.album ?? '(none)';
   const answerMovie = currentMeta?.movie ?? '(none)';
@@ -246,9 +263,11 @@ export default function GuessTheSongGame(props: { lang: Language }) {
         <div>
           <div className="text-xs uppercase tracking-wider text-white/50">Daily game</div>
           <h1 className="text-3xl font-semibold tracking-tight">Guess the Song</h1>
-          <div className="mt-1 text-sm text-white/70">
-            Song {songIndex + 1} / {songs.length} • Clip: {seconds}s
-          </div>
+          {hasSongs && (
+            <div className="mt-1 text-sm text-white/70">
+              Song {songIndex + 1} / {songs.length} • Clip: {seconds}s
+            </div>
+          )}
         </div>
         <div className="flex flex-col items-end gap-2">
           <div className="flex items-center gap-2">
@@ -260,6 +279,33 @@ export default function GuessTheSongGame(props: { lang: Language }) {
               Home
             </Link>
           </div>
+          <div className="flex items-center gap-2">
+            <span className="text-xs uppercase tracking-wide text-white/50">Date</span>
+            <TextInput
+              type="date"
+              value={playDate}
+              min={minPlayDate ?? undefined}
+              max={maxPlayDate ?? todayPacific()}
+              onChange={(e) => setPlayDate(e.target.value)}
+              className="w-auto min-w-[150px]"
+            />
+          </div>
+          {sets.length > 1 && (
+            <div className="flex items-center gap-2">
+              <span className="text-xs uppercase tracking-wide text-white/50">Set</span>
+              <select
+                className="w-auto min-w-[150px] rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm sm:text-base"
+                value={selectedSetId ?? ''}
+                onChange={(e) => setSelectedSetId(e.target.value)}
+              >
+                {sets.map((s, idx) => (
+                  <option key={s.id} value={s.id}>
+                    Set {idx + 1}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
           {!locked && (
             <div className="flex items-center gap-2">
               <Button onClick={handleRevealMore} disabled={isLastReveal} variant="primary" size="sm">
@@ -273,105 +319,114 @@ export default function GuessTheSongGame(props: { lang: Language }) {
         </div>
       </header>
 
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-[1fr_380px] lg:items-start">
-        <div className="space-y-4">
-          {progress.status === 'solved' && (
-            <div className="rounded-2xl border border-green-400/20 bg-green-500/10 p-4 text-sm">
-              <span className="font-semibold">Solved.</span> {progress.guesses} {progress.guesses === 1 ? 'guess' : 'guesses'}.
-            </div>
-          )}
-          {progress.status === 'gave_up' && (
-            <div className="rounded-2xl border border-yellow-400/20 bg-yellow-500/10 p-4 text-sm">
-              <span className="font-semibold">Gave up.</span> Answer: <b>{answerTitle}</b>
-            </div>
-          )}
-
-          <AudioSection audioUrl={audioUrl} audioKey={`${currentSongId}-${seconds}`} />
-
-          <GuessSection
-            locked={locked}
-            guess={guess}
-            setGuess={(v) => {
-              setGuess(v);
-              setSubmitted(null);
-              setIsCorrect(null);
-            }}
-            submitted={submitted}
-            isCorrect={isCorrect}
-            onSubmit={handleSubmitGuess}
-            onGiveUp={handleGiveUp}
-            answerTitle={answerTitle}
-            titleOptions={optionPools.titles}
-          />
-
-          <HintsSection
-            showHints={showHints}
-            progress={progress}
-            onFlip={flipHint}
-            hintKeys={availableHintKeys}
-            labels={{
-              album: 'Album',
-              movie: 'Movie',
-              music_director: 'Music director',
-              hero: 'Hero',
-              heroine: 'Heroine',
-              singers: lang === 'tamil' ? 'Singers' : 'Artist',
-              key: 'Key',
-            }}
-            values={{
-              album: answerAlbum,
-              movie: answerMovie,
-              music_director: answerMusicDirector,
-              hero: answerHero,
-              heroine: answerHeroine,
-              singers: answerSingers,
-              key: answerKey,
-            }}
-          />
-
-          <BonusSection
-            showBonus={showBonus}
-            bonusKeys={bonusKeys}
-            progress={progress}
-            bonusInput={bonusInput}
-            setBonusInput={setBonusInput}
-            optionPools={optionPools}
-            labels={{
-              album: 'Album',
-              movie: 'Movie',
-              music_director: 'Music director',
-              hero: 'Hero',
-              heroine: 'Heroine',
-              singers: lang === 'tamil' ? 'Singer' : 'Artist',
-              key: 'Key',
-            }}
-            values={{
-              album: answerAlbum,
-              movie: answerMovie,
-              music_director: answerMusicDirector,
-              hero: answerHero,
-              heroine: answerHeroine,
-              singers: answerSingers,
-              key: answerKey,
-            }}
-            onSubmitBonus={submitBonus}
-            onPassBonus={passBonus}
-          />
-
-          <SongNav
-            songIndex={songIndex}
-            songCount={songs.length}
-            locked={locked}
-            onPrev={() => setSongIndex((i) => Math.max(0, i - 1))}
-            onNext={() => setSongIndex((i) => Math.min(songs.length - 1, i + 1))}
-          />
+      {loading && !hasSongs && <div className="rounded-2xl border border-white/10 bg-white/5 p-6">Loading…</div>}
+      {!loading && (error || !hasSongs) && (
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+          {error ?? 'No songs to show for that date.'}
         </div>
+      )}
 
-        <div className="space-y-4">
-          <TodaysSetList songs={songs} songIndex={songIndex} progressMap={progressMap} />
-          <LeaderboardSection lang={lang} songs={songs} progressMap={progressMap} />
+      {!loading && !error && hasSongs && (
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-[1fr_380px] lg:items-start">
+          <div className="space-y-4">
+            {progress.status === 'solved' && (
+              <div className="rounded-2xl border border-green-400/20 bg-green-500/10 p-4 text-sm">
+                <span className="font-semibold">Solved.</span> {progress.guesses} {progress.guesses === 1 ? 'guess' : 'guesses'}.
+              </div>
+            )}
+            {progress.status === 'gave_up' && (
+              <div className="rounded-2xl border border-yellow-400/20 bg-yellow-500/10 p-4 text-sm">
+                <span className="font-semibold">Gave up.</span> Answer: <b>{answerTitle}</b>
+              </div>
+            )}
+
+            <AudioSection audioUrl={audioUrl} audioKey={`${currentSongId}-${seconds}`} />
+
+            <GuessSection
+              locked={locked}
+              guess={guess}
+              setGuess={(v) => {
+                setGuess(v);
+                setSubmitted(null);
+                setIsCorrect(null);
+              }}
+              submitted={submitted}
+              isCorrect={isCorrect}
+              onSubmit={handleSubmitGuess}
+              onGiveUp={handleGiveUp}
+              answerTitle={answerTitle}
+              titleOptions={optionPools.titles}
+            />
+
+            <HintsSection
+              showHints={showHints}
+              progress={progress}
+              onFlip={flipHint}
+              hintKeys={availableHintKeys}
+              labels={{
+                album: 'Album',
+                movie: 'Movie',
+                music_director: 'Music director',
+                hero: 'Hero',
+                heroine: 'Heroine',
+                singers: lang === 'tamil' ? 'Singers' : 'Artist',
+                key: 'Key',
+              }}
+              values={{
+                album: answerAlbum,
+                movie: answerMovie,
+                music_director: answerMusicDirector,
+                hero: answerHero,
+                heroine: answerHeroine,
+                singers: answerSingers,
+                key: answerKey,
+              }}
+            />
+
+            <BonusSection
+              showBonus={showBonus}
+              bonusKeys={bonusKeys}
+              progress={progress}
+              bonusInput={bonusInput}
+              setBonusInput={setBonusInput}
+              optionPools={optionPools}
+              labels={{
+                album: 'Album',
+                movie: 'Movie',
+                music_director: 'Music director',
+                hero: 'Hero',
+                heroine: 'Heroine',
+                singers: lang === 'tamil' ? 'Singer' : 'Artist',
+                key: 'Key',
+              }}
+              values={{
+                album: answerAlbum,
+                movie: answerMovie,
+                music_director: answerMusicDirector,
+                hero: answerHero,
+                heroine: answerHeroine,
+                singers: answerSingers,
+                key: answerKey,
+              }}
+              onSubmitBonus={submitBonus}
+              onPassBonus={passBonus}
+            />
+
+            <SongNav
+              songIndex={songIndex}
+              songCount={songs.length}
+              locked={locked}
+              onPrev={() => setSongIndex((i) => Math.max(0, i - 1))}
+              onNext={() => setSongIndex((i) => Math.min(songs.length - 1, i + 1))}
+            />
+          </div>
+
+          <div className="space-y-4">
+            <TodaysSetList songs={songs} songIndex={songIndex} progressMap={progressMap} />
+            <LeaderboardSection lang={lang} songs={songs} progressMap={progressMap} playDate={playDate} />
+          </div>
         </div>
-      </div>
+      )}
     </main>
   );
 }

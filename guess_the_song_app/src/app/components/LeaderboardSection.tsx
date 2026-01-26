@@ -2,7 +2,6 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import type { Language, SongProgress } from '@/lib/gts/types';
-import { todayPacific } from '@/lib/gts/progressStorage';
 import { defaultProgress } from '@/lib/gts/defaults';
 import type { TodaysSongRow } from '@/lib/useTodaysSongs';
 import { fetchLeaderboard, submitLeaderboardScore, type LeaderboardEntry } from '@/lib/leaderboard';
@@ -35,10 +34,9 @@ export function LeaderboardSection(props: {
   lang: Language;
   songs: TodaysSongRow[];
   progressMap: Record<string, SongProgress>;
+  playDate: string;
 }) {
-  const { lang, songs, progressMap } = props;
-
-  const playDate = todayPacific();
+  const { lang, songs, progressMap, playDate } = props;
   const [playerName, setPlayerName] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -77,7 +75,7 @@ export function LeaderboardSection(props: {
   useEffect(() => {
     refresh();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lang]);
+  }, [lang, playDate]);
 
   async function handleSubmit() {
     const name = playerName.trim();
@@ -138,9 +136,9 @@ export function LeaderboardSection(props: {
 
       {error && <div className="text-sm">Error: {error}</div>}
 
-      <div className="rounded-xl border border-white/10 bg-white/5 p-3">
-        <div className="flex items-center justify-between mb-2">
-          <div className="text-sm font-semibold">Top today</div>
+        <div className="rounded-xl border border-white/10 bg-white/5 p-3">
+          <div className="flex items-center justify-between mb-2">
+          <div className="text-sm font-semibold">Top scores</div>
           <Button onClick={refresh} disabled={loading} size="sm" variant="ghost">
             Refresh
           </Button>
