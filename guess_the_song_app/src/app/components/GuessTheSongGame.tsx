@@ -119,6 +119,7 @@ export default function GuessTheSongGame(props: { lang: Language }) {
     return { solved, passed, total };
   }, [freePlayState, progressMap]);
 
+
   useEffect(() => {
     setMode('daily');
     setFreePlayState(loadFreePlayState(lang, playDate));
@@ -195,6 +196,7 @@ export default function GuessTheSongGame(props: { lang: Language }) {
     setLeaderboardAck(true);
     saveLeaderboardAck(lang, playDate, true);
   }
+
 
   function exitFreePlay() {
     setMode('daily');
@@ -641,7 +643,14 @@ export default function GuessTheSongGame(props: { lang: Language }) {
 
           <div className="space-y-4">
             {mode === 'daily' && (
-              <TodaysSetList songs={songs} songIndex={songIndex} progressMap={progressMap} />
+              <TodaysSetList
+                songs={songs}
+                songIndex={songIndex}
+                progressMap={progressMap}
+                lang={lang}
+                playDate={playDate}
+                isToday={isToday}
+              />
             )}
             {mode === 'free' ? (
               <Card className="space-y-3">
