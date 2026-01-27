@@ -77,8 +77,16 @@ html[data-theme='light'] .text-white\/50 {
   color: var(--muted-50);
 }
 
+html[data-theme='light'] .text-white\/60 {
+  color: rgba(15, 23, 42, 0.78);
+}
+
 html[data-theme='light'] .text-white\/70 {
   color: var(--muted-70);
+}
+
+html[data-theme='light'] .text-white\/80 {
+  color: rgba(15, 23, 42, 0.8);
 }
 
 html[data-theme='light'] .placeholder\:text-white\/40::placeholder {

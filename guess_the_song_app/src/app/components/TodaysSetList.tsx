@@ -96,7 +96,7 @@ export function TodaysSetList(props: {
     showShare && mounted
       ? createPortal(
           <div className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/60 backdrop-blur-sm px-4 py-6">
-            <Card className="w-full max-w-2xl space-y-4 bg-[#0d0d12] shadow-[0_24px_70px_rgba(0,0,0,0.7)]">
+            <Card className="w-full max-w-2xl space-y-4 bg-[#0d0d12] text-white shadow-[0_24px_70px_rgba(0,0,0,0.7)]">
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <div className="text-lg font-semibold">Share today</div>
@@ -105,15 +105,15 @@ export function TodaysSetList(props: {
                   Close
                 </Button>
               </div>
-              <pre className="whitespace-pre-wrap rounded-xl border border-white/10 bg-white/5 p-3 text-xs text-white/80">
+              <pre className="whitespace-pre-wrap rounded-xl border border-white/10 bg-white/5 p-3 text-xs opacity-80">
                 {shareText || 'No results yet.'}
               </pre>
               <div className="flex items-center gap-3">
                 <Button onClick={handleShare} variant="secondary">
                   Copy text
                 </Button>
-                {shareStatus === 'copied' && <div className="text-xs text-white/70">Copied.</div>}
-                {shareStatus === 'error' && <div className="text-xs text-white/70">Could not copy.</div>}
+                {shareStatus === 'copied' && <div className="text-xs opacity-70">Copied.</div>}
+                {shareStatus === 'error' && <div className="text-xs opacity-70">Could not copy.</div>}
               </div>
             </Card>
           </div>,
