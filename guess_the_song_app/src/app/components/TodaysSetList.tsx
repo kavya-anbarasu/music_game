@@ -128,11 +128,9 @@ export function TodaysSetList(props: {
           <div className="text-sm font-semibold">Today</div>
           <div className="text-xs opacity-70">Progress across today’s songs.</div>
         </div>
-        {isToday && (
-          <Button onClick={() => setShowShare(true)} size="sm" variant="secondary">
-            Share
-          </Button>
-        )}
+        <Button onClick={() => setShowShare(true)} size="sm" variant="secondary">
+          Share
+        </Button>
       </div>
 
       <div className="flex flex-wrap gap-2">
