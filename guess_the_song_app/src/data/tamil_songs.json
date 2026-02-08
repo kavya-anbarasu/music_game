@@ -2,7 +2,7 @@
   {
     "id": "visiri",
     "title": "Visiri",
-    "movie": "Enai Noki Paayum Thota",
+    "movie": "Ennai Noki Paayum Thota",
     "album": null,
     "music_director": "Darbuka Siva",
     "singers": [
@@ -93,7 +93,7 @@
   {
     "id": "kannamma",
     "title": "Kannamma",
-    "movie": "Kaala - Tamil",
+    "movie": "Kaala",
     "album": null,
     "music_director": "Santhosh Narayanan",
     "singers": [
@@ -111,14 +111,14 @@
     "title": "Rangu Rangamma",
     "movie": "Bheema",
     "album": null,
-    "music_director": null,
+    "music_director": "Harris Jayaran",
     "singers": [
       "Vijay Yesudas",
       "Kailash Kher",
       "Swarnalatha"
     ],
-    "hero": null,
-    "heroine": null,
+    "hero": "Vikram",
+    "heroine": "Trisha Krishnan",
     "key": "F minor",
     "track_uri": "spotify:track:03TwFtM36dliwqTIyyewKO"
   },
@@ -281,7 +281,7 @@
       "Dhanush"
     ],
     "hero": "Dhanush",
-    "heroine": "Kajal Aggarwal",
+    "heroine": "Kajal Agarwal",
     "key": "C#/Db minor",
     "track_uri": "spotify:track:08MhVmbdGEibPERZVagSNF"
   },
@@ -342,7 +342,7 @@
       "Naresh Iyer",
       "Sadhana Sargam"
     ],
-    "hero": "Silambarasan",
+    "hero": "Silambarasan TR",
     "heroine": "Jyothika",
     "key": "A minor",
     "track_uri": "spotify:track:09ghRr7MRt5XAlX1PDeyZE"
@@ -379,7 +379,7 @@
   {
     "id": "future-wife",
     "title": "Future Wife",
-    "movie": "Future Wife",
+    "movie": null,
     "album": null,
     "music_director": null,
     "singers": [
@@ -480,7 +480,7 @@
   {
     "id": "visiri-from-enai-noki-paayum-thota",
     "title": "Visiri",
-    "movie": "Enai Noki Paayum Thota",
+    "movie": "Ennai Noki Paayum Thota",
     "album": null,
     "music_director": "Darbuka Siva",
     "singers": [
@@ -842,7 +842,7 @@
       "Srinivas",
       "A.R. Rahman"
     ],
-    "hero": "Arvind Swamy",
+    "hero": "Aravind Saami",
     "heroine": "Kajol",
     "key": "B minor",
     "track_uri": "spotify:track:0OZEa54bJKOXprf8IAEHlN"
@@ -850,8 +850,8 @@
   {
     "id": "sundari",
     "title": "Sundari",
-    "movie": null,
-    "album": "Spb & S Janaki - Tamil Hits Vol-1",
+    "movie": "Thalapathi",
+    "album": "Thalapathi",
     "music_director": null,
     "singers": [
       "S. P. Balasubrahmanyam",
@@ -1026,7 +1026,7 @@
       "Madhushree"
     ],
     "hero": "Arya",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "A#/Bb minor",
     "track_uri": "spotify:track:0SSLKt27B0a71OqsPy0uoY"
   },
@@ -1093,7 +1093,7 @@
   {
     "id": "yennachu-yedhachu",
     "title": "Yennachu Yedhachu",
-    "movie": "Trisha Illana Nayanthara",
+    "movie": "Trisha Krishnan Illana Nayanthara",
     "album": null,
     "music_director": "G. V. Prakash",
     "singers": [
@@ -1340,7 +1340,7 @@
       "Tippu"
     ],
     "hero": "Shaam",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "F minor",
     "track_uri": "spotify:track:0XhB5HaPNY3uJUmRY9Uw0c"
   },
@@ -1549,7 +1549,7 @@
       "Manikka Vinayagam"
     ],
     "hero": "Vijay",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "D minor",
     "track_uri": "spotify:track:0eNq7YpJFboKtM3gxrrZ9R"
   },
@@ -1619,7 +1619,7 @@
     "id": "en-veetula-from-idharkuthaane-aasaipattai-balakumara",
     "title": "En Veetula",
     "movie": null,
-    "album": "Hits of Gaana Bala",
+    "album": "Soodhu Kavvum",
     "music_director": null,
     "singers": [
       "Gana Bala"
@@ -1667,7 +1667,7 @@
       "K. S. Chithra",
       "A.R. Rahman"
     ],
-    "hero": "Arvind Swamy",
+    "hero": "Aravind Saami",
     "heroine": "Manisha Koirala",
     "key": "E minor",
     "track_uri": "spotify:track:0h3w2rBLiG11sahy43zkRm"
@@ -1899,7 +1899,7 @@
       "Sumangaly"
     ],
     "hero": "Jayam Ravi",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "D minor",
     "track_uri": "spotify:track:0nNvbZo4c0Q9E9JYdRBKjR"
   },
@@ -1960,7 +1960,7 @@
       "Vidyasagar"
     ],
     "hero": "Vijay",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "A#/Bb minor",
     "track_uri": "spotify:track:0q9RHO9GCl4gY5NbT7MG6V"
   },
@@ -2158,7 +2158,7 @@
       "A.R. Rahman",
       "Sid Sriram"
     ],
-    "hero": "Silambarasan",
+    "hero": "Silambarasan TR",
     "heroine": null,
     "key": "F major",
     "track_uri": "spotify:track:0vua5LbAth2HzKqpbnVRZk"
@@ -2357,7 +2357,7 @@
       "Silambarasan TR",
       "Blaze"
     ],
-    "hero": "Silambarasan",
+    "hero": "Silambarasan TR",
     "heroine": "Nayanthara",
     "key": "F minor",
     "track_uri": "spotify:track:10LfH6Hkt06jYjXo8FGecm"
@@ -2738,7 +2738,7 @@
       "Yugabharathi"
     ],
     "hero": "Vijay",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "G minor",
     "track_uri": "spotify:track:1A5NEjVetlCGBubBBe4IEl"
   },
@@ -2823,7 +2823,7 @@
     "id": "merke-merke-from-kanda-naal-mudhalai",
     "title": "Merke Merke",
     "movie": null,
-    "album": "Hits of Shankar Mahadevan",
+    "album": "Kanda Naal Mudhal",
     "music_director": null,
     "singers": [
       "Shankar Mahadevan",
@@ -2968,7 +2968,7 @@
       "Sathyaprakash",
       "Naattu Raja Durai"
     ],
-    "hero": "Silambarasan",
+    "hero": "Silambarasan TR",
     "heroine": null,
     "key": "B minor",
     "track_uri": "spotify:track:1IevAM0Sl5iUIxGWDOXIar"
@@ -3120,7 +3120,7 @@
       "Silambarasan TR",
       "Rakshita Suresh"
     ],
-    "hero": "Silambarasan",
+    "hero": "Silambarasan TR",
     "heroine": "Siddhi Idnani",
     "key": "G major",
     "track_uri": "spotify:track:1NoaJoxPKQr9XNLOuKTyNV"
@@ -3221,7 +3221,7 @@
     "singers": [
       "Harini"
     ],
-    "hero": "Arvind Swamy",
+    "hero": "Aravind Saami",
     "heroine": "Anu Hasan",
     "key": "C#/Db major",
     "track_uri": "spotify:track:1PuTR4IoxoU4xKgtwqCKV1"
@@ -3252,8 +3252,8 @@
       "Chinmayi",
       "Devan Ekambaram"
     ],
-    "hero": "Silambarasan",
-    "heroine": "Trisha",
+    "hero": "Silambarasan TR",
+    "heroine": "Trisha Krishnan",
     "key": "G#/Ab major",
     "track_uri": "spotify:track:1QuZBM0iHDlr1oRVyeZypC"
   },
@@ -3373,7 +3373,7 @@
       "Vidyasagar"
     ],
     "hero": "Vijay",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "A#/Bb minor",
     "track_uri": "spotify:track:1TJqehhOPesTNMKADt4J5m"
   },
@@ -4012,7 +4012,7 @@
     "music_director": "Yuvan Shankar Raja",
     "singers": [
       "Venkat Prabhu",
-      "Chitra Sivaraman"
+      "K. S. Chithra"
     ],
     "hero": "Dhanush",
     "heroine": "Sherin",
@@ -4279,7 +4279,7 @@
       "A.R. Rahman",
       "Yogi Sekar"
     ],
-    "hero": "Silambarasan",
+    "hero": "Silambarasan TR",
     "heroine": null,
     "key": "G major",
     "track_uri": "spotify:track:1ozc22BE86sSLTdoUjmN6W"
@@ -4369,7 +4369,7 @@
     "singers": [
       "KK"
     ],
-    "hero": "Silambarasan",
+    "hero": "Silambarasan TR",
     "heroine": "Jyothika",
     "key": "C minor",
     "track_uri": "spotify:track:1qRmLX6Ni9WtwENHsWT3Xu"
@@ -4620,7 +4620,7 @@
       "Aditya Rao",
       "Jonita Gandhi"
     ],
-    "hero": "Silambarasan",
+    "hero": "Silambarasan TR",
     "heroine": "Manjima Mohan",
     "key": "G major",
     "track_uri": "spotify:track:1x5uIoIGPWxSBoV5SrDE2M"
@@ -4699,7 +4699,7 @@
       "Shreya Ghoshal"
     ],
     "hero": "Vijay",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "G#/Ab major",
     "track_uri": "spotify:track:1z0p8ODhL1aZFBengxPkZU"
   },
@@ -4914,7 +4914,7 @@
   {
     "id": "mayakirriye",
     "title": "Mayakirriye",
-    "movie": "Mayakirriye - Single",
+    "movie": null,
     "album": null,
     "music_director": "Anirudh Ravichander",
     "singers": [
@@ -4957,7 +4957,7 @@
   {
     "id": "naan-pizhaippeno",
     "title": "Naan Pizhaippeno",
-    "movie": "Enai Noki Paayum Thota",
+    "movie": "Ennai Noki Paayum Thota",
     "album": null,
     "music_director": "Darbuka Siva",
     "singers": [
@@ -5324,7 +5324,7 @@
       "Yuvan Shankar Raja"
     ],
     "hero": "Arya",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "G minor",
     "track_uri": "spotify:track:2DKz6y1hSswu1vrf0uo5H6"
   },
@@ -5757,7 +5757,7 @@
       "T. Rajendar",
       "Solar Sai"
     ],
-    "hero": "Silambarasan",
+    "hero": "Silambarasan TR",
     "heroine": "Richa Gangopadhyay",
     "key": "B minor",
     "track_uri": "spotify:track:2PcgMmmhIZA83kwIYEjR8f"
@@ -5773,7 +5773,7 @@
       "A.R. Rahman",
       "Swarnalatha"
     ],
-    "hero": "Arvind Swamy",
+    "hero": "Aravind Saami",
     "heroine": "Manisha Koirala",
     "key": "C major",
     "track_uri": "spotify:track:2QdYBvZil9qOWZOSTyso0M"
@@ -5966,7 +5966,7 @@
       "Malkudi Subha"
     ],
     "hero": "Suriya",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "F minor",
     "track_uri": "spotify:track:2VEyI38e4bZ1uNpKawXRjG"
   },
@@ -6262,7 +6262,7 @@
       "Shuba",
       "Nivas"
     ],
-    "hero": "Silambarasan",
+    "hero": "Silambarasan TR",
     "heroine": null,
     "key": "G major",
     "track_uri": "spotify:track:2akGl5QjvPr5Prw8a5D513"
@@ -6290,7 +6290,7 @@
     "singers": [
       "KK"
     ],
-    "hero": "Silambarasan",
+    "hero": "Silambarasan TR",
     "heroine": "Jyothika",
     "key": "C minor",
     "track_uri": "spotify:track:2bZOaehykrzd1gGXA6IfvC"
@@ -6626,7 +6626,7 @@
     "music_director": "G. V. Prakash",
     "singers": [
       "Udit Narayan",
-      "K.S.Chitra",
+      "K. S. Chithra",
       "Kalyani Menon"
     ],
     "hero": "Rajinikanth",
@@ -6749,7 +6749,7 @@
       "Karthik"
     ],
     "hero": "Suriya",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "F#/Gb major",
     "track_uri": "spotify:track:2lB7K4V2pxkXsXoQV2P99M"
   },
@@ -6775,10 +6775,10 @@
     "music_director": "Srikanth Deva",
     "singers": [
       "Srikanth Deva",
-      "Silambarasan",
+      "Silambarasan TR",
       "Roshini"
     ],
-    "hero": "Silambarasan",
+    "hero": "Silambarasan TR",
     "heroine": "Ramya",
     "key": "C major",
     "track_uri": "spotify:track:2lQ6NqKz2dqEg1rePgbBjD"
@@ -7117,7 +7117,7 @@
   {
     "id": "naan-pizhaippeno-2zmdyo1o",
     "title": "Naan Pizhaippeno",
-    "movie": "Enai Noki Paayum Thota",
+    "movie": "Ennai Noki Paayum Thota",
     "album": null,
     "music_director": "Darbuka Siva",
     "singers": [
@@ -7154,7 +7154,7 @@
       "Unni Menon",
       "Sujatha"
     ],
-    "hero": "Arvind Swamy",
+    "hero": "Aravind Saami",
     "heroine": "Madhubala",
     "key": "C major",
     "track_uri": "spotify:track:30CjHELmwbwRip1NMVDzLU"
@@ -7591,8 +7591,8 @@
       "Karthik",
       "Vivek Agrawal"
     ],
-    "hero": "Silambarasan",
-    "heroine": "Trisha",
+    "hero": "Silambarasan TR",
+    "heroine": "Trisha Krishnan",
     "key": "G#/Ab major",
     "track_uri": "spotify:track:3Ajj1eKaO0fg9YWeAE5vVU"
   },
@@ -7682,7 +7682,7 @@
       "Sadhana Sargam",
       "A.R. Rahman"
     ],
-    "hero": "Arvind Swamy",
+    "hero": "Aravind Saami",
     "heroine": "Kajol",
     "key": "F#/Gb major",
     "track_uri": "spotify:track:3Cq5W6HTcwVKM4g3Et1gXW"
@@ -7727,7 +7727,7 @@
       "A. R. Ameen",
       "Shakthisree Gopalan"
     ],
-    "hero": "Silambarasan",
+    "hero": "Silambarasan TR",
     "heroine": null,
     "key": "F major",
     "track_uri": "spotify:track:3Dv3ojnJtiNxYmCpLlZiBc"
@@ -7771,7 +7771,7 @@
       "S. P. Balasubrahmanyam",
       "Sujatha"
     ],
-    "hero": "Arvind Swamy",
+    "hero": "Aravind Saami",
     "heroine": "Madhubala",
     "key": "E major",
     "track_uri": "spotify:track:3ENOEyv39csYpynRSRGW0o"
@@ -7800,7 +7800,7 @@
       "Shankar Mahadevan"
     ],
     "hero": "Suriya",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "B major",
     "track_uri": "spotify:track:3F0QkJgY8l1PXE8cEN7W54"
   },
@@ -8159,7 +8159,7 @@
     "id": "kanmaniyae-kadhal-enbathu",
     "title": "Kanmaniyae Kadhal Enbathu",
     "movie": null,
-    "album": "Hits Of Ilaiyaraaja Vol. 1",
+    "album": null,
     "music_director": "Ilaiyaraaja",
     "singers": [
       "S. P. Balasubrahmanyam",
@@ -8595,7 +8595,7 @@
     "id": "katrae-en-vaasal",
     "title": "Katrae En Vaasal",
     "movie": null,
-    "album": "Love Song - Tamil Hits 2012",
+    "album": "Rhythm",
     "music_director": "A. R. Rahman",
     "singers": [
       "A.R. Rahman",
@@ -8722,7 +8722,7 @@
       "Sadhana Sargam"
     ],
     "hero": "Ajith Kumar",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "B minor",
     "track_uri": "spotify:track:3eeUvZTgP5uJfOMqI3sUVq"
   },
@@ -8736,7 +8736,7 @@
       "S. P. Balasubrahmanyam",
       "Sujatha"
     ],
-    "hero": "Arvind Swamy",
+    "hero": "Aravind Saami",
     "heroine": "Madhubala",
     "key": "E major",
     "track_uri": "spotify:track:3fYJfHvpvJ63G1LtrLXlpi"
@@ -8896,7 +8896,7 @@
       "A.R. Rahman",
       "Madhushree"
     ],
-    "hero": "Silambarasan",
+    "hero": "Silambarasan TR",
     "heroine": "Siddhi Idnani",
     "key": "D major",
     "track_uri": "spotify:track:3i7qScF9Oyp31O9bAutJez"
@@ -9031,7 +9031,7 @@
       "Sujatha"
     ],
     "hero": "Vijay",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "A minor",
     "track_uri": "spotify:track:3lxMMLhHcctD8jux719V14"
   },
@@ -9061,7 +9061,7 @@
       "Yogi B"
     ],
     "hero": "Vijay",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "B minor",
     "track_uri": "spotify:track:3n6tB0RkaxQkgWtF1LmsU9"
   },
@@ -9262,7 +9262,7 @@
     "id": "machakari-from-jillunu-oru-kaadhal",
     "title": "Machakari",
     "movie": null,
-    "album": "Hits of Shankar Mahadevan",
+    "album": "jillunu-oru-kaadhal",
     "music_director": null,
     "singers": [
       "Shankar Mahadevan",
@@ -9825,7 +9825,7 @@
     "id": "atho-andha-paravaipola-remix",
     "title": "Atho Andha Paravaipola - Remix",
     "movie": null,
-    "album": "MSV - Ilaiyaraaja Remix Hits",
+    "album": null,
     "music_director": null,
     "singers": [
       "T. M. Soundararajan",
@@ -9982,7 +9982,7 @@
       "Tippu"
     ],
     "hero": "Shaam",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "F minor",
     "track_uri": "spotify:track:4C70b6fVd3SyzAymxeeoaA"
   },
@@ -9997,7 +9997,7 @@
       "S.Rajalakshmi"
     ],
     "hero": "Vijay",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "G major",
     "track_uri": "spotify:track:4CTjTeRvp592sm54K0u8dI"
   },
@@ -10012,7 +10012,7 @@
       "Swetha"
     ],
     "hero": "Ajith Kumar",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "D major",
     "track_uri": "spotify:track:4CUG3LbPjQAP9jLLQSjJk0"
   },
@@ -10103,7 +10103,7 @@
       "S. P. Balasubrahmanyam",
       "K. S. Chithra"
     ],
-    "hero": "Arvind Swamy",
+    "hero": "Aravind Saami",
     "heroine": "Anu Hasan",
     "key": "E major",
     "track_uri": "spotify:track:4E7e4R0NjjQSQMaq58zupu"
@@ -10184,7 +10184,7 @@
   {
     "id": "maruvaarthai",
     "title": "Maruvaarthai",
-    "movie": "Enai Noki Paayum Thota",
+    "movie": "Ennai Noki Paayum Thota",
     "album": null,
     "music_director": "Darbuka Siva",
     "singers": [
@@ -10213,7 +10213,7 @@
   {
     "id": "naan-pizhaippeno-4ghobeau",
     "title": "Naan Pizhaippeno",
-    "movie": "Enai Noki Paayum Thota",
+    "movie": "Ennai Noki Paayum Thota",
     "album": null,
     "music_director": "Darbuka Siva",
     "singers": [
@@ -10327,7 +10327,7 @@
       "Suchitra",
       "Mahathi"
     ],
-    "hero": "Silambarasan",
+    "hero": "Silambarasan TR",
     "heroine": "Nayanthara",
     "key": "A#/Bb minor",
     "track_uri": "spotify:track:4I91lJWD0Fgbo1KQ0vHJlS"
@@ -10371,7 +10371,7 @@
       "Karthik"
     ],
     "hero": "Suriya",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "F#/Gb major",
     "track_uri": "spotify:track:4K4GVGXjwNG2SX4lqsNRn8"
   },
@@ -10445,7 +10445,7 @@
       "Vidyasagar"
     ],
     "hero": "Vijay",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "A#/Bb minor",
     "track_uri": "spotify:track:4LL4Y9dCCOf1WVqz6fMCxI"
   },
@@ -10490,7 +10490,7 @@
       "A.R. Rahman",
       "Chorus"
     ],
-    "hero": "Arvind Swamy",
+    "hero": "Aravind Saami",
     "heroine": "Manisha Koirala",
     "key": "E minor",
     "track_uri": "spotify:track:4MjXW86w9ydN47FS8o728u"
@@ -10508,7 +10508,7 @@
       "Yugabharathi"
     ],
     "hero": "Vijay",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "G#/Ab major",
     "track_uri": "spotify:track:4MpdgIzxYk4sVWl4llQJ56"
   },
@@ -10729,8 +10729,8 @@
     "id": "ninaivo-oru",
     "title": "Ninaivo Oru",
     "movie": null,
-    "album": "Hits Of Ilaiyaraaja Vol. 1",
-    "music_director": null,
+    "album": null,
+    "music_director": "Ilaiyaraaja",
     "singers": [
       "S. Janaki",
       "Kamal Haasan"
@@ -10781,7 +10781,7 @@
       "Unni Menon",
       "Sujatha"
     ],
-    "hero": "Arvind Swamy",
+    "hero": "Aravind Saami",
     "heroine": "Madhubala",
     "key": "C major",
     "track_uri": "spotify:track:4VnFeoILhihStBdsYIHdsY"
@@ -10890,7 +10890,7 @@
       "Silambarasan TR",
       "Blaaze"
     ],
-    "hero": "Silambarasan",
+    "hero": "Silambarasan TR",
     "heroine": "Nayanthara",
     "key": "F minor",
     "track_uri": "spotify:track:4Yy2VhegGoOHKNY1uDyZMM"
@@ -10905,7 +10905,7 @@
       "KK",
       "Febi Mani"
     ],
-    "hero": "Arvind Swamy",
+    "hero": "Aravind Saami",
     "heroine": "Kajol",
     "key": "E major",
     "track_uri": "spotify:track:4YzcpAP2UiVuS00HqsWsu0"
@@ -11084,7 +11084,7 @@
     "singers": [
       "Silambarasan TR"
     ],
-    "hero": "Silambarasan",
+    "hero": "Silambarasan TR",
     "heroine": "Nayanthara",
     "key": "G major",
     "track_uri": "spotify:track:4f7z49gAUFZRDPJnptwwV1"
@@ -11100,7 +11100,7 @@
       "Priyadharshini",
       "Silambarasan TR"
     ],
-    "hero": "Silambarasan",
+    "hero": "Silambarasan TR",
     "heroine": null,
     "key": "C#/Db major",
     "track_uri": "spotify:track:4fBxQHpa5Nev0Gg6SdrTsu"
@@ -11152,7 +11152,7 @@
     "id": "sundari-4gvzzmxy",
     "title": "Sundari",
     "movie": null,
-    "album": "Spb & S Janaki - Tamil Hits Vol-1",
+    "album": "Thalapathi",
     "music_director": null,
     "singers": [
       "S. P. Balasubrahmanyam",
@@ -11184,7 +11184,7 @@
     "id": "kasu-panam-from-soodhu-kavvum",
     "title": "Kasu Panam",
     "movie": null,
-    "album": "Hits of Gaana Bala",
+    "album": "Soodhu Kavvum",
     "music_director": null,
     "singers": [
       "Gana Bala",
@@ -11278,7 +11278,7 @@
     "singers": [
       "KK"
     ],
-    "hero": "Silambarasan",
+    "hero": "Silambarasan TR",
     "heroine": "Jyothika",
     "key": "C minor",
     "track_uri": "spotify:track:4lvTfq817mnTPF2eibBdIP"
@@ -11328,7 +11328,7 @@
       "Mathangi"
     ],
     "hero": "Tarun",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "F#/Gb minor",
     "track_uri": "spotify:track:4mQOlDntN3ESqL1mla5Hl7"
   },
@@ -11631,7 +11631,7 @@
       "Kay Kay"
     ],
     "hero": "Vijay",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "G major",
     "track_uri": "spotify:track:4tzRU8Fcu1uOqpddEcUOqe"
   },
@@ -11735,7 +11735,7 @@
       "Hariharan"
     ],
     "hero": "Suriya",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "B minor",
     "track_uri": "spotify:track:4w40zgyB1Jr7MZGPbKGcx0"
   },
@@ -11765,7 +11765,7 @@
       "Sujatha"
     ],
     "hero": "Vijay",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "A#/Bb minor",
     "track_uri": "spotify:track:4wR3WWggsXORXFPoFameCC"
   },
@@ -11838,7 +11838,7 @@
     "singers": [
       "Hariharan"
     ],
-    "hero": "Arvind Swamy",
+    "hero": "Aravind Saami",
     "heroine": "Anu Hasan",
     "key": "D major",
     "track_uri": "spotify:track:4xZqoLPxeIUItAiF16H6Ve"
@@ -11867,7 +11867,7 @@
       "Silambarasan TR",
       "Suchitra"
     ],
-    "hero": "Silambarasan",
+    "hero": "Silambarasan TR",
     "heroine": "Vedhika",
     "key": "E minor",
     "track_uri": "spotify:track:4yFeIf8l5kMPa2D4v7kl0G"
@@ -11989,7 +11989,7 @@
       "Franko"
     ],
     "hero": "Shaam",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "A minor",
     "track_uri": "spotify:track:53E1fT3nLOVn9IDra4HCw2"
   },
@@ -12003,7 +12003,7 @@
       "Hariharan",
       "Sadhana Sargam"
     ],
-    "hero": "Arvind Swamy",
+    "hero": "Aravind Saami",
     "heroine": "Kajol",
     "key": "F#/Gb major",
     "track_uri": "spotify:track:53ZaGcMaZwfmKcBrwWSEKd"
@@ -12292,7 +12292,7 @@
       "Srinivas",
       "K. S. Chithra"
     ],
-    "hero": "Arvind Swamy",
+    "hero": "Aravind Saami",
     "heroine": "Kajol",
     "key": "B minor",
     "track_uri": "spotify:track:5EZpFUuahnOmwVxoQVJz1A"
@@ -12468,7 +12468,7 @@
       "Yuvan Shankar Raja"
     ],
     "hero": "Arya",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "C minor",
     "track_uri": "spotify:track:5I09bcjyhaIe6PbWv8nhsM"
   },
@@ -12527,7 +12527,7 @@
       "Priyadharshini",
       "Silambarasan TR"
     ],
-    "hero": "Silambarasan",
+    "hero": "Silambarasan TR",
     "heroine": "Sneha",
     "key": "C#/Db major",
     "track_uri": "spotify:track:5KGQ4YAwDV8YolJhbFPSuT"
@@ -12575,8 +12575,8 @@
       "Benny Dayal",
       "Kalyani Menon"
     ],
-    "hero": "Silambarasan",
-    "heroine": "Trisha",
+    "hero": "Silambarasan TR",
+    "heroine": "Trisha Krishnan",
     "key": "F major",
     "track_uri": "spotify:track:5KZyOG8LZsBrHjuEdNyZHa"
   },
@@ -12647,7 +12647,7 @@
       "Hariharan",
       "Sadhana Sargam"
     ],
-    "hero": "Arvind Swamy",
+    "hero": "Aravind Saami",
     "heroine": "Kajol",
     "key": "C#/Db major",
     "track_uri": "spotify:track:5Ltbu50lm7994BXVDsogQd"
@@ -12738,7 +12738,7 @@
     "singers": [
       "Yogi And Natchatra"
     ],
-    "hero": "Silambarasan",
+    "hero": "Silambarasan TR",
     "heroine": "Nayanthara",
     "key": "C#/Db minor",
     "track_uri": "spotify:track:5PeEOojM9Iz9YHRGDu9jog"
@@ -12814,7 +12814,7 @@
       "S. P. Balasubrahmanyam",
       "K. S. Chithra"
     ],
-    "hero": "Arvind Swamy",
+    "hero": "Aravind Saami",
     "heroine": "Anu Hasan",
     "key": "E major",
     "track_uri": "spotify:track:5SRqt66Dhv4yvKbvGbHQsF"
@@ -12888,8 +12888,8 @@
       "A.R. Rahman",
       "Alphons Joseph"
     ],
-    "hero": "Silambarasan",
-    "heroine": "Trisha",
+    "hero": "Silambarasan TR",
+    "heroine": "Trisha Krishnan",
     "key": "A major",
     "track_uri": "spotify:track:5Toj8uGqy5Tyb6nXxPU3RD"
   },
@@ -12949,7 +12949,7 @@
       "Madhushree"
     ],
     "hero": "Arya",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "A#/Bb minor",
     "track_uri": "spotify:track:5VnXCd2798p4SQPGab6jTf"
   },
@@ -13496,8 +13496,8 @@
     "id": "paruvame",
     "title": "Paruvame",
     "movie": null,
-    "album": "Hits Of Ilaiyaraaja Vol. 1",
-    "music_director": null,
+    "album": null,
+    "music_director": "Ilaiyaraaja",
     "singers": [
       "S. P. Balasubrahmanyam",
       "S. Janaki"
@@ -13539,7 +13539,7 @@
   {
     "id": "naan-pizhaippeno-5rgam1v3",
     "title": "Naan Pizhaippeno",
-    "movie": "Enai Noki Paayum Thota",
+    "movie": "Ennai Noki Paayum Thota",
     "album": null,
     "music_director": "Darbuka Siva",
     "singers": [
@@ -13662,7 +13662,7 @@
       "Tippu"
     ],
     "hero": "Vijay",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "D major",
     "track_uri": "spotify:track:5tbpFtP9dx79PfWnhdRxqa"
   },
@@ -13795,7 +13795,7 @@
       "Sadhana Sargam"
     ],
     "hero": "Vijay",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "A major",
     "track_uri": "spotify:track:5yv8jpmtsFG3z2FaerZiTG"
   },
@@ -14013,7 +14013,7 @@
     "singers": [
       "S. P. Balasubrahmanyam"
     ],
-    "hero": "Arvind Swamy",
+    "hero": "Aravind Saami",
     "heroine": "Kajol",
     "key": "B minor",
     "track_uri": "spotify:track:67WU7tXaqhaka2Q2MyTXzb"
@@ -14042,8 +14042,8 @@
       "A.R. Rahman",
       "Naresh Iyer"
     ],
-    "hero": "Silambarasan",
-    "heroine": "Trisha",
+    "hero": "Silambarasan TR",
+    "heroine": "Trisha Krishnan",
     "key": "G major",
     "track_uri": "spotify:track:68kb4S1XJcLO9jn6sDwSU1"
   },
@@ -14080,7 +14080,7 @@
   {
     "id": "maruvaarthai-6a79kp68",
     "title": "Maruvaarthai",
-    "movie": "Enai Noki Paayum Thota",
+    "movie": "Ennai Noki Paayum Thota",
     "album": null,
     "music_director": "Darbuka Siva",
     "singers": [
@@ -14159,7 +14159,7 @@
       "Silambarasan TR",
       "Snehan"
     ],
-    "hero": "Silambarasan",
+    "hero": "Silambarasan TR",
     "heroine": "Jyothika",
     "key": "C#/Db major",
     "track_uri": "spotify:track:6DkxP58qMVRQKZMGXfaCy4"
@@ -14203,7 +14203,7 @@
       "S. P. Balasubrahmanyam",
       "Sujatha"
     ],
-    "hero": "Arvind Swamy",
+    "hero": "Aravind Saami",
     "heroine": "Madhubala",
     "key": "E major",
     "track_uri": "spotify:track:6Eon1DjI712yg69mi3MsAd"
@@ -14263,7 +14263,7 @@
       "S.Rajalakshmi"
     ],
     "hero": "Vijay",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "G major",
     "track_uri": "spotify:track:6Fd39l49ejUxs9lM2dAmMW"
   },
@@ -14287,14 +14287,15 @@
   {
     "id": "oru-devathai-vanthu-vittaal-from-nee-varuvai-ena",
     "title": "Oru Devathai Vanthu Vittaal",
-    "movie": null,
-    "album": "Hits of Chitra",
-    "music_director": null,
+    "movie": "Nee Varuvai Ena",
+    "album": null,
+    "music_director": "S. A. Rajkumar",
     "singers": [
-      "K. S. Chithra"
+      "K. S. Chithra",
+      "Hariharan"
     ],
-    "hero": null,
-    "heroine": null,
+    "hero": "R. Parthiban",
+    "heroine": "Devayani",
     "key": "G major",
     "track_uri": "spotify:track:6G4CPKyBgx60XuomyMoj6l"
   },
@@ -14368,7 +14369,7 @@
       "Franko"
     ],
     "hero": "Shaam",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "A minor",
     "track_uri": "spotify:track:6HsPmlNk41viwJpZATVroK"
   },
@@ -14538,8 +14539,8 @@
     "id": "germanien-senthan",
     "title": "Germanien Senthan",
     "movie": null,
-    "album": "Hits Of Ilaiyaraaja Vol. 1",
-    "music_director": null,
+    "album": null,
+    "music_director": "Ilaiyaraaja",
     "singers": [
       "S. Janaki",
       "S. P. Balasubrahmanyam"
@@ -14888,7 +14889,7 @@
       "Shankar Mahadevan",
       "Srilekha Parthasarathy"
     ],
-    "hero": "Silambarasan",
+    "hero": "Silambarasan TR",
     "heroine": "Sonia Agarwal",
     "key": "F minor",
     "track_uri": "spotify:track:6XT0HcEyNMV2w8KgzlWiyp"
@@ -15541,7 +15542,7 @@
     "singers": [
       "Yuvan Shankar Raja"
     ],
-    "hero": "Silambarasan",
+    "hero": "Silambarasan TR",
     "heroine": null,
     "key": "B major",
     "track_uri": "spotify:track:6mCBXs5VNOS3OuiKrtyWxT"
@@ -15690,7 +15691,7 @@
       "A.R. Rahman",
       "M. G. Sreekumar"
     ],
-    "hero": "Arvind Swamy",
+    "hero": "Aravind Saami",
     "heroine": "Isha Koppikar",
     "key": "D major",
     "track_uri": "spotify:track:6rFDPoTkjo2gIPdtUdgv5Z"
@@ -15792,7 +15793,7 @@
       "Krishna Kumar",
       "Febi Mani"
     ],
-    "hero": "Arvind Swamy",
+    "hero": "Aravind Saami",
     "heroine": "Kajol",
     "key": "E major",
     "track_uri": "spotify:track:6si6OajvjU9tzw4yellWt6"
@@ -15887,7 +15888,7 @@
       "Yugabharathi"
     ],
     "hero": "Vijay",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "D major",
     "track_uri": "spotify:track:6uudtMouobDnxJvLhGS3PE"
   },
@@ -15950,7 +15951,7 @@
       "Sid Sriram",
       "Aaryan Dinesh Kanagaratnam"
     ],
-    "hero": "Silambarasan",
+    "hero": "Silambarasan TR",
     "heroine": "Manjima Mohan",
     "key": "A minor",
     "track_uri": "spotify:track:6wBXSf1chpnyXGOSvANs0a"
@@ -16038,7 +16039,7 @@
       "Sukhwinder Singh"
     ],
     "hero": "Vijay",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "D minor",
     "track_uri": "spotify:track:6wkNMxKNAVqWAX74oekg8a"
   },
@@ -16172,7 +16173,7 @@
       "Franko"
     ],
     "hero": "Shaam",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "A minor",
     "track_uri": "spotify:track:73C5Q80RK1T5CA68F6foTl"
   },
@@ -16219,7 +16220,7 @@
       "Yogi B"
     ],
     "hero": "Vijay",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "D major",
     "track_uri": "spotify:track:73WOXOD2XSYKeVFCxiPZQJ"
   },
@@ -16429,7 +16430,7 @@
       "Tippu"
     ],
     "hero": "Shaam",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "F minor",
     "track_uri": "spotify:track:79B67CygqqtpaahPalGdgl"
   },
@@ -16581,7 +16582,7 @@
       "Suchitra",
       "Mahathi"
     ],
-    "hero": "Silambarasan",
+    "hero": "Silambarasan TR",
     "heroine": "Nayanthara",
     "key": "F minor",
     "track_uri": "spotify:track:7DDGASwYNNU4kXb7VyQLvp"
@@ -16627,7 +16628,7 @@
       "A.R. Rahman",
       "Sid Sriram"
     ],
-    "hero": "Silambarasan",
+    "hero": "Silambarasan TR",
     "heroine": null,
     "key": "F major",
     "track_uri": "spotify:track:7DlB8Mxy8Q95PsW3JGs8iy"
@@ -16674,7 +16675,7 @@
       "Hariharan",
       "Sadhana Sargam"
     ],
-    "hero": "Arvind Swamy",
+    "hero": "Aravind Saami",
     "heroine": "Kajol",
     "key": "F#/Gb major",
     "track_uri": "spotify:track:7F2yXXaikB9SQNVZRjDSVo"
@@ -17048,7 +17049,7 @@
     "id": "hey-vaada-vaada-from-kacheri-aarambam",
     "title": "Hey Vaada Vaada",
     "movie": "Kacheri Aarambam",
-    "album": "D. Imman Hits",
+    "album": null,
     "music_director": "D. Imman",
     "singers": [
       "M.L.R. Karthikeyan",
@@ -17286,7 +17287,7 @@
       "Madhushree"
     ],
     "hero": "Arya",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "A#/Bb minor",
     "track_uri": "spotify:track:7kLnZVFaLIYKb34H2GFjwI"
   },
@@ -17330,7 +17331,7 @@
       "Sumangaly"
     ],
     "hero": "Suriya",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "G#/Ab major",
     "track_uri": "spotify:track:7leZvkSK0HCGJAFSOaaqpA"
   },
@@ -17392,8 +17393,8 @@
       "A.R. Rahman",
       "Shreya Ghoshal"
     ],
-    "hero": "Silambarasan",
-    "heroine": "Trisha",
+    "hero": "Silambarasan TR",
+    "heroine": "Trisha Krishnan",
     "key": "D#/Eb major",
     "track_uri": "spotify:track:7mMkw0JFKnyMS6oGRT6b3O"
   },
@@ -17408,7 +17409,7 @@
       "Bombay Jayashri",
       "Karthik"
     ],
-    "hero": "Silambarasan",
+    "hero": "Silambarasan TR",
     "heroine": "Gopika",
     "key": "E major",
     "track_uri": "spotify:track:7mX6nQViFdi0Q6fvf8GtWN"
@@ -17455,7 +17456,7 @@
       "Silambarasan TR",
       "Roshini JKV"
     ],
-    "hero": "Silambarasan",
+    "hero": "Silambarasan TR",
     "heroine": "Nidhhi Agerwal",
     "key": "A minor",
     "track_uri": "spotify:track:7n5Jcqw85WSfJHrMXsk5N2"
@@ -17577,7 +17578,7 @@
       "Priya Hemesh"
     ],
     "hero": "Kamal Haasan",
-    "heroine": "Trisha",
+    "heroine": "Trisha Krishnan",
     "key": "C major",
     "track_uri": "spotify:track:7rUHVRy3jgrP9vIIJDuZ2G"
   },
@@ -17796,7 +17797,7 @@
     "id": "elanthapalam-elanthapalam",
     "title": "Elanthapalam Elanthapalam",
     "movie": null,
-    "album": "Hits of Anuradha Sriram",
+    "album": null,
     "music_director": null,
     "singers": [
       "Anuradha Sriram",
